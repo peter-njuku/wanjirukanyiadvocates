@@ -24,7 +24,9 @@ export const metadata: Metadata = {
     "Expert legal services in land law, succession, data protection, and cyberbullying. Serving communities across Kenya with professional legal consultations and advocacy.",
   generator: "v0.app",
   icons: {
-    icon: "/favicon.ico", // default
+    icon: "/favicon.ico",           // standard browsers
+    shortcut: "/favicon.ico",       // fallback
+    apple: "/apple-touch-icon.png", // optional, for iOS
   },
 }
 
@@ -35,6 +37,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${montserrat.variable} ${openSans.variable} antialiased`}>
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+      </head>
       <body className="font-sans">{children}</body>
     </html>
   )

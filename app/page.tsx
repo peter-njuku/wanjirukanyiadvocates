@@ -10,6 +10,9 @@ import { Metadata } from "next"; // Import Metadata type
 // Define metadata for this page
 export const metadata: Metadata = {
   title: "Wanjiru & Associates | Expert Legal Services in Kenya",
+  icons:{
+     icon: "/favicon.ico",
+  },
   description: "A trusted law firm based in Kenya, specializing in [list 2-3 key practice areas]. We are dedicated to serving our community with integrity and expertise.",
   keywords: "kenya law firm, legal services, lawyer nairobi, [add more keywords]",
   // Open Graph metadata for social sharing (highly recommended)
