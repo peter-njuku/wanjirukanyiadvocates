@@ -44,7 +44,7 @@ export default function ConsultationWeeks() {
                   <strong>Location:</strong> ACK St. Peters Uthiru, Mustard Seed Complex, Ground Floor, Unit G.05
                 </p>
                 <Button variant="secondary" asChild>
-                  <Link href="/contact">Get More Information</Link>
+                  <Link href="/blog">Read more</Link>
                 </Button>
               </div>
             </CardContent>
