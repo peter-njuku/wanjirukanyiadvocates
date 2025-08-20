@@ -25,8 +25,6 @@ export const metadata: Metadata = {
   generator: "v0.app",
   icons: {
     icon: "/favicon.ico", // default
-    shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
   },
 }
 
