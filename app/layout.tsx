@@ -23,6 +23,11 @@ export const metadata: Metadata = {
   description:
     "Expert legal services in land law, succession, data protection, and cyberbullying. Serving communities across Kenya with professional legal consultations and advocacy.",
   generator: "v0.app",
+  icons: {
+    icon: "/favicon.ico", // default
+    shortcut: "/favicon-16x16.png",
+    apple: "/apple-touch-icon.png",
+  },
 }
 
 export default function RootLayout({
