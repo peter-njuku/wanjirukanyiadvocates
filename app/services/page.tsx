@@ -14,22 +14,28 @@ import {
   Building,
   Calendar,
   ArrowRight,
+  Crown,
+  BookOpen,
+  Briefcase,
+  Laptop
 } from "lucide-react"
 
 export default function ServicesPage() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white">
       <Header />
 
       {/* Hero Section */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-6">
-            <Badge variant="secondary" className="mb-4">
+            <Badge variant="outline" className="mb-4 bg-blue-100 text-blue-800 border-blue-300 px-4 py-1">
               Our Legal Services
             </Badge>
-            <h1 className="font-serif font-black text-4xl md:text-5xl text-primary">Comprehensive Legal Solutions</h1>
-            <p className="text-xl text-muted-foreground leading-relaxed">
+            <h1 className="font-serif font-bold text-4xl md:text-5xl text-slate-900">
+              Comprehensive Legal Solutions
+            </h1>
+            <p className="text-xl text-slate-700 leading-relaxed max-w-3xl mx-auto">
               We specialize in a wide range of legal matters, providing expert guidance and representation across
               multiple practice areas to serve Kenya's diverse legal needs.
             </p>
@@ -42,72 +48,99 @@ export default function ServicesPage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Land & Property Law */}
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <Home className="h-10 w-10 text-accent mb-4" />
-                <CardTitle className="text-2xl">Land & Property Law</CardTitle>
-                <CardDescription className="text-base">
+            <Card className="border-slate-200 hover:shadow-xl transition-all duration-300 group">
+              <CardHeader className="pb-4">
+                <div className="bg-blue-50 rounded-lg p-3 w-fit mb-4 group-hover:bg-cyan-50 transition-colors">
+                  <Home className="h-8 w-8 text-blue-600 group-hover:text-cyan-600 transition-colors" />
+                </div>
+                <CardTitle className="text-2xl text-slate-900">Land & Property Law</CardTitle>
+                <CardDescription className="text-base text-slate-600">
                   Comprehensive legal services for all your land and property needs
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
-                <ul className="space-y-2 text-sm">
-                  <li>• Land contracts, agreements, and transfers</li>
-                  <li>• Leases, licenses, and rights of access</li>
-                  <li>• Subdivisions and change of user applications</li>
-                  <li>• Title rectification and due diligence</li>
-                  <li>• Obtaining consents and paying rates/rents</li>
-                  <li>• Searches, caveats, cautions, and restrictions</li>
-                  <li>• Lost title deed recovery</li>
-                  <li>• Buyer/seller sourcing and negotiations</li>
+                <ul className="space-y-3 text-slate-700">
+                  {[
+                    "Land contracts, agreements, and transfers",
+                    "Leases, licenses, and rights of access",
+                    "Subdivisions and change of user applications",
+                    "Title rectification and due diligence",
+                    "Obtaining consents and paying rates/rents",
+                    "Searches, caveats, cautions, and restrictions",
+                    "Lost title deed recovery",
+                    "Buyer/seller sourcing and negotiations"
+                  ].map((item, index) => (
+                    <li key={index} className="flex items-start">
+                      <span className="text-blue-500 mr-2">•</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
                 </ul>
               </CardContent>
             </Card>
 
             {/* Succession & Inheritance */}
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <Users className="h-10 w-10 text-accent mb-4" />
-                <CardTitle className="text-2xl">Succession & Inheritance</CardTitle>
-                <CardDescription className="text-base">
+            <Card className="border-slate-200 hover:shadow-xl transition-all duration-300 group">
+              <CardHeader className="pb-4">
+                <div className="bg-cyan-50 rounded-lg p-3 w-fit mb-4 group-hover:bg-blue-50 transition-colors">
+                  <Crown className="h-8 w-8 text-cyan-600 group-hover:text-blue-600 transition-colors" />
+                </div>
+                <CardTitle className="text-2xl text-slate-900">Succession & Inheritance</CardTitle>
+                <CardDescription className="text-base text-slate-600">
                   Expert guidance through Kenya's Law of Succession Act
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
-                <ul className="space-y-2 text-sm">
-                  <li>• Grant of Letters of Administration applications</li>
-                  <li>• Estate planning and asset distribution</li>
-                  <li>• Inheritance dispute resolution</li>
-                  <li>• Powers of attorney and trust establishment</li>
-                  <li>• Limited grants for urgent needs</li>
-                  <li>• Polygamous family property division</li>
-                  <li>• Beneficiary documentation and asset inventory</li>
-                  <li>• Reconstruction of green cards</li>
+                <ul className="space-y-3 text-slate-700">
+                  {[
+                    "Grant of Letters of Administration applications",
+                    "Estate planning and asset distribution",
+                    "Inheritance dispute resolution",
+                    "Powers of attorney and trust establishment",
+                    "Limited grants for urgent needs",
+                    "Polygamous family property division",
+                    "Beneficiary documentation and asset inventory",
+                    "Reconstruction of green cards"
+                  ].map((item, index) => (
+                    <li key={index} className="flex items-start">
+                      <span className="text-cyan-500 mr-2">•</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
                 </ul>
               </CardContent>
             </Card>
 
             {/* Data Protection */}
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <Shield className="h-10 w-10 text-accent mb-4" />
-                <CardTitle className="text-2xl">Data Protection & Children's Rights</CardTitle>
-                <CardDescription className="text-base">
+            <Card className="border-slate-200 hover:shadow-xl transition-all duration-300 group">
+              <CardHeader className="pb-4">
+                <div className="bg-blue-50 rounded-lg p-3 w-fit mb-4 group-hover:bg-cyan-50 transition-colors">
+                  <Shield className="h-8 w-8 text-blue-600 group-hover:text-cyan-600 transition-colors" />
+                </div>
+                <CardTitle className="text-2xl text-slate-900">Data Protection & Children's Rights</CardTitle>
+                <CardDescription className="text-base text-slate-600">
                   Compliance with Kenya's Data Protection Act (2019)
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
-                <ul className="space-y-2 text-sm">
-                  <li>• Data protection compliance audits</li>
-                  <li>• Children's data protection advocacy</li>
-                  <li>• Parental consent frameworks</li>
-                  <li>• Data breach reporting and response</li>
-                  <li>• Privacy policy development</li>
-                  <li>• Digital safety education programs</li>
-                  <li>• Data Protection Commissioner liaison</li>
+                <ul className="space-y-3 text-slate-700 mb-4">
+                  {[
+                    "Data protection compliance audits",
+                    "Children's data protection advocacy",
+                    "Parental consent frameworks",
+                    "Data breach reporting and response",
+                    "Privacy policy development",
+                    "Digital safety education programs",
+                    "Data Protection Commissioner liaison"
+                  ].map((item, index) => (
+                    <li key={index} className="flex items-start">
+                      <span className="text-blue-500 mr-2">•</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
                 </ul>
-                <div className="bg-accent/10 p-4 rounded-lg">
-                  <p className="text-sm font-medium text-accent">
+                <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                  <p className="text-sm font-medium text-blue-800">
                     "The best interests of the child are paramount" - Our guiding principle in child protection cases
                   </p>
                 </div>
@@ -115,26 +148,35 @@ export default function ServicesPage() {
             </Card>
 
             {/* Cyberbullying */}
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <MessageSquareWarning className="h-10 w-10 text-accent mb-4" />
-                <CardTitle className="text-2xl">Cyberbullying & Cyber Crimes</CardTitle>
-                <CardDescription className="text-base">
+            <Card className="border-slate-200 hover:shadow-xl transition-all duration-300 group">
+              <CardHeader className="pb-4">
+                <div className="bg-cyan-50 rounded-lg p-3 w-fit mb-4 group-hover:bg-blue-50 transition-colors">
+                  <Laptop className="h-8 w-8 text-cyan-600 group-hover:text-blue-600 transition-colors" />
+                </div>
+                <CardTitle className="text-2xl text-slate-900">Cyberbullying & Cyber Crimes</CardTitle>
+                <CardDescription className="text-base text-slate-600">
                   Legal representation under the Computer Misuse and Cyber Crimes Act (2018)
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
-                <ul className="space-y-2 text-sm">
-                  <li>• Cyberbullying case representation</li>
-                  <li>• Evidence preservation and documentation</li>
-                  <li>• DCI complaint filing assistance</li>
-                  <li>• Victim support and counseling referrals</li>
-                  <li>• School and organization awareness programs</li>
-                  <li>• Online harassment legal remedies</li>
-                  <li>• Digital forensics coordination</li>
+                <ul className="space-y-3 text-slate-700 mb-4">
+                  {[
+                    "Cyberbullying case representation",
+                    "Evidence preservation and documentation",
+                    "DCI complaint filing assistance",
+                    "Victim support and counseling referrals",
+                    "School and organization awareness programs",
+                    "Online harassment legal remedies",
+                    "Digital forensics coordination"
+                  ].map((item, index) => (
+                    <li key={index} className="flex items-start">
+                      <span className="text-cyan-500 mr-2">•</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
                 </ul>
-                <div className="bg-destructive/10 p-4 rounded-lg">
-                  <p className="text-sm font-medium text-destructive">
+                <div className="bg-rose-50 p-4 rounded-lg border border-rose-200">
+                  <p className="text-sm font-medium text-rose-800">
                     Cyberbullying penalties: Up to KES 20 million fine or imprisonment
                   </p>
                 </div>
@@ -142,45 +184,63 @@ export default function ServicesPage() {
             </Card>
 
             {/* Employment Cases */}
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <Scale className="h-10 w-10 text-accent mb-4" />
-                <CardTitle className="text-2xl">Employment Law</CardTitle>
-                <CardDescription className="text-base">
+            <Card className="border-slate-200 hover:shadow-xl transition-all duration-300 group">
+              <CardHeader className="pb-4">
+                <div className="bg-blue-50 rounded-lg p-3 w-fit mb-4 group-hover:bg-cyan-50 transition-colors">
+                  <Briefcase className="h-8 w-8 text-blue-600 group-hover:text-cyan-600 transition-colors" />
+                </div>
+                <CardTitle className="text-2xl text-slate-900">Employment Law</CardTitle>
+                <CardDescription className="text-base text-slate-600">
                   Workplace disputes and employment rights protection
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
-                <ul className="space-y-2 text-sm">
-                  <li>• Employment contract drafting and review</li>
-                  <li>• Wrongful termination cases</li>
-                  <li>• Workplace harassment and discrimination</li>
-                  <li>• Labor dispute mediation</li>
-                  <li>• Employment tribunal representation</li>
-                  <li>• Severance and compensation negotiations</li>
-                  <li>• Workplace policy development</li>
+                <ul className="space-y-3 text-slate-700">
+                  {[
+                    "Employment contract drafting and review",
+                    "Wrongful termination cases",
+                    "Workplace harassment and discrimination",
+                    "Labor dispute mediation",
+                    "Employment tribunal representation",
+                    "Severance and compensation negotiations",
+                    "Workplace policy development"
+                  ].map((item, index) => (
+                    <li key={index} className="flex items-start">
+                      <span className="text-blue-500 mr-2">•</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
                 </ul>
               </CardContent>
             </Card>
 
             {/* Corporate & Business */}
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <Building className="h-10 w-10 text-accent mb-4" />
-                <CardTitle className="text-2xl">Corporate & Business Law</CardTitle>
-                <CardDescription className="text-base">
+            <Card className="border-slate-200 hover:shadow-xl transition-all duration-300 group">
+              <CardHeader className="pb-4">
+                <div className="bg-cyan-50 rounded-lg p-3 w-fit mb-4 group-hover:bg-blue-50 transition-colors">
+                  <Building className="h-8 w-8 text-cyan-600 group-hover:text-blue-600 transition-colors" />
+                </div>
+                <CardTitle className="text-2xl text-slate-900">Corporate & Business Law</CardTitle>
+                <CardDescription className="text-base text-slate-600">
                   Business formation, contracts, and commercial negotiations
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
-                <ul className="space-y-2 text-sm">
-                  <li>• Corporate negotiations and mediation</li>
-                  <li>• Business contract drafting and review</li>
-                  <li>• Commercial dispute resolution</li>
-                  <li>• Intellectual property (trademark registration)</li>
-                  <li>• Small claims court matters</li>
-                  <li>• Demand letters and debt collection</li>
-                  <li>• Partnership agreements</li>
+                <ul className="space-y-3 text-slate-700">
+                  {[
+                    "Corporate negotiations and mediation",
+                    "Business contract drafting and review",
+                    "Commercial dispute resolution",
+                    "Intellectual property (trademark registration)",
+                    "Small claims court matters",
+                    "Demand letters and debt collection",
+                    "Partnership agreements"
+                  ].map((item, index) => (
+                    <li key={index} className="flex items-start">
+                      <span className="text-cyan-500 mr-2">•</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
                 </ul>
               </CardContent>
             </Card>
@@ -189,40 +249,61 @@ export default function ServicesPage() {
       </section>
 
       {/* Additional Services */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="font-serif font-bold text-3xl text-primary text-center mb-12">Additional Legal Services</h2>
+            <div className="text-center mb-12">
+              <h2 className="font-serif font-bold text-3xl text-slate-900 mb-6">Additional Legal Services</h2>
+              <div className="h-1 w-16 bg-cyan-500 mx-auto"></div>
+            </div>
 
             <div className="grid md:grid-cols-2 gap-6">
-              <Card>
+              <Card className="border-slate-200 hover:shadow-lg transition-shadow">
                 <CardHeader>
-                  <FileText className="h-8 w-8 text-accent mb-2" />
-                  <CardTitle>Legal Documentation</CardTitle>
+                  <div className="bg-blue-50 rounded-lg p-3 w-fit mb-4">
+                    <FileText className="h-6 w-6 text-blue-600" />
+                  </div>
+                  <CardTitle className="text-slate-900">Legal Documentation</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <ul className="space-y-1 text-sm">
-                    <li>• Drafting and witnessing contracts</li>
-                    <li>• Document certification</li>
-                    <li>• Affidavit preparation</li>
-                    <li>• Legal opinions and advice</li>
-                    <li>• Change of names applications</li>
+                  <ul className="space-y-2 text-slate-700">
+                    {[
+                      "Drafting and witnessing contracts",
+                      "Document certification",
+                      "Affidavit preparation",
+                      "Legal opinions and advice",
+                      "Change of names applications"
+                    ].map((item, index) => (
+                      <li key={index} className="flex items-start">
+                        <span className="text-blue-500 mr-2">•</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
                   </ul>
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="border-slate-200 hover:shadow-lg transition-shadow">
                 <CardHeader>
-                  <Users className="h-8 w-8 text-accent mb-2" />
-                  <CardTitle>Family & Children's Matters</CardTitle>
+                  <div className="bg-cyan-50 rounded-lg p-3 w-fit mb-4">
+                    <Users className="h-6 w-6 text-cyan-600" />
+                  </div>
+                  <CardTitle className="text-slate-900">Family & Children's Matters</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <ul className="space-y-1 text-sm">
-                    <li>• Child custody and support</li>
-                    <li>• Divorce and separation</li>
-                    <li>• Adoption procedures</li>
-                    <li>• Domestic violence cases</li>
-                    <li>• Marriage and family counseling referrals</li>
+                  <ul className="space-y-2 text-slate-700">
+                    {[
+                      "Child custody and support",
+                      "Divorce and separation",
+                      "Adoption procedures",
+                      "Domestic violence cases",
+                      "Marriage and family counseling referrals"
+                    ].map((item, index) => (
+                      <li key={index} className="flex items-start">
+                        <span className="text-cyan-500 mr-2">•</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
                   </ul>
                 </CardContent>
               </Card>
@@ -235,22 +316,34 @@ export default function ServicesPage() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <Card className="bg-accent text-accent-foreground">
-              <CardHeader className="text-center">
-                <Calendar className="h-12 w-12 mx-auto mb-4" />
-                <CardTitle className="text-2xl font-serif">Specialized Legal Consultation Weeks</CardTitle>
-                <CardDescription className="text-accent-foreground/80">
+            <Card className="border-0 shadow-xl bg-gradient-to-br from-blue-900 to-slate-900 text-white overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-500/20 rounded-full -translate-y-16 translate-x-16"></div>
+              
+              <CardHeader className="text-center relative z-10 pb-6">
+                <div className="flex justify-center mb-4">
+                  <div className="p-3 bg-cyan-500/20 rounded-full">
+                    <Calendar className="h-8 w-8 text-cyan-300" />
+                  </div>
+                </div>
+                <CardTitle className="text-2xl font-serif font-semibold">
+                  Specialized Legal Consultation Weeks
+                </CardTitle>
+                <CardDescription className="text-cyan-100 mt-3">
                   Walk-in consultations focusing on Land & Property and Succession matters
                 </CardDescription>
               </CardHeader>
-              <CardContent className="text-center space-y-4">
-                <p className="text-sm">
+              
+              <CardContent className="text-center space-y-4 relative z-10">
+                <p className="text-sm text-blue-100">
                   <strong>Location:</strong> ACK St. Peters Uthiru, Mustard Seed Complex, Ground Floor, Unit G.05
                 </p>
-                <p className="text-sm">
+                <p className="text-sm text-blue-100">
                   <strong>Format:</strong> No prior appointments needed • Services offered at a fee
                 </p>
-                <Button variant="secondary" asChild>
+                <Button 
+                  className="bg-cyan-500 hover:bg-cyan-400 text-blue-900 font-semibold mt-4"
+                  asChild
+                >
                   <Link href="/contact">
                     Get Consultation Schedule
                     <ArrowRight className="ml-2 h-4 w-4" />
@@ -263,15 +356,15 @@ export default function ServicesPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-primary text-primary-foreground">
+      <section className="py-20 bg-gradient-to-br from-slate-900 to-blue-900 text-white">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto space-y-6">
             <h2 className="font-serif font-bold text-3xl">Need Legal Assistance?</h2>
-            <p className="text-xl opacity-90">
+            <p className="text-xl text-blue-100">
               Contact us today to discuss your legal needs. We're here to provide professional guidance and
               representation.
             </p>
-            <Button size="lg" variant="secondary" asChild>
+            <Button size="lg" className="bg-cyan-500 hover:bg-cyan-400 text-blue-900 font-semibold" asChild>
               <Link href="/contact">
                 Schedule Your Consultation
                 <ArrowRight className="ml-2 h-5 w-5" />
