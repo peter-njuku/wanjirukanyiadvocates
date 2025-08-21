@@ -125,7 +125,7 @@ export default function ContactPage() {
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <iframe
-                    src="https://docs.google.com/forms/d/e/18_RT9eXT_Nv_sPv6bQE8u6TFmdO14vZWh_fvHhLO08U/viewform?embedded=true"
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSdeESLjpwZTkSXi4sLBz4yYV52a-qWLBIn0098ZaG5jN064mA/viewform?usp=sharing&ouid=101389716986483315566"
                     width="100%"
                     height="800"
                     frameBorder="0"
