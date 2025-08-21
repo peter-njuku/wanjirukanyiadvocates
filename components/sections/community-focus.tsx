@@ -55,9 +55,9 @@ export default function CommunityFocus() {
           <div className="text-center pt-12">
             <div className="inline-flex items-center bg-white px-6 py-3 rounded-full shadow-sm border border-slate-200">
               <Heart className="h-5 w-5 text-rose-500 mr-3" />
-              {/*<span className="text-slate-700 text-sm font-medium">
-                Proudly serving communities across Kenya since 2015
-              </span>*/}
+              <span className="text-slate-700 text-sm font-medium">
+                Proudly serving communities across Kenya & beyond
+              </span>
             </div>
           </div>
         </div>
