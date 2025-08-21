@@ -16,11 +16,11 @@ const nextConfig = {
         headers: [
           {
             key: 'Content-Security-Policy',
-            value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self';"
+            value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://docs.google.com; style-src 'self' 'unsafe-inline' https://docs.google.com; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://docs.google.com; frame-src 'self' https://docs.google.com https://forms.gle;"
           },
           {
             key: 'X-Frame-Options',
-            value: 'DENY'
+            value: 'ALLOW-FROM https://docs.google.com'
           },
           {
             key: 'X-Content-Type-Options',
