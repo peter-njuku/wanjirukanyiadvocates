@@ -153,7 +153,7 @@ export default function ServicesPage() {
                 <div className="bg-cyan-50 rounded-lg p-3 w-fit mb-4 group-hover:bg-blue-50 transition-colors">
                   <Laptop className="h-8 w-8 text-cyan-600 group-hover:text-blue-600 transition-colors" />
                 </div>
-                <CardTitle className="text-2xl text-slate-900">Cyberbullying & Cyber Crimes</CardTitle>
+                <CardTitle className="text-2xl text-slate-900">Online Harassment & Cyber Offenses</CardTitle>
                 <CardDescription className="text-base text-slate-600">
                   Legal representation under the Computer Misuse and Cyber Crimes Act (2018)
                 </CardDescription>
