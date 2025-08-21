@@ -46,7 +46,7 @@ export default function ServicesOverview() {
             At Wanjiru Kanyi Law Advocates, we deliver tailored legal solutions with precision, integrity, and professionalism. 
             Our expertise spans across key practice areas, enabling us to serve a diverse clientele with confidence and clarity.
           </p>
-          <div className="h-1 w-24 bg-amber-500 mx-auto"></div>
+          <div className="h-1 w-24 bg-cyan-500 mx-auto"></div> {/* Changed to cyan */}
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
@@ -55,18 +55,18 @@ export default function ServicesOverview() {
             return (
               <Card 
                 key={index} 
-                className="hover:shadow-xl transition-all duration-300 border-slate-200 group hover:border-amber-300/50 bg-white h-full"
+                className="hover:shadow-xl transition-all duration-300 border-slate-200 group hover:border-cyan-300/50 bg-white h-full" // Hover border to cyan
               >
                 <CardHeader className="p-8">
-                  {/* Icon Container with Hover Effect */}
+                  {/* Icon Container - Updated to blue/cyan */}
                   <div className="flex justify-center mb-4">
-                    <div className="p-3 bg-amber-50 rounded-lg group-hover:bg-amber-100/80 transition-colors duration-300">
-                      <IconComponent className="h-8 w-8 text-amber-600 group-hover:text-amber-700" />
+                    <div className="p-3 bg-blue-50 rounded-lg group-hover:bg-cyan-50/80 transition-colors duration-300"> {/* Blue to cyan hover */}
+                      <IconComponent className="h-8 w-8 text-blue-600 group-hover:text-cyan-600" /> {/* Blue to cyan hover */}
                     </div>
                   </div>
                   
                   {/* Title */}
-                  <CardTitle className="text-slate-900 text-xl group-hover:text-amber-700 transition-colors duration-300 mb-4">
+                  <CardTitle className="text-slate-900 text-xl group-hover:text-cyan-700 transition-colors duration-300 mb-4"> {/* Hover to cyan */}
                     {service.title}
                   </CardTitle>
                   
@@ -80,7 +80,7 @@ export default function ServicesOverview() {
           })}
         </div>
 
-        <div className="bg-white rounded-xl p-8 md:p-12 shadow-lg max-w-5xl mx-auto">
+        <div className="bg-white rounded-xl p-8 md:p-12 shadow-lg max-w-5xl mx-auto border-l-4 border-cyan-500"> {/* Cyan accent border */}
           <div className="text-center">
             <h3 className="font-serif font-semibold text-2xl md:text-3xl text-slate-900 mb-6">
               Our Philosophy
