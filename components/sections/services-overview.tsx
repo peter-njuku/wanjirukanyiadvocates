@@ -1,81 +1,99 @@
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Scale, Home, Users, Shield, MessageSquareWarning, FileText, Cpu, Heart, Globe } from "lucide-react"
+import { Scale, Users, Shield, Briefcase, Building, Lightbulb, Heart, FileText } from "lucide-react"
 
 export default function ServicesOverview() {
   const services = [
     {
-      icon: MessageSquareWarning,
-      title: "Cyberbullying Cases",
-      description: "Legal representation under the Computer Misuse and Cyber Crimes Act (2018).",
-    },
-    {
-      icon: Cpu,
-      title: "Computer Misuse & CyberCrimes Matters",
-      description: "Expert handling of all computer misuse and cybercrime cases across Kenya.",
-    },
-    {
-      icon: Users,
-      title: "Family Law Matters",
-      description: "Children cases, divorce cases, and comprehensive family law representation.",
+      icon: Scale,
+      title: "Civil & Commercial Litigation",
+      description: "Resolving disputes with strategic advocacy, meticulous preparation, and a results-driven approach.",
     },
     {
       icon: Heart,
-      title: "Children Cases",
-      description: "Dedicated advocacy for children's rights and protection in legal matters.",
+      title: "Family Law & Child Protection",
+      description: "Offering compassionate yet firm representation in matters of custody, maintenance, and child safeguarding.",
+    },
+    {
+      icon: Briefcase,
+      title: "Employment & Labour Law",
+      description: "Advising on contracts, workplace disputes, wrongful termination, and compliance with labour regulations.",
+    },
+    {
+      icon: Building,
+      title: "Corporate & Commercial Law",
+      description: "Supporting businesses, influencers, and entrepreneurs with contract negotiation, debt recovery, and dispute resolution.",
+    },
+    {
+      icon: Lightbulb,
+      title: "Legal Awareness & Advisory",
+      description: "Translating complex legal concepts into practical guidance, empowering clients to make informed decisions.",
     },
     {
       icon: Shield,
-      title: "Ethical AI Advocacy",
-      description: "Leading the conversation on ethical use and regulation of Artificial Intelligence.",
-    },
-    {
-      icon: Globe,
-      title: "Nationwide & International Service",
-      description: "Operating across Kenya and beyond to serve clients wherever they are located.",
+      title: "Cybercrime & Digital Law",
+      description: "Expert handling of computer misuse, cyberbullying, and cybercrime cases under Kenyan law.",
     },
   ]
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-slate-50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="font-serif font-bold text-3xl md:text-4xl text-slate-900 mb-4">
+        <div className="text-center mb-16 max-w-4xl mx-auto">
+          <h2 className="font-serif font-bold text-3xl md:text-4xl text-slate-900 mb-6">
             Our Legal Expertise
           </h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Comprehensive legal solutions with a focus on modern digital challenges and family law matters.
+          <p className="text-lg text-slate-700 mb-6 leading-relaxed">
+            At Wanjiru Kanyi Law Advocates, we deliver tailored legal solutions with precision, integrity, and professionalism. 
+            Our expertise spans across key practice areas, enabling us to serve a diverse clientele with confidence and clarity.
           </p>
+          <div className="h-1 w-24 bg-amber-500 mx-auto"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => {
             const IconComponent = service.icon
             return (
               <Card 
                 key={index} 
-                className="hover:shadow-xl transition-all duration-300 border-slate-200 group hover:border-cyan-300/50"
+                className="hover:shadow-xl transition-all duration-300 border-slate-200 group hover:border-amber-300/50 bg-white h-full"
               >
-                <CardHeader className="text-center p-8">
+                <CardHeader className="p-8">
                   {/* Icon Container with Hover Effect */}
                   <div className="flex justify-center mb-4">
-                    <div className="p-3 bg-cyan-50 rounded-lg group-hover:bg-cyan-100/80 transition-colors duration-300">
-                      <IconComponent className="h-8 w-8 text-cyan-600 group-hover:text-cyan-700" />
+                    <div className="p-3 bg-amber-50 rounded-lg group-hover:bg-amber-100/80 transition-colors duration-300">
+                      <IconComponent className="h-8 w-8 text-amber-600 group-hover:text-amber-700" />
                     </div>
                   </div>
                   
                   {/* Title */}
-                  <CardTitle className="text-slate-900 text-xl group-hover:text-cyan-700 transition-colors duration-300">
+                  <CardTitle className="text-slate-900 text-xl group-hover:text-amber-700 transition-colors duration-300 mb-4">
                     {service.title}
                   </CardTitle>
                   
                   {/* Description */}
-                  <CardDescription className="text-slate-600 mt-3 text-base leading-relaxed">
+                  <CardDescription className="text-slate-600 text-base leading-relaxed">
                     {service.description}
                   </CardDescription>
                 </CardHeader>
               </Card>
             )
           })}
+        </div>
+
+        <div className="bg-white rounded-xl p-8 md:p-12 shadow-lg max-w-5xl mx-auto">
+          <div className="text-center">
+            <h3 className="font-serif font-semibold text-2xl md:text-3xl text-slate-900 mb-6">
+              Our Philosophy
+            </h3>
+            <p className="text-lg text-slate-700 leading-relaxed mb-6">
+              Our philosophy is anchored in excellence and accessibility: combining deep legal knowledge with clear communication, 
+              ensuring that justice is not only pursued but also understood.
+            </p>
+            <p className="text-lg text-slate-700 leading-relaxed font-medium">
+              With us, you gain more than legal representation—you gain a strategic partner committed to protecting your rights, 
+              advancing your interests, and securing lasting solutions.
+            </p>
+          </div>
         </div>
       </div>
     </section>
