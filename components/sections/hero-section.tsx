@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
-import { ArrowRight, Phone, Award, Shield, Scale } from "lucide-react"
+import { ArrowRight, Phone, Award, Shield, Scale, Globe } from "lucide-react" // Added Globe icon
 
 export default function HeroSection() {
   return (
@@ -24,18 +24,18 @@ export default function HeroSection() {
             KEOnline Digitally Fit Awards 2024 Nominee
           </Badge>
           
-          {/* Client-Provided Heading */}
+          {/* Enhanced Heading highlighting international reach */}
           <h1 className="font-serif font-semibold text-4xl md:text-5xl lg:text-6xl leading-tight text-white">
             Expert Legal Representation <br className="hidden md:block" />
-            <span className="text-amber-400 font-light">Across Kenya</span>
+            <span className="text-amber-400 font-light">Across Kenya & Beyond</span>
           </h1>
           
-          {/* Client-Provided Supporting Line - Adjusted for your firm's specialties */}
+          {/* Supporting Line - Updated to include international capability */}
           <p className="text-xl text-slate-200 leading-relaxed max-w-3xl font-light">
-            [Your Firm Name] delivers strategic legal solutions in land law, succession planning, commercial litigation, and cybercrime matters — with integrity, professionalism, and excellence.
+            [Your Firm Name] delivers strategic legal solutions in land law, succession planning, commercial litigation, and cybercrime matters for clients in Kenya and internationally — with integrity, professionalism, and excellence.
           </p>
 
-          {/* Trust Signals */}
+          {/* Trust Signals - Added international element */}
           <div className="flex flex-wrap items-center gap-6 text-sm text-slate-300 pt-2">
             <div className="flex items-center">
               <Shield className="h-4 w-4 mr-2 text-amber-400" />
@@ -44,6 +44,10 @@ export default function HeroSection() {
             <div className="flex items-center">
               <Scale className="h-4 w-4 mr-2 text-amber-400" />
               <span>Proven Results</span>
+            </div>
+            <div className="flex items-center">
+              <Globe className="h-4 w-4 mr-2 text-amber-400" /> {/* New icon */}
+              <span>International Representation</span>
             </div>
           </div>
           
