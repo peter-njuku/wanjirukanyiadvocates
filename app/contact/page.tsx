@@ -123,18 +123,19 @@ export default function ContactPage() {
                     Fill out the form below and we'll get back to you as soon as possible.
                   </CardDescription>
                 </CardHeader>
-                <CardContent className="space-y-6">
-                  <iframe
-                    src="https://docs.google.com/forms/d/e/1FAIpQLSdeESLjpwZTkSXi4sLBz4yYV52a-qWLBIn0098ZaG5jN064mA/viewform?embedded=true"
-                    width="100%"
-                    height="800"
-                    frameBorder="0"
-                    marginHeight={0}
-                    marginWidth={0}
-                  >
-                    Loading…
-                  </iframe>
-                </CardContent>
+                  <CardContent className="space-y-6">
+                    <iframe
+                      src="https://docs.google.com/forms/d/e/1FAIpQLSdeESLjpwZTkSXi4sLBz4yYV52a-qWLBIn0098ZaG5jN064mA/viewform?embedded=true"
+                      width="100%"
+                      height="800"
+                      frameBorder="0"
+                      marginHeight={0}
+                      marginWidth={0}
+                      className="rounded-lg border border-slate-200"
+                    >
+                      Loading…
+                    </iframe>
+                  </CardContent>
               </Card>
             </div>
           </div>
