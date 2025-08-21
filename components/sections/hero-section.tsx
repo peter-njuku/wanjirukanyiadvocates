@@ -32,7 +32,7 @@ export default function HeroSection() {
           
           {/* Supporting Line - Updated to include international capability */}
           <p className="text-xl text-slate-200 leading-relaxed max-w-3xl font-light">
-            [Your Firm Name] delivers strategic legal solutions in land law, succession planning, commercial litigation, and cybercrime matters for clients in Kenya and internationally — with integrity, professionalism, and excellence.
+            Wanjiru Kanyi Law Advocates delivers strategic legal solutions in land law, succession planning, commercial litigation, and cybercrime matters for clients in Kenya and internationally — with integrity, professionalism, and excellence.
           </p>
 
           {/* Trust Signals - Added international element */}
