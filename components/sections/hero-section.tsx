@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
 import { ArrowRight, Phone, Award, Shield, Scale, Globe } from "lucide-react"
 
@@ -18,14 +17,13 @@ export default function HeroSection() {
       <div className="container relative mx-auto px-4 z-10">
         <div className="max-w-3xl lg:max-w-4xl text-left space-y-6">
           
-          {/* Award Badge */}
-          <Badge 
-            variant="outline" 
-            className="mb-4 bg-amber-500/10 text-amber-200 border-amber-500/30 px-4 py-1.5 text-sm font-light"
-          >
-            <Award className="mr-2 h-4 w-4" />
-            KEOnline Digitally Fit Awards 2024 Nominee
-          </Badge>
+          {/* Award Banner */}
+          <div className="inline-flex items-center bg-gradient-to-r from-amber-500 to-amber-600 text-white px-5 py-2 rounded-full shadow-lg mb-6">
+            <Award className="mr-2 h-5 w-5 text-white" />
+            <span className="text-sm font-medium">
+              KEOnline Digitally Fit Awards 2024 – Nominee
+            </span>
+          </div>
           
           {/* Main Heading - Unique & Global */}
           <h1 className="font-serif font-semibold text-4xl md:text-5xl lg:text-6xl leading-tight text-white">
@@ -35,7 +33,7 @@ export default function HeroSection() {
           
           {/* Supporting Line */}
           <p className="text-xl text-slate-200 leading-relaxed max-w-3xl font-light">
-          Trusted legal solutions in land law, succession, commercial disputes, and cybercrime — with integrity and excellence.
+            Trusted legal solutions in land law, succession, commercial disputes, and cybercrime — with integrity and excellence.
           </p>
 
           {/* Trust Signals */}
