@@ -35,7 +35,7 @@ export default function HeroSection() {
           
           {/* Supporting Line */}
           <p className="text-xl text-slate-200 leading-relaxed max-w-3xl font-light">
-            Wanjiru Kanyi Law Advocates delivers strategic legal solutions in land law, succession planning, commercial litigation, and cybercrime matters for clients in Kenya and internationally — with integrity, professionalism, and excellence.
+          Trusted legal solutions in land law, succession, commercial disputes, and cybercrime — with integrity and excellence.
           </p>
 
           {/* Trust Signals */}
