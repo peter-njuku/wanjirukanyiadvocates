@@ -4,7 +4,7 @@ import { ArrowRight, Phone, Award, Shield, Scale, Globe } from "lucide-react"
 
 export default function HeroSection() {
   return (
-    <section className="relative py-32 md:py-40 lg:py-48">
+    <section className="relative py-32 md:py-40 lg:py-48 overflow-hidden">
       {/* Background with Professional Overlay */}
       <div className="absolute inset-0 z-0">
         <div 
@@ -13,17 +13,20 @@ export default function HeroSection() {
         {/* Overlay - darker left, clear right */}
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/50 to-transparent"></div>
       </div>
+
+      {/* Award Ribbon - Top Left Corner */}
+      <div className="absolute top-6 left-[-40px] rotate-[-45deg] bg-gradient-to-r from-amber-500 to-amber-600 text-white px-16 py-2 shadow-xl z-20">
+        <div className="flex items-center justify-center space-x-2">
+          <Award className="h-5 w-5 text-white" />
+          <span className="text-sm font-semibold tracking-wide">
+            KEOnline Digitally Fit Awards 2024 – Nominee
+          </span>
+        </div>
+      </div>
       
+      {/* Content */}
       <div className="container relative mx-auto px-4 z-10">
         <div className="max-w-3xl lg:max-w-4xl text-left space-y-6">
-          
-          {/* Award Banner */}
-          <div className="inline-flex items-center bg-gradient-to-r from-amber-500 to-amber-600 text-white px-5 py-2 rounded-full shadow-lg mb-6">
-            <Award className="mr-2 h-5 w-5 text-white" />
-            <span className="text-sm font-medium">
-              KEOnline Digitally Fit Awards 2024 – Nominee
-            </span>
-          </div>
           
           {/* Main Heading - Unique & Global */}
           <h1 className="font-serif font-semibold text-4xl md:text-5xl lg:text-6xl leading-tight text-white">
