@@ -1,15 +1,15 @@
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
-import { ArrowRight, Phone, Award, Shield, Scale, Globe } from "lucide-react" // Added Globe icon
+import { ArrowRight, Phone, Award, Shield, Scale, Globe } from "lucide-react"
 
 export default function HeroSection() {
   return (
-    <section className="relative pt-32 md:pt-40 lg:pt-44 pb-20 md:pb-28 lg:pb-32">
+    <section className="relative py-32 md:py-40 lg:py-48">
       {/* Background with Professional Overlay */}
       <div className="absolute inset-0 z-0">
         <div 
-          className="absolute inset-0 bg-[url('/hero2.png')] bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 bg-[url('/hero2.png')] bg-contain bg-center bg-no-repeat bg-slate-900"
         />
         {/* Sophisticated dark overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/85 via-slate-900/70 to-slate-900/40"></div>
@@ -30,12 +30,12 @@ export default function HeroSection() {
             <span className="text-amber-400 font-light">Across Kenya & Beyond</span>
           </h1>
           
-          {/* Supporting Line - Updated to include international capability */}
+          {/* Supporting Line */}
           <p className="text-xl text-slate-200 leading-relaxed max-w-3xl font-light">
             Wanjiru Kanyi Law Advocates delivers strategic legal solutions in land law, succession planning, commercial litigation, and cybercrime matters for clients in Kenya and internationally — with integrity, professionalism, and excellence.
           </p>
 
-          {/* Trust Signals - Added international element */}
+          {/* Trust Signals */}
           <div className="flex flex-wrap items-center gap-6 text-sm text-slate-300 pt-2">
             <div className="flex items-center">
               <Shield className="h-4 w-4 mr-2 text-amber-400" />
@@ -46,7 +46,7 @@ export default function HeroSection() {
               <span>Proven Results</span>
             </div>
             <div className="flex items-center">
-              <Globe className="h-4 w-4 mr-2 text-amber-400" /> {/* New icon */}
+              <Globe className="h-4 w-4 mr-2 text-amber-400" />
               <span>International Representation</span>
             </div>
           </div>
