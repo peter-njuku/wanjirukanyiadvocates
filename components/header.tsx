@@ -9,9 +9,8 @@ import {
   Sheet, 
   SheetContent, 
   SheetTrigger, 
-  SheetTitle, 
-  SheetDescription
-} from "@/components/ui/sheet";
+  SheetTitle
+} from "@/components/ui/sheet"; // Removed SheetDescription import
 import { Phone, Mail, MapPin, Menu, Award } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
@@ -44,12 +43,12 @@ export default function Header() {
                 <span>+254792932136</span>
               </a>
               <a
-                href="mailto:contact@wanjirukanyilaw.com" // Updated to branded email
+                href="mailto:contact@wanjirukanyilaw.com"
                 className="flex items-center gap-1 hover:text-cyan-400 transition-colors"
                 aria-label="Email us at contact@wanjirukanyilaw.com"
               >
                 <Mail className="h-3 w-3" />
-                <span>contact@wanjirukanyilaw.com</span> {/* Updated to branded email */}
+                <span>contact@wanjirukanyilaw.com</span>
               </a>
             </div>
             <div className="flex items-center gap-1 text-slate-300">
@@ -61,18 +60,18 @@ export default function Header() {
       </div>
 
       {/* Main navigation */}
-      <div className="container mx-auto px-4 py-3"> {/* Reduced padding for better logo prominence */}
+      <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
-          {/* Logo - Made more prominent */}
+          {/* Logo */}
           <Link href="/" className="flex items-center group">
             <div className="flex items-center space-x-3">
               <div className="relative">
                 <Image
                   src="/logo.jpg"
                   alt="Wanjiru Kanyi Law Advocates Logo"
-                  width={180} // Increased width
-                  height={70} // Increased height
-                  className="h-14 w-auto transition-transform group-hover:scale-105" // Larger and hover effect
+                  width={180}
+                  height={70}
+                  className="h-14 w-auto transition-transform group-hover:scale-105"
                   priority
                 />
                 {/* Award badge on logo */}
@@ -84,7 +83,6 @@ export default function Header() {
                 </div>
               </div>
             </div>
-            {/* Firm name - made slightly smaller to balance with larger logo */}
             <div className="font-serif font-bold text-xl text-slate-900 ml-3 hidden sm:block"> 
               Wanjiru Kanyi Law Advocates
             </div>
@@ -110,7 +108,7 @@ export default function Header() {
 
           {/* Desktop CTA Button */}
           <Button asChild className="bg-cyan-600 hover:bg-cyan-700 text-white hidden md:flex font-semibold">
-            <Link href="/consultation">Book Consultation</Link> {/* Changed text */}
+            <Link href="/consultation">Book Consultation</Link>
           </Button>
 
           {/* Mobile Menu Button */}
@@ -126,14 +124,10 @@ export default function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[85%] sm:w-[400px] bg-white">
-              <SheetTitle asChild>
-                <VisuallyHidden>Main Navigation Menu</VisuallyHidden>
-              </SheetTitle>
-              <SheetDescription asChild>
-                <VisuallyHidden>
-                  Navigate to different sections of the website
-                </VisuallyHidden>
-              </SheetDescription>
+              {/* Removed SheetDescription usage - it was causing the error */}
+              <VisuallyHidden>
+                <SheetTitle>Main Navigation Menu</SheetTitle>
+              </VisuallyHidden>
               
               {/* Mobile Navigation Menu */}
               <nav className="flex flex-col gap-6 mt-12">
