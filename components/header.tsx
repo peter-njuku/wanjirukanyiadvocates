@@ -41,8 +41,8 @@ export default function Header() {
         className={cn(
           "fixed top-0 left-0 w-full z-50 transition-colors duration-300",
           isScrolled
-            ? "bg-transparent"
-            : "bg-white/70 backdrop-blur-sm border-b border-slate-200"
+            ?  "bg-white/70 backdrop-blur-md shadow-sm"
+  : "bg-white/95 backdrop-blur-sm"
         )}
       >
         {/* Top contact bar */}
