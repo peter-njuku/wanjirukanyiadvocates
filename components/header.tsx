@@ -64,21 +64,19 @@ export default function Header() {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo + Heading + Tagline */}
-          <Link href="/" className="flex items-center space-x-4">
+          <Link href="/" className="flex items-center space-x-6">
             <Image
               src="/logo.jpg"
               alt="Wanjiru Kanyi Law Advocates Logo"
-              width={240} // Back to bigger size
+              width={280} // Increased size further
               height={100}
-              className="h-20 w-auto"
+              className="h-24 w-auto" // Bigger visual presence
               priority
             />
             <div className="flex flex-col">
-              {/* Gradient Heading */}
-              <div className="font-sans font-extrabold tracking-tight text-3xl bg-gradient-to-r from-cyan-600 via-blue-600 to-green-500 bg-clip-text text-transparent">
+              <div className="font-sans font-extrabold tracking-tight text-3xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 via-blue-600 to-emerald-600">
                 Wanjiru Kanyi Law Advocates
               </div>
-              {/* Tagline */}
               <div className="text-sm font-medium text-cyan-700 mt-1 italic">
                 Lead Where You Are
               </div>
