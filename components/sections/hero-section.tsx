@@ -11,23 +11,26 @@ export default function HeroSection() {
         <div 
           className="absolute inset-0 bg-[url('/hero2.png')] bg-contain bg-right bg-no-repeat bg-slate-900"
         />
-        {/* Adjusted Overlay - stronger on left, clear on right */}
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/40 to-transparent"></div>
+        {/* Overlay - darker left, clear right */}
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/50 to-transparent"></div>
       </div>
       
       <div className="container relative mx-auto px-4 z-10">
         <div className="max-w-3xl lg:max-w-4xl text-left space-y-6">
           
-          {/* Subtle Award Badge */}
-          <Badge variant="outline" className="mb-4 bg-amber-500/10 text-amber-200 border-amber-500/30 px-4 py-1.5 text-sm font-light">
+          {/* Award Badge */}
+          <Badge 
+            variant="outline" 
+            className="mb-4 bg-amber-500/10 text-amber-200 border-amber-500/30 px-4 py-1.5 text-sm font-light"
+          >
             <Award className="mr-2 h-4 w-4" />
             KEOnline Digitally Fit Awards 2024 Nominee
           </Badge>
           
-          {/* Enhanced Heading highlighting international reach */}
+          {/* Main Heading - Unique & Global */}
           <h1 className="font-serif font-semibold text-4xl md:text-5xl lg:text-6xl leading-tight text-white">
-            Expert Legal Representation <br className="hidden md:block" />
-            <span className="text-amber-400 font-light">Across Kenya & Beyond</span>
+            Strategic Legal Solutions <br className="hidden md:block" />
+            <span className="text-amber-400 font-light">With Global Reach</span>
           </h1>
           
           {/* Supporting Line */}
