@@ -4,39 +4,39 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: oklch(1 0 0); /* White background */
-  --foreground: oklch(0.205 0 0); /* Dark gray text */
-  --card: oklch(0.97 0 0); /* Light gray card background */
-  --card-foreground: oklch(0.269 0 0); /* Darker text on cards */
-  --popover: oklch(1 0 0); /* White popover background */
-  --popover-foreground: oklch(0.205 0 0); /* Dark text in popovers */
-  --primary: oklch(0.35 0.15 240); /* Deep blue primary */
-  --primary-foreground: oklch(1 0 0); /* White text on primary */
-  --secondary: oklch(0.75 0.12 220); /* Light blue accent */
-  --secondary-foreground: oklch(0.205 0 0); /* Dark text on secondary */
-  --muted: oklch(0.97 0 0); /* Light muted background */
-  --muted-foreground: oklch(0.269 0 0); /* Muted text */
-  --accent: oklch(0.55 0.18 230); /* Medium blue accent for highlights */
-  --accent-foreground: oklch(1 0 0); /* White text on accent */
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.205 0 0);
+  --card: oklch(0.97 0 0);
+  --card-foreground: oklch(0.269 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.205 0 0);
+  --primary: oklch(0.35 0.15 240);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.75 0.12 220);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.269 0 0);
+  --accent: oklch(0.55 0.18 230);
+  --accent-foreground: oklch(1 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(1 0 0);
-  --border: oklch(0.85 0 0); /* Light border */
-  --input: oklch(0.985 0 0); /* Very light input background */
-  --ring: oklch(0.55 0.18 230 / 0.5); /* Blue focus ring */
+  --border: oklch(0.85 0 0);
+  --input: oklch(0.985 0 0);
+  --ring: oklch(0.55 0.18 230 / 0.5);
   --chart-1: oklch(0.35 0.15 240);
   --chart-2: oklch(0.55 0.18 230);
   --chart-3: oklch(0.75 0.12 220);
   --chart-4: oklch(0.45 0.16 235);
   --chart-5: oklch(0.65 0.14 225);
-  --radius: 0.25rem; /* Subtle corner rounding */
-  --sidebar: oklch(0.97 0 0); /* Light sidebar background */
-  --sidebar-foreground: oklch(0.269 0 0); /* Sidebar text */
-  --sidebar-primary: oklch(0.35 0.15 240); /* Blue sidebar primary */
-  --sidebar-primary-foreground: oklch(1 0 0); /* White text on primary sidebar */
-  --sidebar-accent: oklch(0.75 0.12 220); /* Light blue sidebar accent */
-  --sidebar-accent-foreground: oklch(0.205 0 0); /* Dark text on sidebar accent */
-  --sidebar-border: oklch(0.85 0 0); /* Sidebar border */
-  --sidebar-ring: oklch(0.55 0.18 230 / 0.5); /* Blue sidebar focus ring */
+  --radius: 0.25rem;
+  --sidebar: oklch(0.97 0 0);
+  --sidebar-foreground: oklch(0.269 0 0);
+  --sidebar-primary: oklch(0.35 0.15 240);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.75 0.12 220);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.85 0 0);
+  --sidebar-ring: oklch(0.55 0.18 230 / 0.5);
   --font-open-sans: "Open Sans", sans-serif;
   --font-montserrat: "Montserrat", serif;
 }
@@ -119,22 +119,27 @@
 }
 
 @layer base {
-  body {
-    overflow-x: hidden !important;
+  * {
+    @apply border-border outline-ring/50;
+    box-sizing: border-box; /* Prevents weird width expansion */
   }
 
-  /* Make sure containers don't exceed screen width */
-  .container,
-  .max-w-screen,
-  .max-w-full {
+  html, body {
+    @apply bg-background text-foreground font-sans;
+    overflow-x: hidden !important; /* Prevents sideways scroll */
+    width: 100% !important;
     max-width: 100% !important;
-    overflow-x: hidden !important;
   }
 
-  /* Prevent images from overflowing */
-  img, video {
+  /* Make media responsive */
+  img, video, svg {
     max-width: 100%;
     height: auto;
     display: block;
+  }
+
+  /* Optional: ensures scrollbar always present to prevent shift */
+  html {
+    overflow-y: scroll;
   }
 }
