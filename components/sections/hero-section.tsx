@@ -5,7 +5,7 @@ import { ArrowRight, Phone, Award, Shield, Scale, Globe } from "lucide-react" //
 
 export default function HeroSection() {
   return (
-    <section className="relative py-20 md:py-28 lg:py-32">
+    <section className="relative pt-32 md:pt-40 lg:pt-44 pb-20 md:pb-28 lg:pb-32">
       {/* Background with Professional Overlay */}
       <div className="absolute inset-0 z-0">
         <div 
