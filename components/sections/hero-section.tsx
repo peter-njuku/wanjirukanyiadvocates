@@ -9,7 +9,7 @@ export default function HeroSection() {
       {/* Background with Professional Overlay */}
       <div className="absolute inset-0 z-0">
         <div 
-          className="absolute inset-0 bg-[url('/hero2.png')] bg-contain bg-center bg-no-repeat bg-slate-900"
+          className="absolute inset-0 bg-[url('/hero2.png')] bg-contain bg-right bg-no-repeat bg-slate-900"
         />
         {/* Sophisticated dark overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/85 via-slate-900/70 to-slate-900/40"></div>
