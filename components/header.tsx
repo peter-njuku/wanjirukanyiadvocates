@@ -179,7 +179,7 @@ export default function Header() {
       </header>
 
       {/* Spacer to prevent content hiding behind the fixed header */}
-      <div className="h-[132px] md:h-[144px]" />
+      <div className="h-[150px] md:h-[144px]" />
     </>
   )
 }
