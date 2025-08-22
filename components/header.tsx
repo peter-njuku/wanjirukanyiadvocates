@@ -10,9 +10,9 @@ import {
   SheetContent, 
   SheetTrigger, 
   SheetTitle, 
-  SheetDescription // 1. Import SheetDescription
+  SheetDescription
 } from "@/components/ui/sheet";
-import { Phone, Mail, MapPin, Menu } from "lucide-react";
+import { Phone, Mail, MapPin, Menu, Award } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
@@ -20,7 +20,7 @@ const navItems = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Services", href: "/services" },
-  {name:"Blog", href:"/blog"},
+  { name: "Blog", href: "/blog" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -29,7 +29,7 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="bg-white border-b border-slate-200">
+    <header className="bg-white border-b border-slate-200 sticky top-0 z-50">
       {/* Top contact bar */}
       <div className="bg-slate-900 text-white py-2">
         <div className="container mx-auto px-4">
@@ -44,12 +44,12 @@ export default function Header() {
                 <span>+254792932136</span>
               </a>
               <a
-                href="mailto:wanjirukanyilawa@gmail.com"
+                href="mailto:contact@wanjirukanyilaw.com" // Updated to branded email
                 className="flex items-center gap-1 hover:text-cyan-400 transition-colors"
-                aria-label="Email us at wanjirukanyilawa@gmail.com"
+                aria-label="Email us at contact@wanjirukanyilaw.com"
               >
                 <Mail className="h-3 w-3" />
-                <span>wanjirukanyilawa@gmail.com</span>
+                <span>contact@wanjirukanyilaw.com</span> {/* Updated to branded email */}
               </a>
             </div>
             <div className="flex items-center gap-1 text-slate-300">
@@ -61,21 +61,31 @@ export default function Header() {
       </div>
 
       {/* Main navigation */}
-      <div className="container mx-auto px-4 py-4">
+      <div className="container mx-auto px-4 py-3"> {/* Reduced padding for better logo prominence */}
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="flex items-center">
+          {/* Logo - Made more prominent */}
+          <Link href="/" className="flex items-center group">
             <div className="flex items-center space-x-3">
-              <Image
-                src="/logo.jpg"
-                alt="Wanjiru Kanyi Law Advocates Logo"
-                width={160}
-                height={60}
-                className="h-12 w-auto"
-                priority
-              />
+              <div className="relative">
+                <Image
+                  src="/logo.jpg"
+                  alt="Wanjiru Kanyi Law Advocates Logo"
+                  width={180} // Increased width
+                  height={70} // Increased height
+                  className="h-14 w-auto transition-transform group-hover:scale-105" // Larger and hover effect
+                  priority
+                />
+                {/* Award badge on logo */}
+                <div className="absolute -top-2 -right-2">
+                  <div className="bg-amber-500 text-white text-xs px-2 py-1 rounded-full flex items-center gap-1 shadow-md">
+                    <Award className="h-3 w-3" />
+                    <span>2024</span>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="font-serif font-black text-2xl text-slate-900"> {/* Deep blue text */}
+            {/* Firm name - made slightly smaller to balance with larger logo */}
+            <div className="font-serif font-bold text-xl text-slate-900 ml-3 hidden sm:block"> 
               Wanjiru Kanyi Law Advocates
             </div>
           </Link>
@@ -87,10 +97,10 @@ export default function Header() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "transition-colors",
+                  "transition-colors font-medium",
                   pathname === item.href
-                    ? "text-cyan-600 font-semibold"
-                    : "text-slate-700 hover:text-cyan-600"
+                    ? "text-cyan-600 font-semibold border-b-2 border-cyan-600"
+                    : "text-slate-700 hover:text-cyan-600 hover:border-b-2 hover:border-cyan-600/50"
                 )}
               >
                 {item.name}
@@ -99,8 +109,8 @@ export default function Header() {
           </nav>
 
           {/* Desktop CTA Button */}
-          <Button asChild className="bg-cyan-600 hover:bg-cyan-700 text-white hidden md:flex">
-            <Link href="/contact">Schedule Consultation</Link>
+          <Button asChild className="bg-cyan-600 hover:bg-cyan-700 text-white hidden md:flex font-semibold">
+            <Link href="/consultation">Book Consultation</Link> {/* Changed text */}
           </Button>
 
           {/* Mobile Menu Button */}
@@ -116,7 +126,6 @@ export default function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[85%] sm:w-[400px] bg-white">
-              {/* 2. Add visually hidden title and description for accessibility */}
               <SheetTitle asChild>
                 <VisuallyHidden>Main Navigation Menu</VisuallyHidden>
               </SheetTitle>
@@ -127,25 +136,25 @@ export default function Header() {
               </SheetDescription>
               
               {/* Mobile Navigation Menu */}
-              <nav className="flex flex-col gap-8 mt-12">
+              <nav className="flex flex-col gap-6 mt-12">
                 {navItems.map((item) => (
                   <Link
                     key={item.href}
                     href={item.href}
                     onClick={() => setIsOpen(false)}
                     className={cn(
-                      "text-lg font-medium transition-colors",
+                      "text-lg font-medium transition-colors py-2 px-4 rounded-lg",
                       pathname === item.href
-                        ? "text-cyan-600 font-semibold"
-                        : "text-slate-700 hover:text-cyan-600"
+                        ? "text-cyan-600 font-semibold bg-cyan-50"
+                        : "text-slate-700 hover:text-cyan-600 hover:bg-slate-100"
                     )}
                   >
                     {item.name}
                   </Link>
                 ))}
-                <Button asChild className="bg-cyan-600 hover:bg-cyan-700 text-white mt-4">
-                  <Link href="/contact" onClick={() => setIsOpen(false)}>
-                    Schedule Consultation
+                <Button asChild className="bg-cyan-600 hover:bg-cyan-700 text-white mt-4 font-semibold">
+                  <Link href="/consultation" onClick={() => setIsOpen(false)}>
+                    Book Consultation
                   </Link>
                 </Button>
               </nav>
