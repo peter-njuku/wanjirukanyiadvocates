@@ -1,57 +1,43 @@
-export default function Header() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const pathname = usePathname();
+"use client"
 
-  // Detect scroll
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20); // change after 20px scroll
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+import Link from "next/link"
+import Image from "next/image"
 
+export default function Navbar() {
   return (
-    <header
-      className={cn(
-        "fixed w-full z-50 transition-all duration-300",
-        isScrolled
-          ? "bg-transparent shadow-none backdrop-blur-sm"
-          : "bg-white border-b border-slate-200"
-      )}
-    >
-      {/* Top contact bar */}
-      <div
-        className={cn(
-          "py-2 transition-all duration-300",
-          isScrolled ? "hidden" : "bg-slate-900 text-white"
-        )}
-      >
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col sm:flex-row justify-between items-center text-sm gap-2">
-            <div className="flex items-center gap-4">
-              <a
-                href="tel:+254792932136"
-                className="flex items-center gap-1 hover:text-cyan-400 transition-colors"
-                aria-label="Call us at +254792932136"
-              >
-                <Phone className="h-3 w-3" />
-                <span>+254792932136</span>
-              </a>
-              <a
-                href="mailto:wanjirukanyilawa@gmail.com"
-                className="flex items-center gap-1 hover:text-cyan-400 transition-colors"
-                aria-label="Email us at wanjirukanyilawa@gmail.com"
-              >
-                <Mail className="h-3 w-3" />
-                <span>wanjirukanyilawa@gmail.com</span>
-              </a>
+    <header className="w-full border-b border-slate-200 bg-white/70 backdrop-blur-sm">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+        
+        {/* Logo + Heading + Tagline */}
+        <Link href="/" className="flex items-center space-x-4">
+          <Image
+            src="/logo.jpg"
+            alt="Wanjiru Kanyi Law Advocates Logo"
+            width={250}   // bigger size
+            height={100}
+            className="h-20 w-auto"
+            priority
+          />
+          <div className="flex flex-col">
+            {/* Gradient Heading */}
+            <div className="text-3xl font-extrabold tracking-tight bg-gradient-to-r from-cyan-600 via-blue-600 to-green-500 bg-clip-text text-transparent">
+              Wanjiru Kanyi Law Advocates
             </div>
-            <div className="flex items-center gap-1 text-slate-300">
-              <MapPin className="h-3 w-3" />
-              <span>Mustard Seed Complex, Uthiru, Nairobi</span>
+
+            {/* Tagline */}
+            <div className="text-sm font-medium mt-1 italic bg-gradient-to-r from-blue-500 to-cyan-600 bg-clip-text text-transparent">
+              Lead Where You Are
             </div>
           </div>
-        </div>
+        </Link>
+
+        {/* Navigation links (you can customize here) */}
+        <nav className="flex space-x-6 text-slate-700 font-medium">
+          <Link href="/about" className="hover:text-cyan-600 transition-colors">About</Link>
+          <Link href="/services" className="hover:text-cyan-600 transition-colors">Services</Link>
+          <Link href="/contact" className="hover:text-cyan-600 transition-colors">Contact</Link>
+        </nav>
       </div>
+    </header>
+  )
+}
