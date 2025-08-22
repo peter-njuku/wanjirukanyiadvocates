@@ -119,23 +119,22 @@
 }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
+  body {
+    overflow-x: hidden !important;
   }
 
-  html, body {
-    @apply bg-background text-foreground font-sans;
-    overflow-x: hidden;   /* Prevents horizontal scroll */
-    width: 100%;          /* Force fit to viewport */
+  /* Make sure containers don't exceed screen width */
+  .container,
+  .max-w-screen,
+  .max-w-full {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
   }
 
-  img, video, svg {
+  /* Prevent images from overflowing */
+  img, video {
     max-width: 100%;
     height: auto;
-  }
-
-  /* Optional: prevents scroll jump when scrollbar appears */
-  html {
-    overflow-y: scroll;
+    display: block;
   }
 }
