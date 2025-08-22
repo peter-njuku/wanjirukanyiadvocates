@@ -10,7 +10,7 @@ import {
   SheetContent, 
   SheetTrigger, 
   SheetTitle, 
-  SheetDescription // 1. Import SheetDescription
+  SheetDescription
 } from "@/components/ui/sheet";
 import { Phone, Mail, MapPin, Menu } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -20,7 +20,7 @@ const navItems = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Services", href: "/services" },
-  {name:"Blog", href:"/blog"},
+  { name:"Blog", href:"/blog"},
   { name: "Contact", href: "/contact" },
 ];
 
@@ -63,19 +63,17 @@ export default function Header() {
       {/* Main navigation */}
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="flex items-center">
-            <div className="flex items-center space-x-3">
-              <Image
-                src="/logo.jpg"
-                alt="Wanjiru Kanyi Law Advocates Logo"
-                width={160}
-                height={60}
-                className="h-12 w-auto"
-                priority
-              />
-            </div>
-            <div className="font-serif font-black text-2xl text-slate-900"> {/* Deep blue text */}
+          {/* Logo + Heading */}
+          <Link href="/" className="flex items-center space-x-4">
+            <Image
+              src="/logo.jpg"
+              alt="Wanjiru Kanyi Law Advocates Logo"
+              width={200}   // Increased size
+              height={80}   // Increased size
+              className="h-16 w-auto" // Adjust height to match
+              priority
+            />
+            <div className="font-playfair font-bold text-3xl text-slate-900 tracking-wide">
               Wanjiru Kanyi Law Advocates
             </div>
           </Link>
@@ -116,7 +114,6 @@ export default function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[85%] sm:w-[400px] bg-white">
-              {/* 2. Add visually hidden title and description for accessibility */}
               <SheetTitle asChild>
                 <VisuallyHidden>Main Navigation Menu</VisuallyHidden>
               </SheetTitle>
