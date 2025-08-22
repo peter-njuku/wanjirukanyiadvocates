@@ -68,17 +68,15 @@ export default function Header() {
             <Image
               src="/logo.jpg"
               alt="Wanjiru Kanyi Law Advocates Logo"
-              width={240} // Back to bigger size
+              width={240} // Increased size again
               height={100}
-              className="h-20 w-auto"
+              className="h-20 w-auto" // bigger height
               priority
             />
             <div className="flex flex-col">
-              {/* Gradient Heading */}
-              <div className="font-sans font-extrabold tracking-tight text-3xl bg-gradient-to-r from-cyan-600 via-blue-600 to-green-500 bg-clip-text text-transparent">
+              <div className="font-sans font-extrabold tracking-tight text-3xl bg-gradient-to-r from-cyan-600 via-blue-600 to-emerald-500 bg-clip-text text-transparent">
                 Wanjiru Kanyi Law Advocates
               </div>
-              {/* Tagline */}
               <div className="text-sm font-medium text-cyan-700 mt-1 italic">
                 Lead Where You Are
               </div>
