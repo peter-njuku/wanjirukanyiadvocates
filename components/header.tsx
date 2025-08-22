@@ -20,7 +20,7 @@ const navItems = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Services", href: "/services" },
-  { name:"Blog", href:"/blog"},
+  { name: "Blog", href: "/blog" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -63,18 +63,23 @@ export default function Header() {
       {/* Main navigation */}
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo + Heading */}
+          {/* Logo + Heading + Tagline */}
           <Link href="/" className="flex items-center space-x-4">
             <Image
               src="/logo.jpg"
               alt="Wanjiru Kanyi Law Advocates Logo"
-              width={200}   // Increased size
-              height={80}   // Increased size
-              className="h-16 w-auto" // Adjust height to match
+              width={200} // Increased size
+              height={80}
+              className="h-16 w-auto"
               priority
             />
-            <div className="font-playfair font-bold text-3xl text-slate-900 tracking-wide">
-              Wanjiru Kanyi Law Advocates
+            <div className="flex flex-col">
+              <div className="font-sans font-extrabold tracking-tight text-3xl text-slate-900">
+                Wanjiru Kanyi Law Advocates
+              </div>
+              <div className="text-sm font-medium text-cyan-700 mt-1 italic">
+                Lead Where You Are
+              </div>
             </div>
           </Link>
 
