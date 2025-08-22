@@ -68,13 +68,13 @@ export default function Header() {
             <Image
               src="/logo.jpg"
               alt="Wanjiru Kanyi Law Advocates Logo"
-              width={280} // Increased size further
-              height={100}
-              className="h-24 w-auto" // Bigger visual presence
+              width={320} // Bigger visual identity
+              height={120}
+              className="h-28 w-auto" // Larger than text
               priority
             />
             <div className="flex flex-col">
-              <div className="font-sans font-extrabold tracking-tight text-3xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 via-blue-600 to-emerald-600">
+              <div className="font-sans font-extrabold tracking-tight text-2xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 via-blue-600 to-emerald-600">
                 Wanjiru Kanyi Law Advocates
               </div>
               <div className="text-sm font-medium text-cyan-700 mt-1 italic">
