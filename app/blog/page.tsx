@@ -28,13 +28,13 @@ const blogPosts = [
   },
   {
     id: 3,
-    title: "Cyberbullying in Kenya: Offenses, Effects, and Legal Remedies",
+    title: "Computer misuse and cyber crimes in Kenya: Offenses, Effects, and Legal Remedies",
     excerpt: "Understanding the Computer Misuse and Cyber Crimes Act 2018 and how to protect yourself from online harassment.",
     date: "2024-03-05",
     author: "Wanjiru Kanyi",
     readTime: "8 min read",
     category: "Cyber Law",
-    slug: "cyberbullying-legal-remedies"
+    slug: "cybercrime-legal-remedies"
   },
   {
     id: 4,

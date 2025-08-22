@@ -48,7 +48,7 @@ export default function Footer() {
               <li>Land & Property Law</li>
               <li>Succession & Inheritance</li>
               <li>Data Protection</li>
-              <li>Cyberbullying Cases</li>
+              <li>Computer misuse and cyber crime Cases</li>
               <li>Employment Law</li>
               <li>Family Matters</li>
             </ul>

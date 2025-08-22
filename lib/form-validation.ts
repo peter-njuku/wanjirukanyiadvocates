@@ -35,7 +35,7 @@ export const contactFormSchema = z.object({
           "land-property",
           "succession",
           "data-protection",
-          "cyberbullying",
+          "computer misuse and cyber crimes",
           "employment",
           "family",
           "corporate",

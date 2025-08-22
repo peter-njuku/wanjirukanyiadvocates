@@ -31,7 +31,7 @@ export default function CyberbullyingPost() {
             </Badge>
             
             <h1 className="font-serif font-bold text-3xl md:text-4xl text-slate-900 mb-6">
-              Cyberbullying in Kenya: Offenses, Effects, and Legal Remedies
+              Computer misuse and cyber crimes in Kenya: Offenses, Effects, and Legal Remedies
             </h1>
             
             <div className="flex flex-wrap items-center gap-6 text-slate-600 mb-8">
@@ -66,12 +66,12 @@ export default function CyberbullyingPost() {
               <p className="text-cyan-100">Your legal protection against online harassment in Kenya</p>
             </div>
 
-            <h2>What is Cyberbullying and Cyber Harassment?</h2>
+            <h2>What is Cyber crimes and Cyber Harassment?</h2>
             
-            <p>Cyberbullying and cyber harassment refer to harassment that occurs through the use of telecommunication and digital devices such as phones, computers, and tablets. This harassment can also occur through social media platforms used to share information that can be accessed by many people.</p>
+            <p>Computer crimes and cyber harassment refer to harassment that occurs through the use of telecommunication and digital devices such as phones, computers, and tablets. This harassment can also occur through social media platforms used to share information that can be accessed by many people.</p>
 
             <div className="bg-slate-50 p-6 rounded-lg my-6 border-l-4 border-cyan-400">
-              <h4 className="text-slate-900 font-semibold mb-3">Examples of Cyberbullying</h4>
+              <h4 className="text-slate-900 font-semibold mb-3">Examples of Cyber </h4>
               <ul className="list-disc list-inside space-y-2 text-slate-700">
                 <li>Sharing false information about someone</li>
                 <li>Sharing mean or harmful content about a person</li>
@@ -111,7 +111,7 @@ export default function CyberbullyingPost() {
               </div>
             </div>
 
-            <h2>Punishment for Cyberbullying Offenses</h2>
+            <h2>Punishment for Cyber crime Offenses</h2>
             
             <div className="bg-red-50 p-6 rounded-lg my-6 border-l-4 border-red-400">
               <h4 className="text-red-800 font-semibold mb-3">Severe Penalties</h4>
@@ -128,7 +128,7 @@ export default function CyberbullyingPost() {
               <p className="text-red-700 text-sm mt-3">Or both fine and imprisonment</p>
             </div>
 
-            <h2>Devastating Effects of Cyberbullying</h2>
+            <h2>Devastating Effects of Cyber crimes</h2>
             
             <div className="bg-amber-50 p-6 rounded-lg my-6">
               <h4 className="text-amber-800 font-semibold mb-3">Psychological and Physical Impact</h4>
@@ -154,9 +154,9 @@ export default function CyberbullyingPost() {
               </ol>
             </div>
 
-            <h2>Understanding the Scope of Cyberbullying</h2>
+            <h2>Understanding the Scope of Cyber crimes</h2>
             
-            <p>Cyberbullying can be perpetrated by friends, workmates, family members, school mates, or acquaintances. Bullies often take advantage of their position of power, strength (physical or financial), or popularity to belittle, shame, taunt, threaten, or physically harass their victims.</p>
+            <p>Computer misuse and cyber crime can be perpetrated by friends, workmates, family members, school mates, or acquaintances. Bullies often take advantage of their position of power, strength (physical or financial), or popularity to belittle, shame, taunt, threaten, or physically harass their victims.</p>
 
             <div className="bg-slate-100 p-6 rounded-lg my-6">
               <h4 className="text-slate-900 font-semibold mb-3">Key Characteristics</h4>
@@ -175,13 +175,13 @@ export default function CyberbullyingPost() {
               <div className="bg-white p-4 border border-slate-200 rounded-lg text-center">
                 <BookOpen className="h-8 w-8 text-cyan-600 mx-auto mb-3" />
                 <h4 className="font-semibold text-slate-900 mb-2">Policy Development</h4>
-                <p className="text-sm text-slate-600">Schools and organizations should implement cyberbullying policies</p>
+                <p className="text-sm text-slate-600">Schools and organizations should implement cyber crime policies</p>
               </div>
 
               <div className="bg-white p-4 border border-slate-200 rounded-lg text-center">
                 <Scale className="h-8 w-8 text-cyan-600 mx-auto mb-3" />
                 <h4 className="font-semibold text-slate-900 mb-2">Awareness Programs</h4>
-                <p className="text-sm text-slate-600">Sensitize employees, students, and the public about cyberbullying dangers</p>
+                <p className="text-sm text-slate-600">Sensitize employees, students, and the public about Computer misuse and cyber crime dangers</p>
               </div>
 
               <div className="bg-white p-4 border border-slate-200 rounded-lg text-center">
@@ -193,7 +193,7 @@ export default function CyberbullyingPost() {
 
             <div className="bg-cyan-50 p-6 rounded-lg my-8 border-l-4 border-cyan-400">
               <h4 className="text-cyan-800 font-semibold mb-3">Legal Support Available</h4>
-              <p>At Wanjiru Kanyi Law Advocates, we provide comprehensive legal representation for cyberbullying cases. Our expertise in the Computer Misuse and Cyber Crimes Act ensures that victims receive the protection and justice they deserve.</p>
+              <p>At Wanjiru Kanyi Law Advocates, we provide comprehensive legal representation for computer misuse and cyber crimes cases. Our expertise in the Computer Misuse and Cyber Crimes Act ensures that victims receive the protection and justice they deserve.</p>
               <div className="mt-4 p-4 bg-white rounded">
                 <p className="text-slate-700 font-medium">📍 ACK Mustard Seed Complex, Ground Floor</p>
                 <p className="text-slate-700 font-medium">📞 Calls/WhatsApp: 0792932136</p>
@@ -202,7 +202,7 @@ export default function CyberbullyingPost() {
             </div>
 
             <p className="text-sm text-slate-500 mt-12">
-              <em>Disclaimer: This article provides general information about cyberbullying laws in Kenya and does not constitute legal advice. For specific legal guidance regarding cyberbullying cases, please consult with a qualified advocate.</em>
+              <em>Disclaimer: This article provides general information about computer misuse and cyber crime laws in Kenya and does not constitute legal advice. For specific legal guidance regarding cyber crime cases, please consult with a qualified advocate.</em>
             </p>
           </div>
 

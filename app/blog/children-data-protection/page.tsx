@@ -116,7 +116,7 @@ export default function ChildrenDataProtectionPost() {
               <ul className="list-disc list-inside space-y-2 text-red-700">
                 <li><strong>Child pornography:</strong> Images digitally manipulated and sold to pornographic sites</li>
                 <li><strong>Grooming:</strong> Children accessible to pedophiles for sexual exploitation</li>
-                <li><strong>Body shaming:</strong> Harassment and cyberbullying based on appearances</li>
+                <li><strong>Body shaming:</strong> Harassment based on appearances</li>
                 <li><strong>Abduction targeting:</strong> Children targeted and abducted using location data</li>
                 <li><strong>Sex slavery:</strong> Vulnerable children sold into trafficking rings</li>
                 <li><strong>Personal vendettas:</strong> Children used to settle disputes between adults</li>
@@ -228,7 +228,7 @@ export default function ChildrenDataProtectionPost() {
                   <li>Refusal to provide consent information</li>
                 </ul>
                 <ul className="list-disc list-inside space-y-1 text-cyan-700">
-                  <li>Cyberbullying targeting children</li>
+                  <li>Cyber crimes targeting children</li>
                   <li>Institutional non-compliance</li>
                   <li>Need for DPC complaints</li>
                 </ul>
@@ -283,10 +283,10 @@ export default function ChildrenDataProtectionPost() {
                   <p className="text-sm text-slate-600">Comprehensive analysis of Kenya's data protection framework</p>
                 </div>
               </Link>
-              <Link href="/blog/cyberbullying-legal-remedies" className="group">
+              <Link href="/blog/cybercrime-legal-remedies" className="group">
                 <div className="p-4 border border-slate-200 rounded-lg hover:border-cyan-300 transition-colors">
                   <h4 className="font-semibold text-slate-900 group-hover:text-cyan-700 mb-2">
-                    Cyberbullying in Kenya: Offenses, Effects, and Legal Remedies
+                    Computer misuse and cyber crimes in Kenya: Offenses, Effects, and Legal Remedies
                   </h4>
                   <p className="text-sm text-slate-600">Protecting children from online harassment and abuse</p>
                 </div>

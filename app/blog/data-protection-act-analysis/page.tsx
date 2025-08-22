@@ -303,10 +303,10 @@ export default function DataProtectionAnalysisPost() {
                   <p className="text-sm text-slate-600">Special focus on children's data protection under the Act</p>
                 </div>
               </Link>
-              <Link href="/blog/cyberbullying-legal-remedies" className="group">
+              <Link href="/blog/cybercrime-legal-remedies" className="group">
                 <div className="p-4 border border-slate-200 rounded-lg hover:border-cyan-300 transition-colors">
                   <h4 className="font-semibold text-slate-900 group-hover:text-cyan-700 mb-2">
-                    Cyberbullying in Kenya: Offenses, Effects, and Legal Remedies
+                    Computer misuse and cyber crimes in Kenya: Offenses, Effects, and Legal Remedies
                   </h4>
                   <p className="text-sm text-slate-600">Understanding related computer misuse and cyber crimes</p>
                 </div>

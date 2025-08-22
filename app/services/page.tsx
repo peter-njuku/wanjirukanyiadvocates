@@ -147,7 +147,6 @@ export default function ServicesPage() {
               </CardContent>
             </Card>
 
-            {/* Cyberbullying */}
             <Card className="border-slate-200 hover:shadow-xl transition-all duration-300 group">
               <CardHeader className="pb-4">
                 <div className="bg-cyan-50 rounded-lg p-3 w-fit mb-4 group-hover:bg-blue-50 transition-colors">
@@ -161,7 +160,7 @@ export default function ServicesPage() {
               <CardContent className="space-y-4">
                 <ul className="space-y-3 text-slate-700 mb-4">
                   {[
-                    "Cyberbullying case representation",
+                    "Cyber crime case representation",
                     "Evidence preservation and documentation",
                     "DCI complaint filing assistance",
                     "Victim support and counseling referrals",
@@ -177,7 +176,7 @@ export default function ServicesPage() {
                 </ul>
                 <div className="bg-rose-50 p-4 rounded-lg border border-rose-200">
                   <p className="text-sm font-medium text-rose-800">
-                    Cyberbullying penalties: Up to KES 20 million fine or imprisonment
+                    Cyber crime penalties: Up to KES 20 million fine or imprisonment
                   </p>
                 </div>
               </CardContent>
