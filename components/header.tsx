@@ -83,17 +83,15 @@ export default function Header() {
               <Image
                 src="/logo.jpg"
                 alt="Wanjiru Kanyi Law Advocates Logo"
-                width={280}   // larger, strong presence
+                width={280}
                 height={110}
                 className="h-24 w-auto"
                 priority
               />
               <div className="flex flex-col">
-                {/* Keep the gradient heading color */}
                 <div className="text-3xl font-extrabold tracking-tight bg-gradient-to-r from-cyan-600 via-blue-600 to-green-500 bg-clip-text text-transparent">
                   Wanjiru Kanyi Law Advocates
                 </div>
-                {/* Keep the tagline gradient color */}
                 <div className="text-sm font-medium mt-1 italic bg-gradient-to-r from-blue-500 to-cyan-600 bg-clip-text text-transparent">
                   Lead Where You Are
                 </div>
@@ -102,18 +100,23 @@ export default function Header() {
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-6">
-              {navItems.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className={cn(
-                    "transition-colors",
-                    "text-black hover:text-black" // keep links black for visibility
-                  )}
-                >
-                  {item.name}
-                </Link>
-              ))}
+              {navItems.map((item) => {
+                const isActive = pathname === item.href
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className={cn(
+                      "transition-colors",
+                      isActive
+                        ? "text-green-400 font-semibold" // luminous green highlight
+                        : "text-black hover:text-green-400"
+                    )}
+                  >
+                    {item.name}
+                  </Link>
+                )
+              })}
             </nav>
 
             {/* Desktop CTA Button */}
@@ -145,19 +148,24 @@ export default function Header() {
 
                 {/* Mobile Navigation Menu */}
                 <nav className="flex flex-col gap-8 mt-12">
-                  {navItems.map((item) => (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      onClick={() => setIsOpen(false)}
-                      className={cn(
-                        "text-lg font-medium transition-colors",
-                        "text-black hover:text-black" // keep links black on mobile too
-                      )}
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
+                  {navItems.map((item) => {
+                    const isActive = pathname === item.href
+                    return (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        onClick={() => setIsOpen(false)}
+                        className={cn(
+                          "text-lg font-medium transition-colors",
+                          isActive
+                            ? "text-green-400 font-semibold"
+                            : "text-black hover:text-green-400"
+                        )}
+                      >
+                        {item.name}
+                      </Link>
+                    )
+                  })}
                   <Button asChild className="bg-cyan-600 hover:bg-cyan-700 text-white mt-4">
                     <Link href="/contact" onClick={() => setIsOpen(false)}>
                       Schedule Your Consultation
@@ -170,7 +178,7 @@ export default function Header() {
         </div>
       </header>
 
-      {/* Spacer to prevent content hiding behind the fixed header (approx combined height of bars) */}
+      {/* Spacer to prevent content hiding behind the fixed header */}
       <div className="h-[132px] md:h-[144px]" />
     </>
   )
