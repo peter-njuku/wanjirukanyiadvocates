@@ -1,11 +1,26 @@
 "use client"
 
+import { useEffect, useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 
 export default function Navbar() {
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10)
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
   return (
-    <header className="w-full border-b border-slate-200 bg-white/70 backdrop-blur-sm">
+    <header
+      className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${
+        isScrolled ? "bg-transparent" : "bg-white/70 backdrop-blur-sm border-b border-slate-200"
+      }`}
+    >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         
         {/* Logo + Heading + Tagline */}
@@ -13,7 +28,7 @@ export default function Navbar() {
           <Image
             src="/logo.jpg"
             alt="Wanjiru Kanyi Law Advocates Logo"
-            width={250}   // bigger size
+            width={250}
             height={100}
             className="h-20 w-auto"
             priority
@@ -31,7 +46,7 @@ export default function Navbar() {
           </div>
         </Link>
 
-        {/* Navigation links (you can customize here) */}
+        {/* Navigation links */}
         <nav className="flex space-x-6 text-slate-700 font-medium">
           <Link href="/about" className="hover:text-cyan-600 transition-colors">About</Link>
           <Link href="/services" className="hover:text-cyan-600 transition-colors">Services</Link>
