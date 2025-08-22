@@ -11,8 +11,8 @@ export default function HeroSection() {
         <div 
           className="absolute inset-0 bg-[url('/hero2.png')] bg-contain bg-right bg-no-repeat bg-slate-900"
         />
-        {/* Sophisticated dark overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/85 via-slate-900/70 to-slate-900/40"></div>
+        {/* Adjusted Overlay - stronger on left, clear on right */}
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/40 to-transparent"></div>
       </div>
       
       <div className="container relative mx-auto px-4 z-10">
