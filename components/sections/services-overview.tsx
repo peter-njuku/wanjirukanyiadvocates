@@ -114,7 +114,7 @@ export default function ServicesOverview() {
               <span className="text-cyan-200 font-medium text-sm">Our Philosophy</span>
             </div>
             
-            <h3 className="font-serif font-semibold text-2xl md:text-3xl mb-6 text-white">
+            <h3 className="font-serif font-semibold text-2xl md:text-3xl mb-6 text-cyan-50 bg-gradient-to-r from-cyan-50 to-cyan-100 bg-clip-text text-transparent">
               Excellence Through Understanding
             </h3>
             
