@@ -14,15 +14,15 @@ export default function HeroSection() {
   // Replace these with your actual image paths
   const slides = [
     {
-      src: "/background1.jpg",
+      src: "/background.jpg",
       alt: "Professional legal team at Wanjiru Kanyi Law Advocates"
     },
     {
-      src: "/background2.jpg",
+      src: "/gavel.jpg",
       alt: "Kenyan courthouse and legal environment"
     },
     {
-      src: "/background3.jpg", 
+      src: "/scale.jpg", 
       alt: "Client success stories and community service"
     }
   ]
