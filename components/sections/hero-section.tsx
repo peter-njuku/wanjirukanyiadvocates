@@ -1,19 +1,80 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { ArrowRight, Phone, Award, Shield, Scale, Globe, Star } from "lucide-react"
+import { ArrowRight, Phone, Award, Shield, Scale, Globe, Star, ChevronLeft, ChevronRight } from "lucide-react"
+import { useState, useEffect } from "react"
 
 export default function HeroSection() {
+  const [currentSlide, setCurrentSlide] = useState(0)
+  
+  // Replace these with your actual image paths
+  const slides = [
+    "/background.jpg",
+    "/gavel.jpeg",
+    "/scale.jpeg"
+  ]
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length)
+    }, 5000) // Change slide every 5 seconds
+    
+    return () => clearTimeout(timer)
+  }, [currentSlide, slides.length])
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length)
+  }
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
+  }
+
   return (
     <section className="relative py-24 md:py-32 lg:py-40 overflow-hidden">
-      {/* Background with Professional Portrait */}
+      {/* Background Slideshow */}
       <div className="absolute inset-0 z-0">
-        {/* Use your professional portrait - much better than half-face */}
-        <div 
-          className="absolute inset-0 bg-[url('/wanjiru-portrait.jpg')] bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('/background.jpg')" }}
-        />
+        {slides.map((slide, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ${
+              index === currentSlide ? 'opacity-100' : 'opacity-0'
+            }`}
+            style={{ backgroundImage: `url(${slide})` }}
+          />
+        ))}
+        
         {/* Professional overlay - darker on left, clear on right */}
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/60 to-transparent"></div>
+        
+        {/* Slideshow navigation buttons */}
+        <button
+          onClick={prevSlide}
+          className="absolute left-4 top-1/2 z-20 -translate-y-1/2 p-2 bg-black/30 rounded-full text-white hover:bg-black/50 transition-colors"
+          aria-label="Previous slide"
+        >
+          <ChevronLeft className="h-6 w-6" />
+        </button>
+        <button
+          onClick={nextSlide}
+          className="absolute right-4 top-1/2 z-20 -translate-y-1/2 p-2 bg-black/30 rounded-full text-white hover:bg-black/50 transition-colors"
+          aria-label="Next slide"
+        >
+          <ChevronRight className="h-6 w-6" />
+        </button>
+        
+        {/* Slide indicators */}
+        <div className="absolute bottom-6 left-1/2 z-20 -translate-x-1/2 flex space-x-2">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`h-2 w-2 rounded-full transition-all ${
+                index === currentSlide ? 'bg-amber-400 w-6' : 'bg-white/50'
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
+        </div>
       </div>
 
       {/* Award Badge - More Professional Placement */}
