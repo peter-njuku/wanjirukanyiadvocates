@@ -18,11 +18,11 @@ export default function HeroSection() {
       alt: "Professional legal team at Wanjiru Kanyi Law Advocates"
     },
     {
-      src: "/gavel.jpg",
+      src: "/gavel.jpeg",
       alt: "Kenyan courthouse and legal environment"
     },
     {
-      src: "/scale.jpg", 
+      src: "/scale.jpeg", 
       alt: "Client success stories and community service"
     }
   ]
