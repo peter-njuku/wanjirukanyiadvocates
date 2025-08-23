@@ -57,7 +57,7 @@ export default function CTASection() {
           
           {/* Trust indicator */}
           <div className="pt-8 text-sm opacity-80 italic">
-            Trusted by hundreds of clients across Montana & Arizona
+            Trusted by hundreds of clients across Kenya & beyond
           </div>
         </div>
       </div>
