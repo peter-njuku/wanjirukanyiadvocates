@@ -1,27 +1,61 @@
-"use client"
+"use client";
 
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowRight, Phone, Award, Shield, Scale, Globe, Star, ChevronLeft, ChevronRight } from "lucide-react"
 import { useState, useEffect } from "react"
+import Image from "next/image"
 
 export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0)
+  const [isLoading, setIsLoading] = useState(true)
+  const [loadedImages, setLoadedImages] = useState<Set<string>>(new Set())
   
   // Replace these with your actual image paths
   const slides = [
-    "/background.jpg",
-    "/gavel.jpeg",
-    "/scale.jpeg"
+    {
+      src: "/background1.jpg",
+      alt: "Professional legal team at Wanjiru Kanyi Law Advocates"
+    },
+    {
+      src: "/background2.jpg",
+      alt: "Kenyan courthouse and legal environment"
+    },
+    {
+      src: "/background3.jpg", 
+      alt: "Client success stories and community service"
+    }
   ]
 
   useEffect(() => {
+    // Client-side only image loading
+    if (typeof window !== 'undefined') {
+      // Track which images have loaded
+      const handleImageLoad = (src: string) => {
+        setLoadedImages(prev => new Set(prev).add(src))
+        if (Array.from(loadedImages).length === slides.length - 1) {
+          setIsLoading(false)
+        }
+      }
+
+      // Preload images
+      slides.forEach(slide => {
+        // Only preload if not already loaded
+        if (!loadedImages.has(slide.src)) {
+          const img = document.createElement('img')
+          img.src = slide.src
+          img.onload = () => handleImageLoad(slide.src)
+          img.onerror = () => console.error(`Failed to load image: ${slide.src}`)
+        }
+      })
+    }
+    
     const timer = setTimeout(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length)
-    }, 5000) // Change slide every 5 seconds
+    }, 5000)
     
     return () => clearTimeout(timer)
-  }, [currentSlide, slides.length])
+  }, [currentSlide])
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length)
@@ -32,46 +66,65 @@ export default function HeroSection() {
   }
 
   return (
-    <section className="relative py-24 md:py-32 lg:py-40 overflow-hidden">
+    <section className="relative py-24 md:py-32 lg:py-40 overflow-hidden min-h-screen">
       {/* Background Slideshow */}
       <div className="absolute inset-0 z-0">
         {slides.map((slide, index) => (
           <div
             key={index}
-            className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ${
-              index === currentSlide ? 'opacity-100' : 'opacity-0'
+            className={`absolute inset-0 transition-opacity duration-1000 ${
+              index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0'
             }`}
-            style={{ backgroundImage: `url(${slide})` }}
-          />
+          >
+            {/* Using next/image for optimized loading */}
+            <Image
+              src={slide.src}
+              alt={slide.alt}
+              fill
+              priority={index === 0}
+              quality={90}
+              className="object-cover"
+              onLoad={() => {
+                if (index === slides.length - 1) setIsLoading(false)
+              }}
+            />
+          </div>
         ))}
         
         {/* Professional overlay - darker on left, clear on right */}
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/60 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/85 via-slate-900/70 to-slate-900/40 z-20"></div>
+        
+        {/* Loading indicator */}
+        {isLoading && (
+          <div className="absolute inset-0 flex items-center justify-center z-30 bg-slate-900/80">
+            <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-amber-500"></div>
+          </div>
+        )}
         
         {/* Slideshow navigation buttons */}
         <button
           onClick={prevSlide}
-          className="absolute left-4 top-1/2 z-20 -translate-y-1/2 p-2 bg-black/30 rounded-full text-white hover:bg-black/50 transition-colors"
+          className="absolute left-4 top-1/2 z-40 -translate-y-1/2 p-3 bg-black/40 rounded-full text-white hover:bg-black/60 transition-all duration-300 backdrop-blur-sm"
           aria-label="Previous slide"
         >
           <ChevronLeft className="h-6 w-6" />
         </button>
         <button
           onClick={nextSlide}
-          className="absolute right-4 top-1/2 z-20 -translate-y-1/2 p-2 bg-black/30 rounded-full text-white hover:bg-black/50 transition-colors"
+          className="absolute right-4 top-1/2 z-40 -translate-y-1/2 p-3 bg-black/40 rounded-full text-white hover:bg-black/60 transition-all duration-300 backdrop-blur-sm"
           aria-label="Next slide"
         >
           <ChevronRight className="h-6 w-6" />
         </button>
         
         {/* Slide indicators */}
-        <div className="absolute bottom-6 left-1/2 z-20 -translate-x-1/2 flex space-x-2">
+        <div className="absolute bottom-8 left-1/2 z-40 -translate-x-1/2 flex space-x-3">
           {slides.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`h-2 w-2 rounded-full transition-all ${
-                index === currentSlide ? 'bg-amber-400 w-6' : 'bg-white/50'
+              className={`h-2 rounded-full transition-all duration-300 ${
+                index === currentSlide ? 'bg-amber-400 w-8' : 'bg-white/60 w-3 hover:bg-white/80'
               }`}
               aria-label={`Go to slide ${index + 1}`}
             />
@@ -79,9 +132,9 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Award Badge - More Professional Placement */}
-      <div className="absolute top-8 left-8 z-20">
-        <div className="bg-gradient-to-r from-amber-500 to-amber-600 text-white px-6 py-3 rounded-lg shadow-xl flex items-center space-x-2">
+      {/* Award Badge */}
+      <div className="absolute top-8 left-8 z-30">
+        <div className="bg-gradient-to-r from-amber-500 to-amber-600 text-white px-6 py-3 rounded-lg shadow-xl flex items-center space-x-2 backdrop-blur-sm">
           <Award className="h-5 w-5 text-white" />
           <span className="text-sm font-semibold tracking-wide">
             KEOnline Awards 2024 Nominee
@@ -90,41 +143,41 @@ export default function HeroSection() {
       </div>
       
       {/* Content */}
-      <div className="container relative mx-auto px-4 z-10">
+      <div className="container relative mx-auto px-4 z-30">
         <div className="max-w-2xl lg:max-w-3xl text-left space-y-6">
           
-          {/* Main Heading - Kenyan Focused */}
+          {/* Main Heading */}
           <h1 className="font-serif font-bold text-4xl md:text-5xl lg:text-6xl leading-tight text-white">
             Protecting Your Rights <br className="hidden md:block" />
             <span className="text-amber-400 font-light">Across Kenya & Beyond</span>
           </h1>
           
-          {/* Supporting Line - More Kenyan Context */}
+          {/* Supporting Line */}
           <p className="text-xl text-slate-200 leading-relaxed max-w-2xl font-light">
             Expert legal representation in land law, succession matters, commercial disputes, and cybercrime — serving Kenyan clients with integrity and excellence.
           </p>
 
-          {/* Trust Signals - Kenyan Focused */}
-          <div className="flex flex-wrap items-center gap-6 text-sm text-slate-300 pt-2">
-            <div className="flex items-center bg-white/10 backdrop-blur-sm px-3 py-2 rounded-lg">
+          {/* Trust Signals */}
+          <div className="flex flex-wrap items-center gap-4 text-sm text-slate-300 pt-2">
+            <div className="flex items-center bg-white/15 backdrop-blur-sm px-4 py-2.5 rounded-lg border border-white/10">
               <Shield className="h-4 w-4 mr-2 text-amber-400" />
               <span>Kenyan Court Experience</span>
             </div>
-            <div className="flex items-center bg-white/10 backdrop-blur-sm px-3 py-2 rounded-lg">
+            <div className="flex items-center bg-white/15 backdrop-blur-sm px-4 py-2.5 rounded-lg border border-white/10">
               <Scale className="h-4 w-4 mr-2 text-amber-400" />
               <span>Proven Results in Kenya</span>
             </div>
-            <div className="flex items-center bg-white/10 backdrop-blur-sm px-3 py-2 rounded-lg">
+            <div className="flex items-center bg-white/15 backdrop-blur-sm px-4 py-2.5 rounded-lg border border-white/10">
               <Globe className="h-4 w-4 mr-2 text-amber-400" />
               <span>International Clients</span>
             </div>
           </div>
           
-          {/* CTAs - More Action-Oriented */}
+          {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 pt-8">
             <Button 
               size="lg" 
-              className="bg-amber-600 hover:bg-amber-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-200 w-fit rounded-md" 
+              className="bg-amber-600 hover:bg-amber-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 w-fit rounded-md py-6 px-8" 
               asChild
             >
               <Link href="/consultation" className="flex items-center">
@@ -136,7 +189,7 @@ export default function HeroSection() {
             <Button
               size="lg"
               variant="outline"
-              className="border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-slate-900 bg-white/10 backdrop-blur-sm font-semibold transition-all duration-200 w-fit rounded-md"
+              className="border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-slate-900 bg-white/15 backdrop-blur-sm font-semibold transition-all duration-300 w-fit rounded-md py-6 px-8 border-2"
               asChild
             >
               <Link href="tel:+254792932136" className="flex items-center">
@@ -146,13 +199,13 @@ export default function HeroSection() {
             </Button>
           </div>
 
-          {/* Quick Stats - Like Kenyan firms use */}
+          {/* Quick Stats */}
           <div className="flex flex-wrap gap-6 pt-8 text-sm text-slate-300">
-            <div className="flex items-center">
+            <div className="flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg">
               <Star className="h-4 w-4 mr-2 text-amber-400" />
               <span>10+ Years Kenyan Legal Experience</span>
             </div>
-            <div className="flex items-center">
+            <div className="flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg">
               <Star className="h-4 w-4 mr-2 text-amber-400" />
               <span>500+ Kenyan Clients Served</span>
             </div>
@@ -160,11 +213,11 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Floating WhatsApp Button for Mobile */}
+      {/* Floating WhatsApp Button */}
       <div className="fixed bottom-6 right-6 z-50 md:hidden">
         <a
           href="https://wa.me/254792932136"
-          className="bg-green-600 text-white p-4 rounded-full shadow-2xl flex items-center justify-center hover:bg-green-700 transition-colors"
+          className="bg-green-600 text-white p-4 rounded-full shadow-2xl flex items-center justify-center hover:bg-green-700 transition-all duration-300 animate-pulse"
           aria-label="Chat on WhatsApp"
         >
           <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
