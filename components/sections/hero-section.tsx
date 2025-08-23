@@ -10,7 +10,7 @@ export default function HeroSection() {
         {/* Use your professional portrait - much better than half-face */}
         <div 
           className="absolute inset-0 bg-[url('/wanjiru-portrait.jpg')] bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('/wanjiru-portrait.jpg')" }}
+          style={{ backgroundImage: "url('/background.jpg')" }}
         />
         {/* Professional overlay - darker on left, clear on right */}
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/60 to-transparent"></div>
