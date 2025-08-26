@@ -16,7 +16,7 @@ export default function Testimonials(){
         },
         {
             Description:"Wish I knew them soonerBest services in the cityBest services in the cityBest services in the cityBest services in the cityBest services in the cityBest services in the city",
-            highlights:"Mr. IDK"
+            clientName:"Mr. IDK"
         }
     ]
     return(
@@ -41,7 +41,7 @@ export default function Testimonials(){
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {testimonials.map((testimonial, index) => {
         const testimonialInfo = testimonial.Description;
-        const Highlights = testimonial.highlights;
+        
         
         return (
           <Card 
@@ -71,29 +71,7 @@ export default function Testimonials(){
 
             {/* Highlights Section */}
             <CardContent className="p-6 pt-0 mt-auto">
-              {Highlights && (
-                <div className="bg-slate-50 rounded-lg p-4">
-                  <h4 className="text-sm font-semibold text-slate-800 mb-2 flex items-center">
-                    <div className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></div>
-                    Case Highlights
-                  </h4>
-                  <ul className="text-sm text-slate-600 space-y-1">
-                    {Array.isArray(Highlights) ? (
-                      Highlights.map((highlight, i) => (
-                        <li key={i} className="flex items-start">
-                          <span className="text-cyan-400 mr-2">•</span>
-                          {highlight}
-                        </li>
-                      ))
-                    ) : (
-                      <li className="flex items-start">
-                        <span className="text-cyan-400 mr-2">•</span>
-                        {Highlights}
-                      </li>
-                    )}
-                  </ul>
-                </div>
-              )}
+              
             </CardContent>
 
             {/* Client Info Footer */}
