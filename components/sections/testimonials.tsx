@@ -8,11 +8,11 @@ export default function Testimonials(){
     const testimonials = [
         {
             Description:"Best services in the cityvBest services in the cityBest services in the cityBest services in the cityBest services in the cityBest services in the cityBest services in the cityBest services in the cityBest services in the cityBest services in the city",
-            clientName:""
+            clientName:"Client 1"
         },
         {
             Description:"I got my justice form this guysBest services in the cityBest services in the cityBest services in the cityBest services in the cityBest services in the city",
-            clientName:""
+            clientName:"CLient 2"
         },
         {
             Description:"Wish I knew them soonerBest services in the cityBest services in the cityBest services in the cityBest services in the cityBest services in the cityBest services in the city",

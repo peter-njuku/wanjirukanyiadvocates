@@ -5,6 +5,23 @@ import { Badge } from "@/components/ui/badge"
 import { Award, Users, Scale, Heart, Target, BookOpen, Shield, Star } from "lucide-react"
 
 export default function AboutPage() {
+  const teamMembers = [
+    {
+      photo:'/BDO.jpeg',
+      memberName:"Mercy Gaitho",
+      jobPosition:"Business Development Officer"
+    },
+    {
+      photo:'/IMG_1247.jpg',
+      memberName:"Vicky Kemboi",
+      jobPosition:"Legal Assistant"
+    },
+    {
+      photo:'/IMG_1248.jpg',
+      memberName:"Leah Kabiru",
+      jobPosition:"Virtual Assistant"
+    }
+  ]
   return (
     <div className="min-h-screen bg-white">
       <Header />
@@ -75,6 +92,8 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
+        </div>
+        <div>
         </div>
       </section>
 
