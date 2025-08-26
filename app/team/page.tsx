@@ -2,6 +2,8 @@ import { Card, CardHeader, CardContent, CardTitle, CardDescription } from "@/com
 import Header from "@/components/header";
 import Image from "next/image";
 import { Linkedin, Mail, Phone } from "lucide-react";
+import CTASection from "@/components/sections/cta-section";
+import Footer from "@/components/footer";
 
 export default function Team() {
     const teamMembers = [
@@ -141,6 +143,8 @@ export default function Team() {
                     </button>
                 </div>
             </section>
+            <CTASection />
+            <Footer />
         </>
     );
 }
