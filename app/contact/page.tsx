@@ -60,32 +60,21 @@ export default function ContactPage() {
     return Object.keys(newErrors).length === 0
   }
 
-  const handleSubmit = async (event: React.FormEvent) => {
-    event.preventDefault()
-    setSubmitStatus("")
-    if (!validateForm()) return
-
-    setIsSubmitting(true)
-    try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/contact`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      })
-
-      if (response.ok) {
-        setSubmitStatus("success")
-        setFormData({ firstName: "", lastName: "", email: "", matterType: "", description: "" })
-      } else {
-        setSubmitStatus("error")
-      }
-    } catch (error) {
-      console.error("Error submitting form:", error)
-      setSubmitStatus("error")
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+  
+    const formData = { firstName, lastName, email, matterType, description };
+  
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+  
+    const data = await res.json();
+    console.log("Response:", data);
+  };
+  
 
   return (
     <div className="min-h-screen bg-white">
