@@ -51,7 +51,7 @@ export default function Team(){
                         >
                             <CardHeader>
                                 <div>
-                                    {teamMember.image}
+                                    <img src={teamMember.image} alt="" />
                                 </div>
                             <CardTitle className="text-slate-900 text-xl group-hover:text-cyan-700 transition-colors duration-300 mb-4">
                                 {teamMember.name}
