@@ -143,7 +143,7 @@ export default function Team() {
                     </button>
                 </div>
             </section>
-            <CTASection />
+            
             <Footer />
         </>
     );
