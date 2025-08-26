@@ -32,7 +32,7 @@ export default async function handler(req, res) {
     // Append new row
     await sheets.spreadsheets.values.append({
       spreadsheetId,
-      range: "Sheet1!A:F", // Adjust sheet name & range
+      range: "Sheet1!A:G", // Adjust sheet name & range
       valueInputOption: "USER_ENTERED",
       requestBody: {
         values: [
