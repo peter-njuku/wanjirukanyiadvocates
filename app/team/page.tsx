@@ -1,4 +1,4 @@
-import { Card, CardHeader, CardContent, CardTitle } from "@/components/ui/card";
+import { Card, CardHeader, CardContent, CardTitle, CardDescription } from "@/components/ui/card";
 import Header from "@/components/header";
 
 
@@ -56,6 +56,9 @@ export default function Team(){
                             <CardTitle className="text-slate-900 text-xl group-hover:text-cyan-700 transition-colors duration-300 mb-4">
                                 {teamMember.name}
                             </CardTitle>
+                            <CardDescription className="text-slate-600 text-base leading-relaxed mb-6">
+                                {teamMember.position}
+                            </CardDescription>
                             </CardHeader>
                         </Card>
                     );
