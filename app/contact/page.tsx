@@ -62,8 +62,15 @@ export default function ContactPage() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const form = new FormData(e.target);
   
-    const formData = { firstName, lastName, email, matterType, description };
+    const formData = {
+      firstName: form.get("firstName"),
+      lastName: form.get("lastName"),
+      email: form.get("email"),
+      matterType: form.get("matterType"),
+      description: form.get("description"),
+    };
   
     const res = await fetch("/api/contact", {
       method: "POST",
