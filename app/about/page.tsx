@@ -5,26 +5,19 @@ import { Badge } from "@/components/ui/badge"
 import { Award, Users, Scale, Heart, Target, BookOpen, Shield, Star } from "lucide-react"
 
 export default function AboutPage() {
-  const teamMembers = [
-    {
-      photo:'/BDO.jpeg',
-      memberName:"Mercy Gaitho",
-      jobPosition:"Business Development Officer"
-    },
-    {
-      photo:'/IMG_1247.jpg',
-      memberName:"Vicky Kemboi",
-      jobPosition:"Legal Assistant"
-    },
-    {
-      photo:'/IMG_1248.jpg',
-      memberName:"Leah Kabiru",
-      jobPosition:"Virtual Assistant"
-    }
-  ]
+  
   return (
     <div className="min-h-screen bg-white">
       <Header />
+
+      <section>
+        <div>
+          <div>
+            <h1>Why choose us?</h1>
+            <p>Choose Wanjiru Kanyi Law Advocates for our unwavering commitment to delivering exceptional legal solutions rooted in deep Kenyan legal expertise. With over a decade of experience and recognition as a 2024 KEOnline Digitally Fit Awards nominee, we combine traditional legal excellence with innovative approaches to handle complex matters in land law, succession, commercial disputes, and cybercrime. Our client-first philosophy ensures personalized attention, clear communication, and strategic representation that protects your interests while navigating Kenya's unique legal landscape with integrity and proven results.</p>
+          </div>
+        </div>
+      </section>
 
       {/* Hero Section */}
       <section className="py-20 bg-slate-50">
