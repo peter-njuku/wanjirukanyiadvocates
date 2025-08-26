@@ -18,6 +18,7 @@ import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 const navItems = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
+  {name:"Our Team", href:"/team"},
   { name: "Services", href: "/services" },
   { name: "Blog", href: "/blog" },
   { name: "Contact", href: "/contact" },
@@ -98,7 +99,7 @@ export default function Header() {
                   isScrolled ? "text-xl font-bold" : "text-3xl font-extrabold"
                 )}
               >
-                Wanjiru Kanyi Law Advocates
+                WANJIRU KANYI LAW ADVOCATES
               </div>
               <div
                 className={cn(
