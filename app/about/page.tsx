@@ -12,10 +12,7 @@ export default function AboutPage() {
 
       <section>
         <div>
-          <div>
-            <h1>Why choose us?</h1>
-            <p>Choose Wanjiru Kanyi Law Advocates for our unwavering commitment to delivering exceptional legal solutions rooted in deep Kenyan legal expertise. With over a decade of experience and recognition as a 2024 KEOnline Digitally Fit Awards nominee, we combine traditional legal excellence with innovative approaches to handle complex matters in land law, succession, commercial disputes, and cybercrime. Our client-first philosophy ensures personalized attention, clear communication, and strategic representation that protects your interests while navigating Kenya's unique legal landscape with integrity and proven results.</p>
-          </div>
+          
         </div>
       </section>
 
@@ -23,6 +20,10 @@ export default function AboutPage() {
       <section className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-6">
+          <div>
+            <h1>Why choose us?</h1>
+            <p>Choose Wanjiru Kanyi Law Advocates for our unwavering commitment to delivering exceptional legal solutions rooted in deep Kenyan legal expertise. With over a decade of experience and recognition as a 2024 KEOnline Digitally Fit Awards nominee, we combine traditional legal excellence with innovative approaches to handle complex matters in land law, succession, commercial disputes, and cybercrime. Our client-first philosophy ensures personalized attention, clear communication, and strategic representation that protects your interests while navigating Kenya's unique legal landscape with integrity and proven results.</p>
+          </div>
             <Badge variant="outline" className="mb-4 bg-blue-100 text-blue-800 border-blue-300 px-4 py-1">
               About Our Practice
             </Badge>
