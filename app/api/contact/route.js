@@ -1,66 +1,52 @@
-// pages/api/contact.js
-import { google } from "googleapis";
-
-export default async function handler(req, res) {
-  if (req.method !== "POST") {
-    return res.status(405).json({ message: "Method not allowed" });
-  }
-
+// app/api/contact/route.js
+export async function POST(req) {
   try {
-    const { firstName, lastName, email, matterType, description } = req.body;
+    const body = await req.json();
+    const { firstName, lastName, email, matterType, description } = body;
 
+    // Validate required fields
     if (!firstName || !lastName || !email || !matterType || !description) {
-      return res.status(400).json({ message: "All fields are required" });
+      return new Response(
+        JSON.stringify({ message: "All fields are required" }),
+        { status: 400 }
+      );
     }
 
+    // Validate email format
     const emailRegex = /\S+@\S+\.\S+/;
     if (!emailRegex.test(email)) {
-      return res.status(400).json({ message: "Invalid email format" });
+      return new Response(
+        JSON.stringify({ message: "Invalid email format" }),
+        { status: 400 }
+      );
     }
 
-    // 🔑 Authenticate with Google Sheets API
-    const auth = new google.auth.GoogleAuth({
-      credentials: {
-        type: "service_account",
-        project_id: process.env.GOOGLE_PROJECT_ID,
-        private_key_id: process.env.GOOGLE_PRIVATE_KEY_ID,
-        private_key: process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, '\n'),
-        client_email: process.env.GOOGLE_CLIENT_EMAIL,
-        client_id: process.env.GOOGLE_CLIENT_ID,
-      },
-      scopes: ["https://www.googleapis.com/auth/spreadsheets"],
+    console.log("New contact form submission:", {
+      firstName,
+      lastName,
+      email,
+      matterType,
+      description,
+      submittedAt: new Date().toISOString(),
     });
 
-    const sheets = google.sheets({ version: "v4", auth });
-
-    
-    const spreadsheetId = process.env.GOOGLE_SHEET_ID;
-
-    // Append new row
-    await sheets.spreadsheets.values.append({
-      spreadsheetId,
-      range: "Sheet1!A:H", // Adjust sheet name & range
-      valueInputOption: "USER_ENTERED",
-      requestBody: {
-        values: [
-          [
-            firstName,
-            lastName,
-            email,
-            matterType,
-            description,
-            new Date().toISOString(),
-          ],
-        ],
-      },
-    });
-
-    res.status(200).json({
-      message: "Form submitted successfully & saved to Google Sheet",
-      reference: `REF-${Date.now()}`,
-    });
+    return new Response(
+      JSON.stringify({
+        message: "Form submitted successfully",
+        reference: `REF-${Date.now()}`,
+      }),
+      { status: 200 }
+    );
   } catch (error) {
     console.error("Error processing contact form:", error);
-    res.status(500).json({ message: "Internal server error" });
+    return new Response(
+      JSON.stringify({ message: "Internal server error" }),
+      { status: 500 }
+    );
   }
+}
+
+// Handle other methods (e.g. GET)
+export function GET() {
+  return new Response("Method not allowed", { status: 405 });
 }
