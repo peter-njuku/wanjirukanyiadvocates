@@ -119,7 +119,7 @@ export default function ContactPage() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <form onSubmit={handleSubmit} className="space-y-4">
+                  <form onSubmit={handleSubmit} method="POST" className="space-y-4">
                     {submitStatus === "success" && (
                       <div className="p-3 bg-green-100 text-green-700 rounded-md text-sm">
                         Thank you for your submission! We'll be in touch soon.
