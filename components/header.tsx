@@ -18,7 +18,7 @@ import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 const navItems = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
-  {name:"Our Team", href:"/team"},
+  { name:"Our Team", href:"/team" },
   { name: "Services", href: "/services" },
   { name: "Blog", href: "/blog" },
   { name: "Contact", href: "/contact" },
