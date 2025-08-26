@@ -13,8 +13,7 @@ export default function Team(){
               Our Team
             </h1>
             <p className="text-xl text-slate-700 leading-relaxed max-w-3xl mx-auto">
-              We specialize in a wide range of legal matters, providing expert guidance and representation across
-              multiple practice areas to serve Kenya's diverse legal needs.
+              
             </p>
           </div>
         </div>
