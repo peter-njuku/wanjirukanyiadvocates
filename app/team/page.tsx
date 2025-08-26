@@ -10,7 +10,7 @@ export default function Team() {
             name: "Wanjiru Kanyi",
             position: "Founding Advocate",
             bio: "Advocate of the High Court of Kenya with 10+ years experience in litigation and legal consultancy.",
-            email: "wanjiru@lawfirm.com",
+            email: "wanjirukanyilawa@gmail.com",
             phone: "+254 792 932 136"
         },
         {
@@ -73,7 +73,7 @@ export default function Team() {
                                         alt={teamMember.name}
                                         fill
                                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                                        className="object-cover group-hover:scale-105 transition-transform duration-300"
+                                        className="object-contain group-hover:scale-105 transition-transform duration-300"
                                         priority={index === 0}
                                     />
                                     {/* Overlay gradient */}
