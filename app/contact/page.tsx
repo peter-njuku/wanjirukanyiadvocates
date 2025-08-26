@@ -64,43 +64,22 @@ export default function ContactPage() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    
-    if (!validateForm()) {
-      return;
-    }
-    
-    setIsSubmitting(true);
-    setSubmitStatus('');
-    
+  const handleSubmit = async (event) => {
+    event.preventDefault(); // ✅ stops default browser GET
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/contact`, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
-      
-      if (response.ok) {
-        setSubmitStatus('success');
-        setFormData({
-          firstName: '',
-          lastName: '',
-          email: '',
-          matterType: '',
-          description: ''
-        });
-      } else {
-        setSubmitStatus('error');
-      }
+  
+      const data = await response.json();
+      console.log("Response:", data);
     } catch (error) {
-      setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
+      console.error("Error submitting form:", error);
     }
   };
+  
 
   return (
     <div className="min-h-screen bg-white">
@@ -218,7 +197,7 @@ export default function ContactPage() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <form onSubmit={handleSubmit} className="space-y-4">
+                  <form onSubmit={handleSubmit} method="POST" className="space-y-4">
                     {submitStatus === 'success' && (
                       <div className="p-3 bg-green-100 text-green-700 rounded-md text-sm">
                         Thank you for your submission! We'll be in touch soon.
