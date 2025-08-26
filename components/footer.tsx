@@ -64,7 +64,7 @@ export default function Footer() {
                   <p>Mustard Seed Complex</p>
                   <p>ACK St. Peters Church Uthiru</p>
                   <p>Unit G.05, Ground Floor</p>
-                  <p>PO Box 73088-00100, Nairobi</p>
+                  <p>Nairobi</p>
                 </div>
               </div>
               <div className="flex items-center gap-2">
