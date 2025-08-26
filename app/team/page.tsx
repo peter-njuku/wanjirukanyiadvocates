@@ -50,6 +50,9 @@ export default function Team(){
                         className="hover:shadow-xl transition-all duration-300 border-slate-200 group hover:border-cyan-300/50 bg-white h-full overflow-hidden hover:-translate-y-2"
                         >
                             <CardHeader>
+                                <div>
+                                    {teamMember.image}
+                                </div>
                             <CardTitle className="text-slate-900 text-xl group-hover:text-cyan-700 transition-colors duration-300 mb-4">
                                 {teamMember.name}
                             </CardTitle>
