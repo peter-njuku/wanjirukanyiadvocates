@@ -6,81 +6,57 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { Phone, Mail, MapPin, Clock, BookOpen } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { useState } from "react"
+import { FormEvent, useState } from "react"
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    matterType: "",
-    description: "",
-  })
-  const [errors, setErrors] = useState<Record<string, string>>({})
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitStatus, setSubmitStatus] = useState<"success" | "error" | "">("")
+  
+    const [firstName, setFirstName] = useState('')
+    const [lastName, setLastName] = useState('')
+    const [email, setEmail] = useState('')
+    const [matterType, setMatterType] = useState('')
+    const [description, setDescription] = useState('')
+    const [error, setError] = useState('')
+    const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const matterTypes = [
-    "Land & Property Law",
-    "Succession & Inheritance",
-    "Data Protection",
-    "Computer Misuse & Cyber Crime Cases",
-    "Employment Law",
-    "Family Matters",
-    "Student Mentorship",
-    "Other",
-  ]
+    const matterTypes = [
+        "Family Matters",
+        "Succession & Inheritance",
+        "Computer Misuse & Cyber Crimes",
+        "Child Rights",
+        "Employment Law",
+        "Corporate & Business Law",
+        "Student Mentorship",
+        "Other Legal Matters"
+    ]
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }))
-
-    if (errors[name]) {
-      setErrors((prev) => ({ ...prev, [name]: "" }))
-    }
-  }
-
-  const validateForm = () => {
-    const newErrors: Record<string, string> = {}
-
-    if (!formData.firstName.trim()) newErrors.firstName = "First name is required"
-    if (!formData.lastName.trim()) newErrors.lastName = "Last name is required"
-    if (!formData.email.trim()) {
-      newErrors.email = "Email is required"
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = "Email is invalid"
-    }
-    if (!formData.matterType) newErrors.matterType = "Please select a matter type"
-    if (!formData.description.trim()) newErrors.description = "Description is required"
-
-    setErrors(newErrors)
-    return Object.keys(newErrors).length === 0
-  }
-
-  const handleSubmit = async (e) => {
+  const handleSubmit = async(e:FormEvent<HTMLFormElement>)=>{
     e.preventDefault();
-    const form = new FormData(e.target);
+
+    const form = [
+      firstName,
+      lastName,
+      email,
+      matterType,
+      description
+    ]
+
+    const response = await fetch('/api/contact/route',{
+      method:'POST',
+      headers:{
+        'Accept':'application/json',
+        'Content-Type':'application/json'
+      },
+      body:JSON.stringify(form)
+    })
   
-    const formData = {
-      firstName: form.get("firstName"),
-      lastName: form.get("lastName"),
-      email: form.get("email"),
-      matterType: form.get("matterType"),
-      description: form.get("description"),
-    };
-  
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
-    });
-  
-    const data = await res.json();
-    console.log("Response:", data);
-  };
+	const content = await response.json();
+    console.log(content.data.tableRange)
+    setFirstName('')
+    setLastName('')
+    setEmail('')
+    setMatterType('')
+    setDescription('')
+  }
   
 
   return (
@@ -120,7 +96,16 @@ export default function ContactPage() {
                 </CardHeader>
                 <CardContent>
                   <form onSubmit={handleSubmit} method="POST" className="space-y-4">
-                    {submitStatus === "success" && (
+                    {error ? (
+                        <div className="p-3 bg-green-100 text-green-700 rounded-md text-sm">
+                            Thank you for your submission! We'll be in touch soon.
+                        </div>
+                    ):(
+                        <div className="p-3 bg-red-100 text-red-700 rounded-md text-sm">
+                            There was an error submitting your form. Please try again.
+                        </div>
+                    )}
+                    { /*submitStatus === "success" && (
                       <div className="p-3 bg-green-100 text-green-700 rounded-md text-sm">
                         Thank you for your submission! We'll be in touch soon.
                       </div>
@@ -129,7 +114,7 @@ export default function ContactPage() {
                       <div className="p-3 bg-red-100 text-red-700 rounded-md text-sm">
                         There was an error submitting your form. Please try again.
                       </div>
-                    )}
+                    )*/}
 
                     {/* First/Last Name */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -141,13 +126,11 @@ export default function ContactPage() {
                           type="text"
                           id="firstName"
                           name="firstName"
-                          value={formData.firstName}
-                          onChange={handleChange}
-                          className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${
-                            errors.firstName ? "border-red-500" : "border-slate-300"
-                          }`}
+                          value={firstName}
+                          onChange={e=>setFirstName(e.target.value)}
+                          className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                         />
-                        {errors.firstName && <p className="mt-1 text-sm text-red-600">{errors.firstName}</p>}
+                        
                       </div>
 
                       <div>
@@ -158,13 +141,11 @@ export default function ContactPage() {
                           type="text"
                           id="lastName"
                           name="lastName"
-                          value={formData.lastName}
-                          onChange={handleChange}
-                          className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${
-                            errors.lastName ? "border-red-500" : "border-slate-300"
-                          }`}
+                          value={lastName}
+                          onChange={e=>setLastName(e.target.value)}
+                          className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                         />
-                        {errors.lastName && <p className="mt-1 text-sm text-red-600">{errors.lastName}</p>}
+                    
                       </div>
                     </div>
 
@@ -177,13 +158,11 @@ export default function ContactPage() {
                         type="email"
                         id="email"
                         name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${
-                          errors.email ? "border-red-500" : "border-slate-300"
-                        }`}
+                        value={email}
+                        onChange={e=>setEmail(e.target.value)}
+                        className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                       />
-                      {errors.email && <p className="mt-1 text-sm text-red-600">{errors.email}</p>}
+                      
                     </div>
 
                     {/* Matter Type */}
@@ -194,11 +173,9 @@ export default function ContactPage() {
                       <select
                         id="matterType"
                         name="matterType"
-                        value={formData.matterType}
-                        onChange={handleChange}
-                        className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${
-                          errors.matterType ? "border-red-500" : "border-slate-300"
-                        }`}
+                        value={matterType}
+                        onChange={e=>setMatterType(e.target.value)}
+                        className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                       >
                         <option value="">Select a matter type</option>
                         {matterTypes.map((type) => (
@@ -207,7 +184,7 @@ export default function ContactPage() {
                           </option>
                         ))}
                       </select>
-                      {errors.matterType && <p className="mt-1 text-sm text-red-600">{errors.matterType}</p>}
+                      
                     </div>
 
                     {/* Description */}
@@ -219,13 +196,11 @@ export default function ContactPage() {
                         id="description"
                         name="description"
                         rows={4}
-                        value={formData.description}
-                        onChange={handleChange}
-                        className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${
-                          errors.description ? "border-red-500" : "border-slate-300"
-                        }`}
+                        value={description}
+                        onChange={e=>setDescription(e.target.value)}
+                        className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                       />
-                      {errors.description && <p className="mt-1 text-sm text-red-600">{errors.description}</p>}
+        
                     </div>
 
                     {/* Submit Button */}
