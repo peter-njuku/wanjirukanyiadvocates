@@ -96,15 +96,7 @@ export default function ContactPage() {
                 </CardHeader>
                 <CardContent>
                   <form onSubmit={handleSubmit} method="POST" className="space-y-4">
-                    {error ? (
-                        <div className="p-3 bg-green-100 text-green-700 rounded-md text-sm">
-                            Thank you for your submission! We'll be in touch soon.
-                        </div>
-                    ):(
-                        <div className="p-3 bg-red-100 text-red-700 rounded-md text-sm">
-                            There was an error submitting your form. Please try again.
-                        </div>
-                    )}
+                    
                     { /*submitStatus === "success" && (
                       <div className="p-3 bg-green-100 text-green-700 rounded-md text-sm">
                         Thank you for your submission! We'll be in touch soon.
