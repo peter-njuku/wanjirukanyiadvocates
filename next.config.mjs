@@ -20,7 +20,7 @@ const nextConfig = {
           },
           {
             key: 'X-Frame-Options',
-            value: 'ALLOW-FROM https://docs.google.com'
+            value: 'ALLOW-FROM https://maps.google.com'
           },
           {
             key: 'X-Content-Type-Options',
