@@ -91,19 +91,22 @@ export default function ContactPage() {
             <CardContent className="space-y-4">
               <div className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-blue-600" />
-                <span>+254 700 000 000</span>
+                <span>+254 792 932 136</span>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-blue-600" />
-                <span>info@wanjirukanyiadvocates.co.ke</span>
+                <span>wanjirukanyilawa@gmail.com</span>
               </div>
               <div className="flex items-center gap-3">
                 <MapPin className="w-5 h-5 text-blue-600" />
-                <span>Westlands, Nairobi, Kenya</span>
+                <span>Mustard Seed Complex, ACK St. Peters Church Uthiru, Unit G.05, Ground Floor, Nairobi</span>
               </div>
               <div className="flex items-center gap-3">
                 <Clock className="w-5 h-5 text-blue-600" />
-                <span>Mon – Fri: 8:30 AM – 5:00 PM</span>
+                <span>Mon – Fri: 9:00 AM – 5:00 PM</span>
+              </div>
+              <div>
+                <iframe src="https://maps.app.goo.gl/6xmoDTERh4zJwqn5A" />
               </div>
             </CardContent>
           </Card>
