@@ -1,10 +1,10 @@
 "use client"
 import {Loader} from '@googlemaps/js-api-loader'
-import { useEffect, useReducer, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 export default function GoogleMapComponent(){
 
-  const mapRef = useRef<HTMLDialogElement>(null)
+  const mapRef = useRef<HTMLDivElement>(null)
 
   useEffect(()=>{
 
@@ -29,7 +29,7 @@ export default function GoogleMapComponent(){
       new Map(mapRef.current as HTMLElement, options)
     }
     initMap();
-  })
+  }, [])
   return(
     <div ref={mapRef} className='w-[400px] h-[400px]' />
   )
