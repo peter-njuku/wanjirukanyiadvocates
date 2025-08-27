@@ -3,56 +3,45 @@
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Phone, Mail, MapPin, Clock, BookOpen } from "lucide-react"
+import { Phone, Mail, MapPin, Clock } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { FormEvent, useState } from "react"
 
 export default function ContactPage() {
   
-    const [firstName, setFirstName] = useState('')
-    const [lastName, setLastName] = useState('')
-    const [email, setEmail] = useState('')
-    const [matterType, setMatterType] = useState('')
-    const [description, setDescription] = useState('')
-    const [error, setError] = useState('')
-    const [isSubmitting, setIsSubmitting] = useState(false)
-    const [successMessage, setSuccessMessage] = useState('')
+  const [firstName, setFirstName] = useState('')
+  const [lastName, setLastName] = useState('')
+  const [email, setEmail] = useState('')
+  const [matterType, setMatterType] = useState('')
+  const [description, setDescription] = useState('')
+  const [error, setError] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [successMessage, setSuccessMessage] = useState('')
 
-    const matterTypes = [
-        "Family Matters",
-        "Succession & Inheritance",
-        "Computer Misuse & Cyber Crimes",
-        "Child Rights",
-        "Employment Law",
-        "Corporate & Business Law",
-        "Student Mentorship",
-        "Other Legal Matters"
-    ]
+  const matterTypes = [
+    "Family Matters",
+    "Succession & Inheritance",
+    "Computer Misuse & Cyber Crimes",
+    "Child Rights",
+    "Employment Law",
+    "Corporate & Business Law",
+    "Student Mentorship",
+    "Other Legal Matters"
+  ]
 
-  const handleSubmit = async(e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
-    // Clear previous messages
     setError('');
     setSuccessMessage('');
     setIsSubmitting(true);
 
-    // Basic validation
     if (!firstName || !lastName || !email || !matterType || !description) {
       setError('Please fill in all required fields');
       setIsSubmitting(false);
       return;
     }
 
-    // Send data as an object (not array)
-    const formData = {
-      firstName,
-      lastName,
-      email,
-      matterType,
-      description
-    };
+    const formData = { firstName, lastName, email, matterType, description };
 
     try {
       const response = await fetch('/api/contact', {
@@ -61,15 +50,13 @@ export default function ContactPage() {
           'Accept': 'application/json',
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData) 
+        body: JSON.stringify(formData)
       });
 
       const content = await response.json();
 
       if (response.ok) {
         setSuccessMessage('Your message has been submitted successfully!');
-        
-        // Clear form
         setFirstName('');
         setLastName('');
         setEmail('');
@@ -89,27 +76,56 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
-      
-      <main className="container mx-auto px-4 py-8">
-        <div className="max-w-2xl mx-auto">
-          <Card>
+
+      <main className="container mx-auto px-4 py-12 grid grid-cols-1 lg:grid-cols-2 gap-8">
+        
+        {/* Contact Info Card */}
+        <div className="flex flex-col justify-center">
+          <Card className="shadow-md">
             <CardHeader>
-              <CardTitle>Contact Us</CardTitle>
+              <CardTitle>Get in Touch</CardTitle>
               <CardDescription>
-                Get in touch with Wanjiru Kanyi Advocates for legal consultation
+                We’re here to help with your legal needs. Reach out today and schedule a consultation.
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="flex items-center gap-3">
+                <Phone className="w-5 h-5 text-blue-600" />
+                <span>+254 700 000 000</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Mail className="w-5 h-5 text-blue-600" />
+                <span>info@wanjirukanyiadvocates.co.ke</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <MapPin className="w-5 h-5 text-blue-600" />
+                <span>Westlands, Nairobi, Kenya</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Clock className="w-5 h-5 text-blue-600" />
+                <span>Mon – Fri: 8:30 AM – 5:00 PM</span>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Contact Form Card */}
+        <div>
+          <Card className="shadow-md">
+            <CardHeader>
+              <CardTitle>Send Us a Message</CardTitle>
+              <CardDescription>
+                Complete the form below and our team will respond promptly.
               </CardDescription>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-4">
                 
-                {/* Error Message */}
                 {error && (
                   <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded">
                     {error}
                   </div>
                 )}
-                
-                {/* Success Message */}
                 {successMessage && (
                   <div className="bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded">
                     {successMessage}
@@ -123,26 +139,23 @@ export default function ContactPage() {
                     </label>
                     <input
                       type="text"
-                      name="firstName"
                       id="firstName"
                       value={firstName}
                       onChange={e => setFirstName(e.target.value)}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
                       required
                     />
                   </div>
-                  
                   <div>
                     <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-1">
                       Last Name *
                     </label>
                     <input
                       type="text"
-                      name="lastName"
                       id="lastName"
                       value={lastName}
                       onChange={e => setLastName(e.target.value)}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
                       required
                     />
                   </div>
@@ -154,11 +167,10 @@ export default function ContactPage() {
                   </label>
                   <input
                     type="email"
-                    name="email"
                     id="email"
                     value={email}
                     onChange={e => setEmail(e.target.value)}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
                     required
                   />
                 </div>
@@ -168,18 +180,15 @@ export default function ContactPage() {
                     Matter Type *
                   </label>
                   <select
-                    name="matterType"
                     id="matterType"
                     value={matterType}
                     onChange={e => setMatterType(e.target.value)}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
                     required
                   >
                     <option value="">Select a matter type</option>
-                    {matterTypes.map((type) => (
-                      <option key={type} value={type}>
-                        {type}
-                      </option>
+                    {matterTypes.map(type => (
+                      <option key={type} value={type}>{type}</option>
                     ))}
                   </select>
                 </div>
@@ -189,12 +198,11 @@ export default function ContactPage() {
                     Description *
                   </label>
                   <textarea
-                    name="description"
                     id="description"
                     value={description}
                     onChange={e => setDescription(e.target.value)}
                     rows={4}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
                     placeholder="Please describe your legal matter in detail..."
                     required
                   />
@@ -212,8 +220,8 @@ export default function ContactPage() {
           </Card>
         </div>
       </main>
-      
+
       <Footer />
     </div>
-  );
+  )
 }

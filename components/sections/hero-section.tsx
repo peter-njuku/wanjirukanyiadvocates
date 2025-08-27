@@ -64,7 +64,7 @@ export default function HeroSection() {
               className="bg-amber-600 hover:bg-amber-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-200 w-fit rounded-md" 
               asChild
             >
-              <Link href="/consultation" className="flex items-center">
+              <Link href="/contact" className="flex items-center">
                 Get Free Case Assessment
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
