@@ -40,7 +40,7 @@ export default function ContactPage() {
       description
     ]
 
-    const response = await fetch('/api/contact/route',{
+    const response = await fetch('/api/contact',{
       method:'POST',
       headers:{
         'Accept':'application/json',
