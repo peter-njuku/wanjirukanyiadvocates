@@ -106,7 +106,7 @@ export default function ContactPage() {
                 <span>Mon – Fri: 9:00 AM – 5:00 PM</span>
               </div>
               <div>
-                <iframe src="https://maps.app.goo.gl/6xmoDTERh4zJwqn5A" />
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3401.9533231805294!2d36.71120687416625!3d-1.2589584355951864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f193cc2fd67db%3A0xec783ded16a0dc25!2sUthiru%20High%20School%2C%20P.O%20Box%2029034%2C%20Rungiri!5e1!3m2!1sen!2ske!4v1756288507235!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
             </CardContent>
           </Card>
