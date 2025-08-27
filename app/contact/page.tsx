@@ -106,7 +106,7 @@ export default function ContactPage() {
                 <Clock className="w-5 h-5 text-blue-600" />
                 <span>Mon – Fri: 9:00 AM – 5:00 PM</span>
               </div>
-              <GoogleMapComponent />
+              
             </CardContent>
           </Card>
         </div>
