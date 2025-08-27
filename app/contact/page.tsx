@@ -6,7 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Phone, Mail, MapPin, Clock } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { FormEvent, useState } from "react"
-
+import GoogleMapComponent from "../../components/mapComponent"
 
 export default function ContactPage() {
   
@@ -106,7 +106,7 @@ export default function ContactPage() {
                 <Clock className="w-5 h-5 text-blue-600" />
                 <span>Mon – Fri: 9:00 AM – 5:00 PM</span>
               </div>
-              
+              <GoogleMapComponent />
             </CardContent>
           </Card>
         </div>
