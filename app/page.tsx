@@ -1,3 +1,4 @@
+import FaqSection from "@/components/sections/faq-section";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import HeroSection from "@/components/sections/hero-section";
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
   icons:{
      icon: "/favicon.ico",
   },
-  description: "A trusted law firm based in Kenya, specializing in [list 2-3 key practice areas]. We are dedicated to serving our community with integrity and expertise.",
+  description: "A trusted law firm based in Kenya, specializing in [list 2-3 key practice areas]. We are dedicated to serving our community with integrity and excellence.",
   keywords: "kenya law firm, legal services, lawyer nairobi, [add more keywords]",
   // Open Graph metadata for social sharing (highly recommended)
   openGraph: {
@@ -37,6 +38,7 @@ export default function HomePage() {
       <ConsultationWeeks />
       <CommunityFocus />
       <CTASection />
+      <FaqSection />
       <Footer />
     </div>
   );
