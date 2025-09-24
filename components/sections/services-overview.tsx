@@ -1,11 +1,11 @@
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Scale, Users, Shield, Briefcase, Building, Lightbulb, Heart, Target, ArrowRight } from "lucide-react"
+import { Scale as ScaleIcon, Users, Shield, Briefcase, Building, Lightbulb, Heart, Target, ArrowRight } from "lucide-react"
 import Link from "next/link"
 
 export default function ServicesOverview() {
   const services = [
     {
-      icon: Scale,
+      icon: ScaleIcon,
       title: "Civil & Commercial Litigation",
       description: "Resolving disputes with strategic advocacy, meticulous preparation, and a results-driven approach.",
       highlights: ["Contract disputes", "Debt recovery", "Commercial arbitration"]

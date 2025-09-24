@@ -1,3 +1,5 @@
+import { Heart, Scale as ScaleIcon } from "lucide-react";
+
 export default function AboutSection() {
   return (
     <section className="py-20 bg-white">
@@ -18,7 +20,7 @@ export default function AboutSection() {
                 As a trusted **Legal Information and Resource Centre**, we prioritize accessible legal knowledge and confidentiality in all our engagements.
               </p>
               <div className="flex items-center space-x-2">
-                <Scale className="w-5 h-5 text-blue-600" />
+                <ScaleIcon className="w-5 h-5 text-blue-600" />
                 <span>Our firm is built on a foundation of **expertise, integrity, and a passion for community advocacy**.</span>
               </div>
             </div>
