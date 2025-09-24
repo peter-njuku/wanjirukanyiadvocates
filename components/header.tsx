@@ -84,7 +84,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-4">
             <Image
-              src="/logo.jpeg"
+              src="/logo.svg"
               alt="Wanjiru Kanyi Law Advocates Logo"
               width={isScrolled ? 290 : 420}
               height={isScrolled ? 96 : 160}
