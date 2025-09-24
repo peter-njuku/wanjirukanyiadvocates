@@ -1,3 +1,4 @@
+import CurvedBottom from "@/components/ui/curved-bottom";
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -25,7 +26,7 @@ export default function ServicesPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="py-20 bg-[#1a237e] text-white">
+      <section className="relative py-20 bg-[#1a237e] text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <Badge variant="outline" className="mb-4 bg-blue-100 text-blue-800 border-blue-300 px-4 py-1">
@@ -40,6 +41,7 @@ export default function ServicesPage() {
             </p>
           </div>
         </div>
+        <CurvedBottom nextSectionBgColor="bg-white" />
       </section>
 
       {/* Main Services */}

@@ -2,9 +2,16 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowRight, Phone, Award, Shield, Scale as ScaleIcon, Globe, Star } from "lucide-react"
 
-export default function HeroSection() {
+interface HeroSectionProps {
+  hasCurvedBottom?: boolean;
+}
+
+export default function HeroSection({ hasCurvedBottom = false }: HeroSectionProps) {
   return (
     <section className="relative py-24 md:py-32 lg:py-40 overflow-hidden">
+      {hasCurvedBottom && (
+        <div className="absolute bottom-0 left-0 right-0 h-24 bg-background rounded-t-[50%] transform translate-y-1/2 z-10"></div>
+      )}
       {/* Background with Professional Portrait */}
       <div className="absolute inset-0 z-0">
         {/* Use your professional portrait - much better than half-face */}

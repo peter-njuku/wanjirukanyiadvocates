@@ -1,3 +1,4 @@
+import CurvedBottom from "@/components/ui/curved-bottom";
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -10,7 +11,7 @@ export default function AboutPage() {
       <Header />
 
       {/* Hero Section - Combined Why Choose Us & About */}
-      <section className="py-16 bg-[#1a237e] text-white">
+      <section className="relative py-16 bg-[#1a237e] text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-300 px-4 py-1 mb-4">
@@ -20,14 +21,14 @@ export default function AboutPage() {
               Wanjiru Kanyi Law Advocates
             </h1>
             <p className="text-lg text-slate-200 leading-relaxed">
-              Choose us for our unwavering commitment to exceptional legal solutions rooted in deep Kenyan expertise. 
-              With vast amount of experience, we combine traditional excellence with 
+              Choose us for our unwavering commitment to exceptional legal solutions rooted in deep Kenyan expertise.
+              With vast amount of experience, we combine traditional excellence with
               innovative approaches in land law, succession, commercial disputes, and cybercrime.
             </p>
           </div>
         </div>
+        <CurvedBottom nextSectionBgColor="bg-white" />
       </section>
-
       {/* Founder Section - Compact & Impactful */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
