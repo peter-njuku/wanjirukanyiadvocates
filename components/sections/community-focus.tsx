@@ -1,4 +1,4 @@
-import { Users, Shield, Award, Heart, BookOpen, GraduationCap, Scale } from "lucide-react"
+import { Users, Shield, Award, Heart, BookOpen, GraduationCap, Scale, Briefcase } from "lucide-react"
 
 export default function CommunityFocus() {
   const focusAreas = [
@@ -66,7 +66,7 @@ export default function CommunityFocus() {
               <div className="text-sm text-blue-700 font-medium">Lives Impacted</div>
             </div>
             <div className="text-center p-6 bg-blue-50 rounded-lg">
-              <div className="text-3xl font-bold text-blue-800 mb-2"></div>
+              <Briefcase className="w-5 h-5" />
               <div className="text-sm text-blue-700 font-medium">Vast Experience</div>
             </div>
           </div>
