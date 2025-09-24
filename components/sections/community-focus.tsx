@@ -66,7 +66,7 @@ export default function CommunityFocus() {
               <div className="text-sm text-blue-700 font-medium">Lives Impacted</div>
             </div>
             <div className="text-center p-6 bg-blue-50 rounded-lg">
-              <Briefcase className="w-5 h-5" />
+              <Briefcase className="text-3xl font-bold text-blue-800 mb-2" />
               <div className="text-sm text-blue-700 font-medium">Vast Experience</div>
             </div>
           </div>
