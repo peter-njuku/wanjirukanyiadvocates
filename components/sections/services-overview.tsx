@@ -14,7 +14,7 @@ export default function ServicesOverview() {
       icon: Heart,
       title: "Family Law & Child Protection",
       description: "Offering compassionate yet firm representation in matters of custody, maintenance, and child safeguarding.",
-      highlights: ["Child custody", "Divorce proceedings", "Protection orders"]
+      highlights: ["Family Law", "Child custody", "Divorce proceedings", "Protection orders"]
     },
     {
       icon: Briefcase,
@@ -39,6 +39,12 @@ export default function ServicesOverview() {
       title: "Digital Rights & Cybercrime",
       description: "Protecting individuals and businesses against online defamation, bullying, harassment, and misuse of technology.",
       highlights: ["Cybercrime defense", "Digital privacy", "Online reputation protection"]
+    },
+    {
+      icon: Shield,
+      title: "Commissioner For Oaths",
+      description: "Administering oaths and affirmations for legal documents, affidavits, and statutory declarations.",
+      highlights: ["Affidavits", "Statutory declarations", "Oaths and affirmations"]
     },
   ]
 
