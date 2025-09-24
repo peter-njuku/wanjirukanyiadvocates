@@ -20,7 +20,7 @@ export default function HeroSection() {
       <div className="absolute top-8 left-8 z-20">
         <div className="bg-gradient-to-r from-amber-500 to-amber-600 text-white px-6 py-3 rounded-lg shadow-xl flex items-center space-x-2">
           <Award className="h-5 w-5 text-white" />
-          <span className="flex items-center mr-2 h-5 w-5">
+          <span className="flex items-center mr-2 ">
             Advocates You Can Trust
           </span>
         </div>
