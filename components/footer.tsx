@@ -13,6 +13,7 @@ export default function Footer() {
               Professional legal services with a commitment to ensuring access to justice and legal information for
               communities across Kenya.
             </p>
+          </div> {/* The closing tag for this div was missing */}
 
           {/* Quick Links */}
           <div className="space-y-4">
