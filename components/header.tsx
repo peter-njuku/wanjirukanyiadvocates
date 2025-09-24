@@ -78,7 +78,7 @@ export default function Header() {
         <div
           className={cn(
             "container mx-auto px-4 flex items-center justify-between transition-all duration-300",
-            isScrolled ? "py-2" : "py-2"
+            isScrolled ? "py-3" : "py-2"
           )}
         >
           {/* Logo */}
