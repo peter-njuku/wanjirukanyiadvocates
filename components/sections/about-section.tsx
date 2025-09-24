@@ -1,4 +1,5 @@
 import { Heart, Scale as ScaleIcon } from "lucide-react";
+import ValuesCards from "./value-cards";
 
 export default function AboutSection() {
   return (
@@ -14,27 +15,7 @@ export default function AboutSection() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 text-sm text-slate-700">
-            <div className="space-y-4">
-              <p>
-                As a trusted <b>Legal Information and Resource Centre</b>, we prioritize accessible legal knowledge and confidentiality in all our engagements.
-              </p>
-              <div className="flex items-center space-x-2">
-                <ScaleIcon className="w-5 h-5 text-blue-600" />
-                <span>Our firm is built on a foundation of <b>expertise, integrity, and a passion for community advocacy</b>.</span>
-              </div>
-            </div>
-
-            <div className="space-y-4">
-              <p>
-                We believe that every Kenyan has the right to quality representation. We achieve this through our dedicated community programs, legal education initiatives, and a client-first approach to every case.
-              </p>
-              <div className="flex items-center space-x-2">
-                <Heart className="w-5 h-5 text-rose-500" />
-                <span>We ensure our clients receive skilled and compassionate representation.</span>
-              </div>
-            </div>
-          </div>
+          <ValuesCards />
         </div>
       </div>
     </section>
