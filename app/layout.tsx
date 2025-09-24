@@ -1,9 +1,9 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Garamond } from "next/font/google"
+import { EB_Garamond } from "next/font/google"
 import "./globals.css"
 
-const garamond = Garamond({
+const ebgaramond = EB_Garamond({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-garamond",
