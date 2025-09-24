@@ -6,7 +6,7 @@ import ConsultationWeeks from "@/components/sections/consultation-weeks";
 import CommunityFocus from "@/components/sections/community-focus";
 import CTASection from "@/components/sections/cta-section";
 import { Metadata } from "next"; // Import Metadata type
-import AboutSection from "@/components/sections/AboutSection";
+import AboutSection from "@/components/sections/about-section";
 
 // Define metadata for this page
 export const metadata: Metadata = {
