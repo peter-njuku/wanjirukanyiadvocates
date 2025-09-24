@@ -1,6 +1,3 @@
-import { Heart, Scale as ScaleIcon } from "lucide-react";
-import ValuesCards from "./value-cards";
-
 export default function AboutSection() {
   return (
     <section className="py-20 bg-white">
