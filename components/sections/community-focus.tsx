@@ -1,4 +1,4 @@
-import { Briefcase, BookOpen, GraduationCap, Heart, Scale, Shield } from "lucide-react"
+import { Briefcase, BookOpen, GraduationCap, Heart, Scale as ScaleIcon, Shield } from "lucide-react"
 
 export default function CommunityFocus() {
   const focusAreas = [
@@ -25,7 +25,7 @@ export default function CommunityFocus() {
         <div className="max-w-5xl mx-auto space-y-12">
           <div className="text-center">
             <div className="inline-flex items-center justify-center bg-blue-50 px-4 py-2 rounded-full mb-6">
-              <Scale className="h-5 w-5 text-blue-600 mr-2" />
+              <ScaleIcon className="h-5 w-5 text-blue-600 mr-2" />
               <span className="text-blue-700 font-medium text-sm">Community Focus</span>
             </div>
             <h2 className="font-serif font-bold text-3xl md:text-4xl text-slate-900 mb-6">

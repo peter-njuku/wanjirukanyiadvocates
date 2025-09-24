@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import Link from "next/link"
-import { Calendar, MapPin, Clock, Users, Home, Scale } from "lucide-react"
+import { Calendar, MapPin, Clock, Users, Home, Scale as ScaleIcon } from "lucide-react"
 
 export default function ConsultationWeeks() {
   return (
@@ -101,7 +101,7 @@ export default function ConsultationWeeks() {
               {/* Location and Time Information */}
               <div className="bg-white/5 p-8 rounded-xl border border-cyan-500/20 backdrop-blur-sm">
                 <h3 className="text-center font-serif font-semibold text-2xl text-cyan-300 mb-8 flex items-center justify-center">
-                  <Scale className="h-6 w-6 mr-3" />
+                  <ScaleIcon className="h-6 w-6 mr-3" />
                   Service Week Details
                 </h3>
                 <div className="grid md:grid-cols-2 gap-8">

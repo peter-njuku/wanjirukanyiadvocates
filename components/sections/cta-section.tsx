@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { ArrowRight, Phone, Shield, Scale } from "lucide-react"
+import { ArrowRight, Phone, Shield, Scale as ScaleIcon } from "lucide-react"
 
 export default function CTASection() {
   return (
@@ -17,7 +17,7 @@ export default function CTASection() {
           {/* Icon decoration */}
           <div className="flex justify-center space-x-6">
             <Shield className="h-10 w-10 opacity-80" />
-            <Scale className="h-10 w-10 opacity-80" />
+            <ScaleIcon className="h-10 w-10 opacity-80" />
           </div>
           
           <h2 className="font-serif font-bold text-3xl md:text-4xl lg:text-5xl leading-tight">
