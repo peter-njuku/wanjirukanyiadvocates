@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Calendar, User, Clock, ArrowLeft, Share, Shield, AlertTriangle, Users, Baby, Lock, Scale } from "lucide-react"
+import { Calendar, User, Clock, ArrowLeft, Share, Shield, AlertTriangle, Users, Baby, Lock, Scale as ScaleIcon } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 
 export default function ChildrenDataProtectionPost() {
@@ -165,7 +165,7 @@ export default function ChildrenDataProtectionPost() {
             <h2>Enforcement and Penalties</h2>
             
             <div className="bg-purple-50 p-6 rounded-lg my-6 border-l-4 border-purple-400">
-              <Scale className="h-8 w-8 text-purple-600 float-left mr-4" />
+              <ScaleIcon className="h-8 w-8 text-purple-600 float-left mr-4" />
               <h4 className="text-purple-800 font-semibold mb-2">Office of the Data Protection Commissioner</h4>
               <div className="space-y-3 text-purple-700">
                 <p>The Act establishes the Office of the Data Protection Commissioner which is mandated to receive complaints of infringements of children's data rights.</p>

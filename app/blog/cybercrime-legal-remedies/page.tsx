@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Calendar, User, Clock, ArrowLeft, Share, Shield, AlertTriangle, BookOpen, Scale } from "lucide-react"
+import { Calendar, User, Clock, ArrowLeft, Share, Shield, AlertTriangle, BookOpen, Scale as ScaleIcon } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 
 export default function CyberbullyingPost() {
@@ -179,7 +179,7 @@ export default function CyberbullyingPost() {
               </div>
 
               <div className="bg-white p-4 border border-slate-200 rounded-lg text-center">
-                <Scale className="h-8 w-8 text-cyan-600 mx-auto mb-3" />
+                <ScaleIcon className="h-8 w-8 text-cyan-600 mx-auto mb-3" />
                 <h4 className="font-semibold text-slate-900 mb-2">Awareness Programs</h4>
                 <p className="text-sm text-slate-600">Sensitize employees, students, and the public about Computer misuse and cyber crime dangers</p>
               </div>
