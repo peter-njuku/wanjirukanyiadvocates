@@ -81,34 +81,16 @@ export default function Header() {
             isScrolled ? "py-2" : "py-4"
           )}
         >
-          {/* Logo + Heading */}
+          {/* Logo */}
           <Link href="/" className="flex items-center space-x-4">
             <Image
-              src="/logo.jpg"
+              src="/logo.jpeg"
               alt="Wanjiru Kanyi Law Advocates Logo"
               width={isScrolled ? 180 : 280}
               height={isScrolled ? 64 : 110}
               className={cn(isScrolled ? "h-16 w-auto" : "h-24 w-auto")}
               priority
             />
-            <div className="flex flex-col">
-              <div
-                className={cn(
-                  "tracking-tight bg-gradient-to-r from-cyan-600 via-blue-600 to-green-500 bg-clip-text text-transparent transition-all duration-300",
-                  isScrolled ? "text-xl font-bold" : "text-3xl font-extrabold"
-                )}
-              >
-                WANJIRU KANYI LAW ADVOCATES
-              </div>
-              <div
-                className={cn(
-                  "italic bg-gradient-to-r from-blue-500 to-cyan-600 bg-clip-text text-transparent transition-all duration-300",
-                  isScrolled ? "text-xs font-normal mt-0" : "text-sm font-medium mt-1"
-                )}
-              >
-                Lead Where You Are
-              </div>
-            </div>
           </Link>
 
           {/* Desktop Navigation */}
