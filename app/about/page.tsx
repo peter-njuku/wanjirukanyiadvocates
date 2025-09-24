@@ -21,7 +21,7 @@ export default function AboutPage() {
             </h1>
             <p className="text-lg text-slate-700 leading-relaxed">
               Choose us for our unwavering commitment to exceptional legal solutions rooted in deep Kenyan expertise. 
-              With over a decade of experience and KEOnline Awards recognition, we combine traditional excellence with 
+              With vast amount of experience, we combine traditional excellence with 
               innovative approaches in land law, succession, commercial disputes, and cybercrime.
             </p>
           </div>

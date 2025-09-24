@@ -6,6 +6,7 @@ import ConsultationWeeks from "@/components/sections/consultation-weeks";
 import CommunityFocus from "@/components/sections/community-focus";
 import CTASection from "@/components/sections/cta-section";
 import { Metadata } from "next"; // Import Metadata type
+import AboutSection from "@/components/sections/AboutSection";
 
 // Define metadata for this page
 export const metadata: Metadata = {
@@ -29,6 +30,8 @@ export default function HomePage() {
     <div className="min-h-screen bg-background">
       <Header />
       <HeroSection />
+      <AboutSection />
+      
       <ServicesOverview />
       <ConsultationWeeks />
       <CommunityFocus />
