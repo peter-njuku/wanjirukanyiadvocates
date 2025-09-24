@@ -78,7 +78,7 @@ export default function Header() {
         <div
           className={cn(
             "container mx-auto px-4 flex items-center justify-between transition-all duration-300",
-            isScrolled ? "py-2" : "py-4"
+            isScrolled ? "py-2" : "py-2"
           )}
         >
           {/* Logo */}
@@ -86,9 +86,9 @@ export default function Header() {
             <Image
               src="/logo.svg"
               alt="Wanjiru Kanyi Law Advocates Logo"
-              width={isScrolled ? 290 : 420}
-              height={isScrolled ? 96 : 160}
-              className={cn(isScrolled ? "h-24 w-auto" : "h-40 w-auto")}
+              width={isScrolled ? 290 : 290}
+              height={isScrolled ? 96 : 96}
+              className={cn(isScrolled ? "h-24 w-auto" : "h-24 w-auto")}
               priority
             />
           </Link>
