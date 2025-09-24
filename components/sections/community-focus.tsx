@@ -66,9 +66,11 @@ export default function CommunityFocus() {
               <div className="text-sm text-blue-700 font-medium">Lives Impacted</div>
             </div>
             <div className="text-center p-6 bg-blue-50 rounded-lg flex flex-col items-center">
-  <Briefcase className="w-10 h-10 text-3xl font-bold text-blue-800 mb-2" />
-  <div className="text-sm text-blue-700 font-medium">Vast Experience</div>
-</div>
+              <Briefcase className="w-10 h-10 text-3xl font-bold text-blue-800 mb-2" />
+              <div className="text-sm text-blue-700 font-medium">Vast Experience</div>
+            </div>
+          </div>  {/* <-- ADD THIS CLOSING DIV TAG */}
+
           {/* Additional trust element */}
           <div className="text-center pt-8">
             <div className="inline-flex items-center bg-white px-6 py-4 rounded-xl shadow-sm border border-blue-100">
