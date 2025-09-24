@@ -1,3 +1,4 @@
+import CurvedBottom from "@/components/ui/curved-bottom";
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
@@ -93,13 +94,14 @@ export default function BlogPage() {
     <div className="min-h-screen bg-white">
         <Header />
       {/* Hero Section */}
-      <section className="bg-[#1a237e] text-white py-16">
+      <section className="relative bg-[#1a237e] text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="font-serif font-bold text-4xl md:text-5xl mb-4">Legal Insights & Updates</h1>
           <p className="text-xl text-cyan-100 max-w-2xl mx-auto">
             Expert analysis on Kenyan law, cyber legislation, children's rights, and data protection from Wanjiru Kanyi Law Advocates.
           </p>
         </div>
+        <CurvedBottom nextSectionBgColor="bg-white" />
       </section>
 
       {/* Main Content */}

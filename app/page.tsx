@@ -30,7 +30,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <HeroSection />
+      <HeroSection hasCurvedBottom={false} />
       <AboutSection />
       <ValuesCards />
       <ServicesOverview />
