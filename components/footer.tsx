@@ -13,11 +13,6 @@ export default function Footer() {
               Professional legal services with a commitment to ensuring access to justice and legal information for
               communities across Kenya.
             </p>
-            <div className="flex items-center gap-2 text-sm">
-              <Award className="h-4 w-4" />
-              <span>KEOnline Digitally Fit Awards 2024 Nominee</span>
-            </div>
-          </div>
 
           {/* Quick Links */}
           <div className="space-y-4">

@@ -76,16 +76,6 @@ const blogPosts = [
     category: "Property Law",
     slug: "land-inheritance-service-week"
   },
-  {
-    id: 8,
-    title: "KEOnline Digitally Fit Awards 2024: Our Nomination",
-    excerpt: "Celebrating our recognition in advocating for digital rights and cyber law in Kenya.",
-    date: "2024-02-05",
-    author: "Wanjiru Kanyi",
-    readTime: "3 min read",
-    category: "Awards",
-    slug: "digitally-fit-awards-nomination"
-  }
 ]
 
 const categories = [
@@ -96,7 +86,6 @@ const categories = [
   "Data Protection",
   "Property Law",
   "Legal Education",
-  "Awards"
 ]
 
 export default function BlogPage() {

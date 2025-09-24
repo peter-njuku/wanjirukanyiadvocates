@@ -155,24 +155,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Recognition - Simplified 
-      <section className="py-16 bg-slate-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-2xl mx-auto text-center">
-            <Award className="h-10 w-10 text-amber-500 mx-auto mb-4" />
-            <h2 className="font-serif font-bold text-xl md:text-2xl text-slate-900 mb-3">
-              Professional Recognition
-            </h2>
-            <p className="text-slate-700 mb-4 text-sm">
-              Nominated for KEOnline Digitally Fit Awards 2024 in "Advocating & Law" category
-            </p>
-            <Badge className="bg-amber-500/20 text-amber-700 border-amber-500/30 px-3 py-1 text-xs">
-              2024 Award Nominee
-            </Badge>
-          </div>
-        </div>
-      </section> */}
-
       <Footer />
     </div>
   )
