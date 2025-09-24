@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 import { EB_Garamond } from "next/font/google"
 import "./globals.css"
 
-const ebgaramond = EB_Garamond({
+const ebGaramond = EB_Garamond({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-garamond",
@@ -28,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${garamond.variable}`}>
+    <html lang="en" className={`${ebGaramond.variable}`}>
       <head>
         <link rel="icon" href="/favicon.ico" />
       </head>
