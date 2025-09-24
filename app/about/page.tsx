@@ -10,7 +10,7 @@ export default function AboutPage() {
       <Header />
 
       {/* Hero Section - Combined Why Choose Us & About */}
-      <section className="py-16 bg-primary text-white">
+      <section className="py-16 bg-[#1a237e] text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-300 px-4 py-1 mb-4">
