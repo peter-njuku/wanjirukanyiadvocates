@@ -78,7 +78,7 @@ export default function ContactPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="py-20 bg-primary text-white">
+      <section className="py-20 bg-[#1a237e] text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <h1 className="font-serif font-bold text-4xl md:text-5xl text-white">
