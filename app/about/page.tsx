@@ -10,16 +10,16 @@ export default function AboutPage() {
       <Header />
 
       {/* Hero Section - Combined Why Choose Us & About */}
-      <section className="py-16 bg-gradient-to-br from-slate-50 to-blue-50">
+      <section className="py-16 bg-gradient-to-r from-slate-900/90 via-slate-900/60 to-transparent text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-300 px-4 py-1 mb-4">
               Why Choose Us
             </Badge>
-            <h1 className="font-serif font-bold text-3xl md:text-4xl text-slate-900">
+            <h1 className="font-serif font-bold text-3xl md:text-4xl text-white">
               Wanjiru Kanyi Law Advocates
             </h1>
-            <p className="text-lg text-slate-700 leading-relaxed">
+            <p className="text-lg text-slate-200 leading-relaxed">
               Choose us for our unwavering commitment to exceptional legal solutions rooted in deep Kenyan expertise. 
               With vast amount of experience, we combine traditional excellence with 
               innovative approaches in land law, succession, commercial disputes, and cybercrime.

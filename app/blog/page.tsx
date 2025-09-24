@@ -93,7 +93,7 @@ export default function BlogPage() {
     <div className="min-h-screen bg-white">
         <Header />
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-slate-900 to-blue-900 text-white py-16">
+      <section className="bg-gradient-to-r from-slate-900/90 via-slate-900/60 to-transparent text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="font-serif font-bold text-4xl md:text-5xl mb-4">Legal Insights & Updates</h1>
           <p className="text-xl text-cyan-100 max-w-2xl mx-auto">
