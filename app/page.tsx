@@ -31,7 +31,6 @@ export default function HomePage() {
       <Header />
       <HeroSection />
       <AboutSection />
-      
       <ServicesOverview />
       <ConsultationWeeks />
       <CommunityFocus />

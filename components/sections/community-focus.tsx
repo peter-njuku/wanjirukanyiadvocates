@@ -1,4 +1,4 @@
-import { Users, Shield, Award, Heart, BookOpen, GraduationCap, Scale, Briefcase } from "lucide-react"
+import { Briefcase, BookOpen, GraduationCap, Heart, Scale, Shield } from "lucide-react"
 
 export default function CommunityFocus() {
   const focusAreas = [
@@ -69,8 +69,9 @@ export default function CommunityFocus() {
               <Briefcase className="w-10 h-10 text-3xl font-bold text-blue-800 mb-2" />
               <div className="text-sm text-blue-700 font-medium">Vast Experience</div>
             </div>
-          </div>  {/* <-- ADD THIS CLOSING DIV TAG */}
-
+          </div>
+          {/* Missing closing div tag for the grid was here */}
+          
           {/* Additional trust element */}
           <div className="text-center pt-8">
             <div className="inline-flex items-center bg-white px-6 py-4 rounded-xl shadow-sm border border-blue-100">
