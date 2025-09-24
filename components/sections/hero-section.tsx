@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { ArrowRight, Phone, Award, Shield, Scale, Globe, Star } from "lucide-react"
+import { ArrowRight, Phone, Award, Shield, Scale as ScaleIcon, Globe, Star } from "lucide-react"
 
 export default function HeroSection() {
   return (
@@ -52,7 +52,7 @@ export default function HeroSection() {
               <span>Kenyan Court Experience</span>
             </div>
             <div className="flex items-center bg-white/10 backdrop-blur-sm px-3 py-2 rounded-lg">
-              <Scale className="h-4 w-4 mr-2 text-amber-400" />
+              <ScaleIcon className="h-4 w-4 mr-2 text-amber-400" />
               <span>Proven Results in Kenya</span>
             </div>
             <div className="flex items-center bg-white/10 backdrop-blur-sm px-3 py-2 rounded-lg">
