@@ -2,7 +2,7 @@ import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Award, Users, Scale, Target, BookOpen, Shield, Star, Heart, Globe } from "lucide-react"
+import { Award, Users, Scale as ScaleIcon, Target, BookOpen, Shield, Star, Heart, Globe } from "lucide-react"
 
 export default function AboutPage() {
   return (
@@ -103,7 +103,7 @@ export default function AboutPage() {
             {/* Core Values Grid */}
             <div className="grid md:grid-cols-2 gap-6">
               <div className="flex items-start space-x-3">
-                <Scale className="h-5 w-5 text-cyan-300 mt-0.5 flex-shrink-0" />
+                <ScaleIcon className="h-5 w-5 text-cyan-300 mt-0.5 flex-shrink-0" />
                 <div>
                   <h4 className="font-semibold text-cyan-100 mb-1">Excellence</h4>
                   <p className="text-blue-100 text-sm">Highest standards in legal expertise and preparation</p>
@@ -143,7 +143,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center">
             <div className="bg-cyan-50 p-6 rounded-xl border border-cyan-200">
-              <Scale className="h-10 w-10 text-cyan-600 mx-auto mb-3" />
+              <ScaleIcon className="h-10 w-10 text-cyan-600 mx-auto mb-3" />
               <h3 className="font-serif font-semibold text-xl text-slate-900 mb-3">Our Access Commitment</h3>
               <p className="text-slate-700 text-sm">
                 We believe quality legal services should be accessible to all Kenyans. This drives our 

@@ -9,7 +9,6 @@ import {
   Users,
   Shield,
   MessageSquareWarning,
-  Scale,
   FileText,
   Building,
   Calendar,
