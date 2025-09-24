@@ -6,7 +6,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Phone, Mail, MapPin, Clock } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { FormEvent, useState } from "react"
-import GoogleMapComponent from "../../components/mapComponent"
 
 export default function ContactPage() {
   
