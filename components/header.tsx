@@ -86,9 +86,9 @@ export default function Header() {
             <Image
               src="/logo.jpeg"
               alt="Wanjiru Kanyi Law Advocates Logo"
-              width={isScrolled ? 180 : 280}
-              height={isScrolled ? 64 : 110}
-              className={cn(isScrolled ? "h-16 w-auto" : "h-24 w-auto")}
+              width={isScrolled ? 240 : 360}
+              height={isScrolled ? 80 : 140}
+              className={cn(isScrolled ? "h-20 w-auto" : "h-32 w-auto")}
               priority
             />
           </Link>
