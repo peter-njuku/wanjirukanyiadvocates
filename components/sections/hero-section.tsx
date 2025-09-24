@@ -19,7 +19,7 @@ export default function HeroSection() {
       {/* Award Badge - More Professional Placement */}
       <div className="absolute top-8 left-8 z-20">
   {/* The outer div acts as the container for the border */}
-  <div className="border-2 border-amber-500 rounded-lg p-1"> {/* Yellowish boundary */}
+  <div> {/* Yellowish boundary */}
     {/* The inner div is now responsible for the content and has a clear background */}
     <div className="bg-transparent text-white px-6 py-3 rounded-lg flex items-center space-x-2">
       <div className="flex items-center bg-white/10 backdrop-blur-sm px-3 py-2 rounded-lg">
