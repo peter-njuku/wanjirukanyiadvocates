@@ -25,7 +25,7 @@ export default function ServicesPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-slate-900/90 via-slate-900/60 to-transparent text-white">
+      <section className="py-20 bg-primary text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <Badge variant="outline" className="mb-4 bg-blue-100 text-blue-800 border-blue-300 px-4 py-1">
