@@ -6,6 +6,14 @@ const faqs = [
     answer: "We specialize in land law, succession matters, commercial disputes, cybercrime, and family law. Visit our Services page for a comprehensive list.",
   },
   {
+    question: "What are the key changes introduced by Kenya's New Children Bill 2021?",
+    answer: "The New Children Bill 2021 introduces major reforms, including a raised age of criminal responsibility, provisions for free legal aid for children, and new kinship adoption procedures. For a detailed breakdown, please refer to our blog post on the topic.",
+  },
+  {
+    question: "How does the Computer Misuse and Cyber Crimes Act 2018 protect individuals in Kenya?",
+    answer: "The Computer Misuse and Cyber Crimes Act 2018 outlines various offenses related to cybercrime and provides legal remedies for victims. It addresses issues like online harassment and misuse of computer systems. Our blog offers a comprehensive guide to understanding this Act and its implications.",
+  },
+  {
     question: "How can I schedule a consultation?",
     answer: "You can schedule a consultation by calling us at +254792932136, emailing us at wanjirukanyilawa@gmail.com, or by filling out the contact form on our Contact page.",
   },
