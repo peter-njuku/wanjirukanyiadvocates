@@ -18,7 +18,7 @@ export default function HeroSection() {
 
       {/* Award Badge - More Professional Placement */}
       <div className="absolute top-8 left-8 z-20">
-        <div className="bg-gradient-to-r from-amber-500 to-amber-600 text-white px-6 py-3 rounded-lg shadow-xl flex items-center space-x-2">
+        <div >
           <Award className="h-5 w-5 text-white" />
           <div className="flex items-center bg-white/10 backdrop-blur-sm px-3 py-2 rounded-lg">
               <span>Advocates You Can Trust</span>
