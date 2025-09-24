@@ -7,6 +7,7 @@ import CommunityFocus from "@/components/sections/community-focus";
 import CTASection from "@/components/sections/cta-section";
 import { Metadata } from "next"; // Import Metadata type
 import AboutSection from "@/components/sections/about-section";
+import ValuesCards from "@/components/sections/value-cards";
 
 // Define metadata for this page
 export const metadata: Metadata = {
@@ -31,6 +32,7 @@ export default function HomePage() {
       <Header />
       <HeroSection />
       <AboutSection />
+      <ValuesCards />
       <ServicesOverview />
       <ConsultationWeeks />
       <CommunityFocus />
