@@ -23,11 +23,11 @@ module.exports = {
           background: "hsl(var(--background))",
           foreground: "hsl(var(--foreground))",
           primary: {
-            DEFAULT: "hsl(221, 83%, 26%)",  // Deep, trustworthy blue
+            DEFAULT: "hsl(220, 80%, 30%)",  // Slightly more saturated deep blue
             foreground: "hsl(0, 0%, 100%)", // White text on blue
           },
           secondary: {
-            DEFAULT: "hsl(210, 40%, 96%)",  // Light blue-gray
+            DEFAULT: "hsl(200, 60%, 90%)",  // Lighter, more energetic blue
             foreground: "hsl(222, 84%, 25%)",
           },
           destructive: {
