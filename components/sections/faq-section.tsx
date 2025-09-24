@@ -10,10 +10,6 @@ const faqs = [
     answer: "You can schedule a consultation by calling us at +254792932136, emailing us at wanjirukanyilawa@gmail.com, or by filling out the contact form on our Contact page.",
   },
   {
-    question: "Do you offer pro bono services?",
-    answer: "Yes, we are committed to making justice accessible. We offer pro bono services and community programs. Please contact us for more details.",
-  },
-  {
     question: "Where are your offices located?",
     answer: "Our offices are located at Mustard Seed Complex, ACK St. Peters Church Uthiru, Unit G.05, Ground Floor, Nairobi.",
   },
