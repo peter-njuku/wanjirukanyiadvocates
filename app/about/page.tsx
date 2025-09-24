@@ -155,7 +155,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Recognition - Simplified */}
+      {/* Recognition - Simplified 
       <section className="py-16 bg-slate-50">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center">
@@ -171,7 +171,7 @@ export default function AboutPage() {
             </Badge>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <Footer />
     </div>
