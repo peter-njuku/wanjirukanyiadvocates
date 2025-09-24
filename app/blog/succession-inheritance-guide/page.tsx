@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Calendar, User, Clock, ArrowLeft, Share, Scale, FileText, Users, Home, AlertCircle } from "lucide-react"
+import { Calendar, User, Clock, ArrowLeft, Share, Scale as ScaleIcon, FileText, Users, Home, AlertCircle } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 
 export default function SuccessionGuidePost() {
@@ -61,7 +61,7 @@ export default function SuccessionGuidePost() {
           <div className="prose prose-lg max-w-none prose-headings:text-slate-900 prose-p:text-slate-700 prose-strong:text-slate-900">
             
             <div className="bg-gradient-to-r from-slate-900 to-blue-900 text-white p-8 rounded-lg mb-8 text-center">
-              <Scale className="h-12 w-12 text-cyan-300 mx-auto mb-4" />
+              <ScaleIcon className="h-12 w-12 text-cyan-300 mx-auto mb-4" />
               <h3 className="text-2xl font-serif font-bold text-white mb-2">The Law of Succession Act</h3>
               <p className="text-cyan-100">Understanding the legal framework for property redistribution in Kenya</p>
             </div>

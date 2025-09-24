@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Calendar, User, Clock, ArrowLeft, Share, Shield, FileText, Scale, Users, AlertCircle } from "lucide-react"
+import { Calendar, User, Clock, ArrowLeft, Share, Shield, FileText, Scale as ScaleIcon, Users, AlertCircle } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 
 export default function DataProtectionAnalysisPost() {
@@ -111,7 +111,7 @@ export default function DataProtectionAnalysisPost() {
             <h2>Landmark Case: Allen Gichuhi & 2 Others v Data Protection Commissioner</h2>
             
             <div className="bg-blue-50 p-6 rounded-lg my-6 border-l-4 border-blue-400">
-              <Scale className="h-8 w-8 text-blue-600 float-left mr-4" />
+              <ScaleIcon className="h-8 w-8 text-blue-600 float-left mr-4" />
               <h4 className="text-blue-800 font-semibold mb-2">High Court Clarification (Application E202 of 2023)</h4>
               <div className="space-y-3 text-blue-700">
                 <p><strong>Key Finding 1:</strong> The Court affirmed that only <strong>natural and identifiable persons</strong> are protected by the DPA.</p>

@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Calendar, User, Clock, ArrowLeft, Share, Home, Scale, FileText, MapPin, Phone } from "lucide-react"
+import { Calendar, User, Clock, ArrowLeft, Share, Home, Scale as ScaleIcon, FileText, MapPin, Phone } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Users } from "lucide-react"
 
@@ -99,7 +99,7 @@ export default function LandInheritanceServiceWeekPost() {
               </div>
 
               <div className="bg-white p-6 border border-slate-200 rounded-lg shadow-sm">
-                <Scale className="h-8 w-8 text-cyan-600 mb-3" />
+                <ScaleIcon className="h-8 w-8 text-cyan-600 mb-3" />
                 <h4 className="font-semibold text-slate-900 mb-3">Legal Documentation</h4>
                 <ul className="list-disc list-inside space-y-2 text-slate-700">
                   <li>Obtaining necessary consents</li>
@@ -136,7 +136,7 @@ export default function LandInheritanceServiceWeekPost() {
             <h2>Succession and Inheritance Services</h2>
             
             <div className="bg-purple-50 p-6 rounded-lg my-6">
-              <Scale className="h-8 w-8 text-purple-600 float-left mr-4" />
+              <ScaleIcon className="h-8 w-8 text-purple-600 float-left mr-4" />
               <h4 className="text-purple-800 font-semibold mb-2">Comprehensive Succession Support</h4>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
@@ -170,7 +170,7 @@ export default function LandInheritanceServiceWeekPost() {
               </div>
 
               <div className="bg-white p-4 border border-slate-200 rounded-lg text-center">
-                <Scale className="h-8 w-8 text-cyan-600 mx-auto mb-3" />
+                <ScaleIcon className="h-8 w-8 text-cyan-600 mx-auto mb-3" />
                 <h4 className="font-semibold text-slate-900 mb-2">Specialized Expertise</h4>
                 <p className="text-sm text-slate-600">Focused on land and succession matters only</p>
               </div>
