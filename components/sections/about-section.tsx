@@ -14,8 +14,6 @@ export default function AboutSection() {
               We are a distinguished law firm dedicated to providing <b>professional legal services with a commitment to justice</b>. Our practice serves communities across Kenya, specializing in key areas such as <b>Land & Property Law</b>, <b>Succession</b>, <b>Data Protection</b>, and <b>Cyber Crime Matters</b>.
             </p>
           </div>
-
-          <ValuesCards />
         </div>
       </div>
     </section>
