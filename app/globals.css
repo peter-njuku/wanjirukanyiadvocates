@@ -77,7 +77,7 @@
 }
 
 @theme inline {
-  --font-sans: var(--font-open-sans);
+  --font-sans: var(--font-garamond);
   --font-serif: var(--font-montserrat);
   --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --color-background: var(--background);
