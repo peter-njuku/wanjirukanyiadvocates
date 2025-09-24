@@ -10,18 +10,18 @@ export default function AboutSection() {
               About Wanjiru Kanyi Law Advocates
             </h2>
             <p className="text-lg text-slate-700 leading-relaxed max-w-3xl mx-auto">
-              We are a distinguished law firm dedicated to providing **professional legal services with a commitment to justice**. Our practice serves communities across Kenya, specializing in key areas such as **Land & Property Law**, **Succession**, **Data Protection**, and **Cyber Crime Matters**.
+              We are a distinguished law firm dedicated to providing <b>professional legal services with a commitment to justice</b>. Our practice serves communities across Kenya, specializing in key areas such as <b>Land & Property Law</b>, <b>Succession</b>, <b>Data Protection</b>, and <b>Cyber Crime Matters</b>.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 text-sm text-slate-700">
             <div className="space-y-4">
               <p>
-                As a trusted **Legal Information and Resource Centre**, we prioritize accessible legal knowledge and confidentiality in all our engagements.
+                As a trusted <b>Legal Information and Resource Centre</b>, we prioritize accessible legal knowledge and confidentiality in all our engagements.
               </p>
               <div className="flex items-center space-x-2">
                 <ScaleIcon className="w-5 h-5 text-blue-600" />
-                <span>Our firm is built on a foundation of **expertise, integrity, and a passion for community advocacy**.</span>
+                <span>Our firm is built on a foundation of <b>expertise, integrity, and a passion for community advocacy</b>.</span>
               </div>
             </div>
 
