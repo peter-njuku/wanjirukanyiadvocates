@@ -5,7 +5,6 @@ import ServicesOverview from "@/components/sections/services-overview";
 import ConsultationWeeks from "@/components/sections/consultation-weeks";
 import CommunityFocus from "@/components/sections/community-focus";
 import CTASection from "@/components/sections/cta-section";
-import Testimonials from "@/components/sections/testimonials";
 import { Metadata } from "next"; // Import Metadata type
 
 // Define metadata for this page
@@ -30,7 +29,6 @@ export default function HomePage() {
     <div className="min-h-screen bg-background">
       <Header />
       <HeroSection />
-      <Testimonials />
       <ServicesOverview />
       <ConsultationWeeks />
       <CommunityFocus />
