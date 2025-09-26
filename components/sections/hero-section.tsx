@@ -29,7 +29,7 @@ export default function HeroSection({ hasCurvedBottom = false }: HeroSectionProp
               <stop offset="100%" stop-color="#8DAAC9" />
             </linearGradient>
             <linearGradient id="gold-gradient-bottom" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stop-color="#FFD700" stop-opacity="0" />
+              <stop offset="20%" stop-color="#FFD700" stop-opacity="1" />
               <stop offset="100%" stop-color="#FFD700" stop-opacity="1" />
             </linearGradient>
           </defs>
@@ -39,7 +39,7 @@ export default function HeroSection({ hasCurvedBottom = false }: HeroSectionProp
             <rect x="1200" y="-300" width="800" height="1200" transform="rotate(-30 1200 -300)" fill="url(#gradient3)" />
             <rect x="500" y="700" width="1000" height="600" transform="rotate(10 500 700)" fill="url(#gradient2)" />
           </g>
-          <g opacity="0.4">
+          <g opacity="1">
             <polygon points="1920,1080 1920,0 1200,1080" fill="url(#gold-gradient-bottom)" />
             <polygon points="0,1080 0,800 800,1080" fill="url(#gold-gradient-bottom)" />
           </g>
