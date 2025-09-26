@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import Image from "next/image"
 import { ArrowRight, Phone, Award, Shield, Scale as ScaleIcon, Globe, Star } from "lucide-react"
 
 interface HeroSectionProps {
@@ -53,7 +54,7 @@ export default function HeroSection({ hasCurvedBottom = false }: HeroSectionProp
       {/* Award Badge - More Professional Placement */}
       <div className="absolute top-8 left-8 z-20">
   {/* The outer div acts as the container for the border */}
-  <div> {/* Yellowish boundary */}
+  <div className="border border-amber-500/50 bg-amber-500/10 rounded-lg"> {/* Yellowish boundary */}
     {/* The inner div is now responsible for the content and has a clear background */}
     <div className="bg-transparent text-white px-6 py-3 rounded-lg flex items-center space-x-2">
       <div className="flex items-center bg-white/10 backdrop-blur-sm px-3 py-2 rounded-lg">
@@ -66,71 +67,76 @@ export default function HeroSection({ hasCurvedBottom = false }: HeroSectionProp
       
       {/* Content */}
       <div className="container relative mx-auto px-4 z-10">
-        <div className="max-w-2xl lg:max-w-3xl text-left space-y-6">
-          
-          {/* Main Heading - Kenyan Focused */}
-          <h1 className="font-serif font-bold text-4xl md:text-5xl lg:text-6xl leading-tight text-white">
-            Protecting Your Rights <br className="hidden md:block" />
-            <span className="text-amber-400 font-light">Across Kenya & Beyond</span>
-          </h1>
-          
-          {/* Supporting Line - More Kenyan Context */}
-          <p className="text-xl text-slate-200 leading-relaxed max-w-2xl font-light">
-            Expert legal representation in land law, succession matters, commercial disputes, and cybercrime — serving Kenyan clients with integrity and excellence.
-          </p>
-
-          {/* Trust Signals - Kenyan Focused */}
-          <div className="flex flex-wrap items-center gap-6 text-sm text-slate-300 pt-2">
-            <div className="flex items-center bg-white/10 backdrop-blur-sm px-3 py-2 rounded-lg">
-              <Shield className="h-4 w-4 mr-2 text-amber-400" />
-              <span>Kenyan Court Experience</span>
-            </div>
-            <div className="flex items-center bg-white/10 backdrop-blur-sm px-3 py-2 rounded-lg">
-              <ScaleIcon className="h-4 w-4 mr-2 text-amber-400" />
-              <span>Proven Results in Kenya</span>
-            </div>
-            <div className="flex items-center bg-white/10 backdrop-blur-sm px-3 py-2 rounded-lg">
-              <Globe className="h-4 w-4 mr-2 text-amber-400" />
-              <span>International Clients</span>
-            </div>
-          </div>
-          
-          {/* CTAs - More Action-Oriented */}
-          <div className="flex flex-col sm:flex-row gap-4 pt-8">
-            <Button 
-              size="lg" 
-              className="bg-amber-600 hover:bg-amber-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-200 w-fit rounded-md" 
-              asChild
-            >
-              <Link href="/contact" className="flex items-center">
-                Get Free Case Assessment
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
+        <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div className="max-w-2xl lg:max-w-3xl text-left space-y-6">
             
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-slate-900 bg-white/10 backdrop-blur-sm font-semibold transition-all duration-200 w-fit rounded-md"
-              asChild
-            >
-              <Link href="tel:+254792932136" className="flex items-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call +254 792 932 136
-              </Link>
-            </Button>
-          </div>
+            {/* Main Heading - Kenyan Focused */}
+            <h1 className="font-serif font-bold text-4xl md:text-5xl lg:text-6xl leading-tight text-white">
+              Protecting Your Rights <br className="hidden md:block" />
+              <span className="text-amber-400 font-light">Across Kenya & Beyond</span>
+            </h1>
+            
+            {/* Supporting Line - More Kenyan Context */}
+            <p className="text-xl text-slate-200 leading-relaxed max-w-2xl font-light">
+              Expert legal representation in land law, succession matters, commercial disputes, and cybercrime — serving Kenyan clients with integrity and excellence.
+            </p>
 
-          {/* Quick Stats - Like Kenyan firms use */}
-          <div className="flex flex-wrap gap-6 pt-8 text-sm text-slate-300">
-            <div className="flex items-center">
-              <Star className="h-4 w-4 mr-2 text-amber-400" />
-              <span>10+ Years Kenyan Legal Experience</span>
+            {/* Trust Signals - Kenyan Focused */}
+            <div className="flex flex-wrap items-center gap-6 text-sm text-slate-300 pt-2">
+              <div className="flex items-center bg-white/10 backdrop-blur-sm px-3 py-2 rounded-lg">
+                <Shield className="h-4 w-4 mr-2 text-amber-400" />
+                <span>Kenyan Court Experience</span>
+              </div>
+              <div className="flex items-center bg-white/10 backdrop-blur-sm px-3 py-2 rounded-lg">
+                <ScaleIcon className="h-4 w-4 mr-2 text-amber-400" />
+                <span>Proven Results in Kenya</span>
+              </div>
+              <div className="flex items-center bg-white/10 backdrop-blur-sm px-3 py-2 rounded-lg">
+                <Globe className="h-4 w-4 mr-2 text-amber-400" />
+                <span>International Clients</span>
+              </div>
             </div>
-            <div className="flex items-center">
-              <Star className="h-4 w-4 mr-2 text-amber-400" />
-              <span>500+ Kenyan Clients Served</span>
+            
+            {/* CTAs - More Action-Oriented */}
+            <div className="flex flex-col sm:flex-row gap-4 pt-8">
+              <Button 
+                size="lg" 
+                className="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-200 w-fit rounded-md animate-pulse" 
+                asChild
+              >
+                <Link href="/contact" className="flex items-center">
+                  Get Free Case Assessment
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+              
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-slate-900 bg-white/10 backdrop-blur-sm font-semibold transition-all duration-200 w-fit rounded-md"
+                asChild
+              >
+                <Link href="tel:+254792932136" className="flex items-center">
+                  <Phone className="mr-2 h-5 w-5" />
+                  Call +254 792 932 136
+                </Link>
+              </Button>
             </div>
+
+            {/* Quick Stats - Like Kenyan firms use */}
+            <div className="flex flex-wrap gap-6 pt-8 text-sm text-slate-300">
+              <div className="flex items-center">
+                <Star className="h-4 w-4 mr-2 text-amber-400" />
+                <span>Extensive experience in Kenyan legal services</span>
+              </div>
+              <div className="flex items-center">
+                <Star className="h-4 w-4 mr-2 text-amber-400" />
+                <span>500+ Kenyan Clients Served</span>
+              </div>
+            </div>
+          </div>
+          <div className="hidden md:block">
+            <Image src="/hero.png" alt="Wanjiru Kanyi Advocates" width={500} height={500} />
           </div>
         </div>
       </div>
