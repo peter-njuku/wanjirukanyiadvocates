@@ -88,7 +88,7 @@ export default function HeroSection({ hasCurvedBottom = false }: HeroSectionProp
       
       {/* Content */}
       <div className="container relative mx-auto px-4 z-10">
-        <div className="max-w-2xl lg:max-w-3xl text-left space-y-6">
+        <div className="text-left space-y-6">
           
           {/* Main Heading - Kenyan Focused */}
           <h1 className="font-serif font-bold text-4xl md:text-5xl lg:text-6xl leading-tight text-white">
