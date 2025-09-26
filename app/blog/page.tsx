@@ -82,7 +82,7 @@ const blogPosts = [
 const categories = [
   "All Posts",
   "Children's Law",
-  "Cyber Law",
+  "Cyber Crime Cases",
   "Succession Law",
   "Data Protection",
   "Property Law",
