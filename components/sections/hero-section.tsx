@@ -12,15 +12,42 @@ export default function HeroSection({ hasCurvedBottom = false }: HeroSectionProp
       {hasCurvedBottom && (
         <div className="absolute bottom-0 left-0 right-0 h-24 bg-background rounded-t-[50%] transform translate-y-1/2 z-10"></div>
       )}
-      {/* Background with Professional Portrait */}
-      <div className="absolute inset-0 z-0">
-        {/* Use your professional portrait - much better than half-face */}
-        <div 
-          className="absolute inset-0 bg-[url('/wanjiru-portrait.jpg')] bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('/background.jpg')" }}
-        />
-        {/* Professional overlay - darker on left, clear on right */}
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/60 to-transparent"></div>
+      {/* Background with Professional SVG */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <svg width="100%" height="100%" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#0A2342" />
+              <stop offset="100%" stop-color="#1E3A5F" />
+            </linearGradient>
+            <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#2C5D8F" />
+              <stop offset="100%" stop-color="#4A7BAF" />
+            </linearGradient>
+            <linearGradient id="gradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#6B8EAE" />
+              <stop offset="100%" stop-color="#8DAAC9" />
+            </linearGradient>
+          </defs>
+          <rect x="0" y="0" width="100%" height="100%" fill="url(#gradient1)" />
+          <g opacity="0.15">
+            <rect x="-200" y="100" width="800" height="1200" transform="rotate(20 -200 100)" fill="url(#gradient2)" />
+            <rect x="1200" y="-300" width="800" height="1200" transform="rotate(-30 1200 -300)" fill="url(#gradient3)" />
+            <rect x="500" y="700" width="1000" height="600" transform="rotate(10 500 700)" fill="url(#gradient2)" />
+          </g>
+          <g opacity="0.1">
+            <polygon points="0,0 400,0 200,400 0,200" fill="#FFFFFF" transform="translate(100, 50) rotate(15)" />
+            <polygon points="1920,0 1520,0 1720,400 1920,200" fill="#FFFFFF" transform="translate(-100, 50) rotate(-15)" />
+            <rect x="800" y="800" width="300" height="300" fill="#FFFFFF" transform="rotate(45 800 800)" />
+          </g>
+          <g opacity="0.05">
+            <rect x="10%" y="0" width="2px" height="100%" fill="#FFFFFF" />
+            <rect x="30%" y="0" width="2px" height="100%" fill="#FFFFFF" />
+            <rect x="50%" y="0" width="2px" height="100%" fill="#FFFFFF" />
+            <rect x="70%" y="0" width="2px" height="100%" fill="#FFFFFF" />
+            <rect x="90%" y="0" width="2px" height="100%" fill="#FFFFFF" />
+          </g>
+        </svg>
       </div>
 
       {/* Award Badge - More Professional Placement */}
