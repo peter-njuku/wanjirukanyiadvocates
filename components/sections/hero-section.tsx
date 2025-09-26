@@ -97,7 +97,7 @@ export default function HeroSection({ hasCurvedBottom = false }: HeroSectionProp
           </h1>
           
           {/* Supporting Line - More Kenyan Context */}
-          <p className="text-xl text-slate-200 leading-relaxed max-w-2xl font-light">
+          <p className="text-xl text-slate-200 leading-relaxed font-light">
             Expert legal representation in land law, succession matters, commercial disputes, and cybercrime — serving Kenyan clients with integrity and excellence.
           </p>
 
