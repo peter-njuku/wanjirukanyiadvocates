@@ -136,7 +136,7 @@ export default function HeroSection({ hasCurvedBottom = false }: HeroSectionProp
             </div>
           </div>
           <div className="hidden md:block">
-            <Image src="/hero.png" alt="Wanjiru Kanyi Advocates" width={500} height={500} />
+            <Image src="/stock-photo-judge-gavel-open-book-close-white-background.webp" alt="Judge Gavel and Open Book" width={500} height={500} className="opacity-50 mix-blend-multiply" />
           </div>
         </div>
       </div>
