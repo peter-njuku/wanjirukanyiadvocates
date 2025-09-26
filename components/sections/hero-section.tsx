@@ -8,7 +8,7 @@ interface HeroSectionProps {
 
 export default function HeroSection({ hasCurvedBottom = false }: HeroSectionProps) {
   return (
-    <section className="relative py-8 sm:py-16 md:py-24 lg:py-32 xl:py-40 min-h-screen flex items-center">
+    <section className="relative py-4 sm:py-8 md:py-16 lg:py-24 xl:py-32 h-screen max-h-screen overflow-hidden flex items-center">
       {hasCurvedBottom && (
         <div className="absolute bottom-0 left-0 right-0 h-24 bg-background rounded-t-[50%] transform translate-y-1/2 z-10"></div>
       )}
@@ -85,70 +85,74 @@ export default function HeroSection({ hasCurvedBottom = false }: HeroSectionProp
       </div>
       
       {/* Content */}
-      <div className="container relative mx-auto px-4 z-10">
-        <div className="text-left space-y-3 sm:space-y-4 md:space-y-6">
+      <div className="container relative mx-auto px-4 z-10 max-h-full overflow-y-auto">
+        <div className="text-left space-y-2 sm:space-y-3 md:space-y-4 lg:space-y-6 max-w-4xl">
           
           {/* Main Heading - Better mobile sizing */}
-          <h1 className="font-serif font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl leading-tight text-white">
+          <h1 className="font-serif font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl leading-tight text-white">
             Protecting Your Rights <br className="hidden sm:block" />
             <span className="text-amber-400 font-light">Across Kenya & Beyond</span>
           </h1>
           
           {/* Supporting Line - Better mobile sizing */}
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-slate-200 leading-relaxed font-light max-w-4xl">
+          <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-slate-200 leading-snug sm:leading-relaxed font-light">
             Expert legal representation in land law, succession matters, commercial disputes, and cybercrime — serving Kenyan clients with integrity and excellence.
           </p>
 
-          {/* Trust Signals - Stack on mobile */}
-          <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3 text-xs text-slate-300 pt-2">
-            <div className="flex items-center bg-white/10 backdrop-blur-sm px-2 py-1 sm:px-3 sm:py-2 rounded-lg">
-              <Shield className="h-3 w-3 sm:h-4 sm:w-4 mr-2 text-amber-400" />
-              <span>Kenyan Court Experience</span>
+          {/* Trust Signals - Very compact on mobile */}
+          <div className="flex flex-wrap gap-1 sm:gap-2 text-xs text-slate-300 pt-1">
+            <div className="flex items-center bg-white/10 backdrop-blur-sm px-2 py-1 rounded text-xs">
+              <Shield className="h-3 w-3 mr-1 text-amber-400" />
+              <span className="hidden sm:inline">Kenyan Court Experience</span>
+              <span className="sm:hidden">Court Experience</span>
             </div>
-            <div className="flex items-center bg-white/10 backdrop-blur-sm px-2 py-1 sm:px-3 sm:py-2 rounded-lg">
-              <ScaleIcon className="h-3 w-3 sm:h-4 sm:w-4 mr-2 text-amber-400" />
-              <span>Proven Results in Kenya</span>
+            <div className="flex items-center bg-white/10 backdrop-blur-sm px-2 py-1 rounded text-xs">
+              <ScaleIcon className="h-3 w-3 mr-1 text-amber-400" />
+              <span className="hidden sm:inline">Proven Results</span>
+              <span className="sm:hidden">Results</span>
             </div>
-            <div className="flex items-center bg-white/10 backdrop-blur-sm px-2 py-1 sm:px-3 sm:py-2 rounded-lg">
-              <Globe className="h-3 w-3 sm:h-4 sm:w-4 mr-2 text-amber-400" />
-              <span>International Clients</span>
+            <div className="flex items-center bg-white/10 backdrop-blur-sm px-2 py-1 rounded text-xs">
+              <Globe className="h-3 w-3 mr-1 text-amber-400" />
+              <span className="hidden sm:inline">International Clients</span>
+              <span className="sm:hidden">Global</span>
             </div>
           </div>
           
           {/* CTAs - Stack on mobile, better spacing */}
-          <div className="flex flex-col gap-2 pt-4 sm:pt-6">
+          {/* CTAs - Compact on mobile */}
+          <div className="flex flex-col gap-2 pt-2 sm:pt-4">
             <Button 
-              size="default"
-              className="bg-amber-400 hover:bg-amber-500 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-200 w-full sm:w-fit rounded-md animate-pulse text-sm" 
+              size="sm"
+              className="bg-amber-400 hover:bg-amber-500 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-200 w-full sm:w-fit rounded-md animate-pulse text-xs sm:text-sm h-10 sm:h-auto" 
               asChild
             >
-              <Link href="/contact" className="flex items-center justify-center py-3">
-                Get Free Case Assessment
-                <ArrowRight className="ml-2 h-4 w-4" />
+              <Link href="/contact" className="flex items-center justify-center">
+                Free Case Assessment
+                <ArrowRight className="ml-1 h-3 w-3 sm:h-4 sm:w-4" />
               </Link>
             </Button>
             
             <Button
-              size="default"
+              size="sm"
               variant="outline"
-              className="border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-slate-900 bg-white/10 backdrop-blur-sm font-semibold transition-all duration-200 w-full sm:w-fit rounded-md text-sm"
+              className="border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-slate-900 bg-white/10 backdrop-blur-sm font-semibold transition-all duration-200 w-full sm:w-fit rounded-md text-xs sm:text-sm h-10 sm:h-auto"
               asChild
             >
-              <Link href="tel:+254792932136" className="flex items-center justify-center py-3">
-                <Phone className="mr-2 h-4 w-4" />
+              <Link href="tel:+254792932136" className="flex items-center justify-center">
+                <Phone className="mr-1 h-3 w-3 sm:h-4 sm:w-4" />
                 Call +254 792 932 136
               </Link>
             </Button>
           </div>
 
           {/* Quick Stats - Stack on mobile, smaller text */}
-          <div className="flex flex-col sm:flex-row sm:flex-wrap gap-2 sm:gap-4 md:gap-6 pt-4 sm:pt-6 md:pt-8 text-xs sm:text-sm text-slate-300">
+          <div className="flex flex-col gap-1 pt-3 text-xs text-slate-300">
             <div className="flex items-center">
-              <Star className="h-3 w-3 sm:h-4 sm:w-4 mr-2 text-amber-400" />
+              <Star className="h-3 w-3 mr-2 text-amber-400" />
               <span>Extensive experience in Kenyan legal services</span>
             </div>
             <div className="flex items-center">
-              <Star className="h-3 w-3 sm:h-4 sm:w-4 mr-2 text-amber-400" />
+              <Star className="h-3 w-3 mr-2 text-amber-400" />
               <span>500+ Kenyan Clients Served</span>
             </div>
           </div>
