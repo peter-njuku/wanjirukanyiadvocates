@@ -8,7 +8,7 @@ interface HeroSectionProps {
 
 export default function HeroSection({ hasCurvedBottom = false }: HeroSectionProps) {
   return (
-    <section className="relative py-24 md:py-32 lg:py-40 overflow-hidden pb-12 md:pb-16 lg:pb-20">
+    <section className="relative py-24 md:py-32 lg:py-40 overflow-hidden pb-24 md:pb-32 lg:pb-40">
       {hasCurvedBottom && (
         <div className="absolute bottom-0 left-0 right-0 h-24 bg-background rounded-t-[50%] transform translate-y-1/2 z-10"></div>
       )}
