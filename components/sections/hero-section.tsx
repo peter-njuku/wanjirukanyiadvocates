@@ -8,13 +8,13 @@ interface HeroSectionProps {
 
 export default function HeroSection({ hasCurvedBottom = false }: HeroSectionProps) {
   return (
-    <section className="relative py-24 md:py-32 lg:py-40 overflow-hidden pb-24 md:pb-32 lg:pb-40">
+    <section className="relative py-32 md:py-40 lg:py-48 overflow-hidden">
       {hasCurvedBottom && (
         <div className="absolute bottom-0 left-0 right-0 h-24 bg-background rounded-t-[50%] transform translate-y-1/2 z-10"></div>
       )}
       {/* Background with Professional SVG */}
       <div className="absolute inset-0 z-0">
-        <svg width="100%" height="100%" viewBox="0 0 1920 1080" preserveAspectRatio="xMinYMin slice" xmlns="http://www.w3.org/2000/svg">
+        <svg width="100%" height="100%" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stop-color="#0A2342" />
@@ -91,7 +91,7 @@ export default function HeroSection({ hasCurvedBottom = false }: HeroSectionProp
         <div className="text-left space-y-6">
           
           {/* Main Heading - Kenyan Focused */}
-          <h1 className="font-serif font-bold text-4xl md:text-5xl lg:text-6xl leading-tight text-white">
+          <h1 className="font-serif font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight text-white">
             Protecting Your Rights <br className="hidden md:block" />
             <span className="text-amber-400 font-light">Across Kenya & Beyond</span>
           </h1>
