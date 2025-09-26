@@ -8,7 +8,7 @@ interface HeroSectionProps {
 
 export default function HeroSection({ hasCurvedBottom = false }: HeroSectionProps) {
   return (
-    <section className="relative py-32 md:py-40 lg:py-48 overflow-hidden">
+    <section className="relative flex items-center justify-center text-center py-32 md:py-40 lg:py-48 min-h-[600px] md:min-h-[700px]">
       {hasCurvedBottom && (
         <div className="absolute bottom-0 left-0 right-0 h-24 bg-background rounded-t-[50%] transform translate-y-1/2 z-10"></div>
       )}
@@ -121,7 +121,7 @@ export default function HeroSection({ hasCurvedBottom = false }: HeroSectionProp
           <div className="flex flex-col sm:flex-row gap-4 pt-12">
             <Button 
               size="lg" 
-              className="bg-brownish-orange hover:bg-opacity-90 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-200 w-fit rounded-md animate-pulse" 
+              className="bg-amber-400 hover:bg-amber-500 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-200 w-fit rounded-md animate-pulse" 
               asChild
             >
               <Link href="/contact" className="flex items-center">
