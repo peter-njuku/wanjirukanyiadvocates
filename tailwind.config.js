@@ -50,6 +50,8 @@ module.exports = {
             DEFAULT: "hsl(0, 0%, 100%)",
             foreground: "hsl(222, 84%, 5%)",
           },
+          'brownish-orange': '#D2691E',
+          'dark-orange': '#FF8C00',
         },
         // You can also add custom fonts, borderRadius, etc. here later.
         // fontFamily: {
