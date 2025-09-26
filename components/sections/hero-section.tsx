@@ -75,12 +75,12 @@ export default function HeroSection({ hasCurvedBottom = false }: HeroSectionProp
       {/* Award Badge - More Professional Placement */}
       <div className="absolute top-8 left-8 z-20">
   {/* The outer div acts as the container for the border */}
-  <div className="border border-brownish-orange/50 bg-brownish-orange/10 rounded-lg"> {/* Yellowish boundary */}
+  <div className="bg-amber-500/10 rounded-lg"> {/* Yellowish boundary */}
     {/* The inner div is now responsible for the content and has a clear background */}
     <div className="bg-transparent text-white px-6 py-3 rounded-lg flex items-center space-x-2">
       <div className="flex items-center bg-white/10 backdrop-blur-sm px-3 py-2 rounded-lg">
-        <Award className="h-5 w-5 text-brownish-orange" /> {/* Changed icon color to match border */}
-        <span className="text-brownish-orange">Advocates You Can Trust</span> {/* Changed text color to match border */}
+        <Award className="h-5 w-5 text-amber-400" /> {/* Changed icon color to match border */}
+        <span className="text-amber-400">Advocates You Can Trust</span> {/* Changed text color to match border */}
       </div>
     </div>
   </div>
