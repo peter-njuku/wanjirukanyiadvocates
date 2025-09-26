@@ -39,10 +39,23 @@ export default function HeroSection({ hasCurvedBottom = false }: HeroSectionProp
               <stop offset="0%" stop-color="white" stop-opacity="0" />
               <stop offset="100%" stop-color="white" stop-opacity="1" />
             </linearGradient>
+            <linearGradient id="dark-orange-gradient-bottom" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="20%" stop-color="#FF8C00" stop-opacity="0" />
+              <stop offset="100%" stop-color="#FF8C00" stop-opacity="1" />
+            </linearGradient>
           </defs>
           <rect x="0" y="0" width="100%" height="100%" fill="url(#gradient1)" />
+          <g opacity="0.15">
+            <rect x="-200" y="100" width="800" height="1200" transform="rotate(20 -200 100)" fill="url(#gradient2)" />
+            <rect x="1200" y="-300" width="800" height="1200" transform="rotate(-30 1200 -300)" fill="url(#gradient3)" />
+            <rect x="500" y="700" width="1000" height="600" transform="rotate(10 500 700)" fill="url(#gradient2)" />
+          </g>
           <g opacity="0.2">
             <rect x="0" y="0" width="100%" height="100%" fill="url(#checkered)" mask="url(#fade-mask)" />
+          </g>
+          <g opacity="1">
+            <polygon points="1920,1080 1920,0 1200,1080" fill="url(#dark-orange-gradient-bottom)" />
+            <polygon points="0,1080 0,800 800,1080" fill="url(#dark-orange-gradient-bottom)" />
           </g>
           <g opacity="0.1">
             <polygon points="0,0 400,0 200,400 0,200" fill="#FFFFFF" transform="translate(100, 50) rotate(15)" />
