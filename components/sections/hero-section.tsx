@@ -8,7 +8,7 @@ interface HeroSectionProps {
 
 export default function HeroSection({ hasCurvedBottom = false }: HeroSectionProps) {
   return (
-    <section className="relative flex items-center justify-center text-center py-32 md:py-40 lg:py-48 min-h-[600px] md:min-h-[700px]">
+    <section className="relative py-32 md:py-40 lg:py-48 min-h-[600px] md:min-h-[700px]">
       {hasCurvedBottom && (
         <div className="absolute bottom-0 left-0 right-0 h-24 bg-background rounded-t-[50%] transform translate-y-1/2 z-10"></div>
       )}
