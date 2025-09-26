@@ -8,7 +8,7 @@ interface HeroSectionProps {
 
 export default function HeroSection({ hasCurvedBottom = false }: HeroSectionProps) {
   return (
-    <section className="relative py-4 sm:py-8 md:py-16 lg:py-24 xl:py-32 h-screen max-h-screen overflow-hidden flex items-center">
+    <section className="relative py-2 sm:py-4 md:py-8 lg:py-16 xl:py-24 min-h-screen flex items-center">
       {hasCurvedBottom && (
         <div className="absolute bottom-0 left-0 right-0 h-24 bg-background rounded-t-[50%] transform translate-y-1/2 z-10"></div>
       )}
@@ -72,8 +72,8 @@ export default function HeroSection({ hasCurvedBottom = false }: HeroSectionProp
         </svg>
       </div>
 
-      {/* Award Badge - Hidden on mobile to save space */}
-      <div className="absolute top-4 left-4 md:top-8 md:left-8 z-20 hidden sm:block">
+      {/* Award Badge - Closer to content */}
+      <div className="absolute top-2 left-2 md:top-4 md:left-4 z-20 hidden sm:block">
         <div className="bg-amber-500/10 rounded-lg">
           <div className="bg-transparent text-white px-4 py-2 md:px-6 md:py-3 rounded-lg flex items-center space-x-2">
             <div className="flex items-center bg-white/10 backdrop-blur-sm px-2 py-1 md:px-3 md:py-2 rounded-lg">
@@ -85,17 +85,17 @@ export default function HeroSection({ hasCurvedBottom = false }: HeroSectionProp
       </div>
       
       {/* Content */}
-      <div className="container relative mx-auto px-4 z-10 max-h-full overflow-y-auto">
-        <div className="text-left space-y-2 sm:space-y-3 md:space-y-4 lg:space-y-6 max-w-4xl">
+      <div className="container relative mx-auto px-4 z-10">
+        <div className="text-left space-y-1 sm:space-y-2 md:space-y-3 lg:space-y-4 max-w-4xl">
           
           {/* Main Heading - Better mobile sizing */}
-          <h1 className="font-serif font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl leading-tight text-white">
+          <h1 className="font-serif font-bold text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl leading-tight text-white">
             Protecting Your Rights <br className="hidden sm:block" />
             <span className="text-amber-400 font-light">Across Kenya & Beyond</span>
           </h1>
           
           {/* Supporting Line - Better mobile sizing */}
-          <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-slate-200 leading-snug sm:leading-relaxed font-light">
+          <p className="text-xs sm:text-sm md:text-base lg:text-lg text-slate-200 leading-tight sm:leading-snug font-light">
             Expert legal representation in land law, succession matters, commercial disputes, and cybercrime — serving Kenyan clients with integrity and excellence.
           </p>
 
@@ -146,14 +146,18 @@ export default function HeroSection({ hasCurvedBottom = false }: HeroSectionProp
           </div>
 
           {/* Quick Stats - Stack on mobile, smaller text */}
-          <div className="flex flex-col gap-1 pt-3 text-xs text-slate-300">
+          {/* Quick Stats - Ultra compact */}
+          <div className="flex flex-wrap gap-1 pt-2 text-xs text-slate-300">
             <div className="flex items-center">
-              <Star className="h-3 w-3 mr-2 text-amber-400" />
-              <span>Extensive experience in Kenyan legal services</span>
+              <Star className="h-3 w-3 mr-1 text-amber-400" />
+              <span className="hidden sm:inline">Extensive Kenyan legal experience</span>
+              <span className="sm:hidden">Expert Legal Services</span>
             </div>
+            <span className="text-slate-500 hidden sm:inline">•</span>
             <div className="flex items-center">
-              <Star className="h-3 w-3 mr-2 text-amber-400" />
-              <span>500+ Kenyan Clients Served</span>
+              <Star className="h-3 w-3 mr-1 text-amber-400" />
+              <span className="hidden sm:inline">500+ Clients Served</span>
+              <span className="sm:hidden">500+ Clients</span>
             </div>
           </div>
         </div>
