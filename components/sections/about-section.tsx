@@ -1,6 +1,6 @@
 export default function AboutSection() {
   return (
-    <section className="pt-10 bg-gradient-to-b from-secondary to-white">
+    <section className="pt-20 bg-gradient-to-b from-secondary to-white">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
