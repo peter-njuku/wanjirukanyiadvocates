@@ -8,7 +8,7 @@ interface HeroSectionProps {
 
 export default function HeroSection({ hasCurvedBottom = false }: HeroSectionProps) {
   return (
-    <section className="relative py-16 sm:py-24 md:py-32 lg:py-40 xl:py-48 min-h-[500px] sm:min-h-[600px] md:min-h-[700px]">
+    <section className="relative py-8 sm:py-16 md:py-24 lg:py-32 xl:py-40 min-h-screen flex items-center">
       {hasCurvedBottom && (
         <div className="absolute bottom-0 left-0 right-0 h-24 bg-background rounded-t-[50%] transform translate-y-1/2 z-10"></div>
       )}
@@ -86,21 +86,21 @@ export default function HeroSection({ hasCurvedBottom = false }: HeroSectionProp
       
       {/* Content */}
       <div className="container relative mx-auto px-4 z-10">
-        <div className="text-left space-y-4 sm:space-y-6">
+        <div className="text-left space-y-3 sm:space-y-4 md:space-y-6">
           
           {/* Main Heading - Better mobile sizing */}
-          <h1 className="font-serif font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight text-white">
+          <h1 className="font-serif font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl leading-tight text-white">
             Protecting Your Rights <br className="hidden sm:block" />
             <span className="text-amber-400 font-light">Across Kenya & Beyond</span>
           </h1>
           
           {/* Supporting Line - Better mobile sizing */}
-          <p className="text-base sm:text-lg md:text-xl text-slate-200 leading-relaxed font-light max-w-4xl">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-slate-200 leading-relaxed font-light max-w-4xl">
             Expert legal representation in land law, succession matters, commercial disputes, and cybercrime — serving Kenyan clients with integrity and excellence.
           </p>
 
           {/* Trust Signals - Stack on mobile */}
-          <div className="flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center gap-2 sm:gap-4 md:gap-6 text-xs sm:text-sm text-slate-300 pt-2 sm:pt-4">
+          <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3 text-xs text-slate-300 pt-2">
             <div className="flex items-center bg-white/10 backdrop-blur-sm px-2 py-1 sm:px-3 sm:py-2 rounded-lg">
               <Shield className="h-3 w-3 sm:h-4 sm:w-4 mr-2 text-amber-400" />
               <span>Kenyan Court Experience</span>
@@ -116,26 +116,26 @@ export default function HeroSection({ hasCurvedBottom = false }: HeroSectionProp
           </div>
           
           {/* CTAs - Stack on mobile, better spacing */}
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-6 sm:pt-8 md:pt-12">
+          <div className="flex flex-col gap-2 pt-4 sm:pt-6">
             <Button 
-              size="lg" 
-              className="bg-amber-400 hover:bg-amber-500 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-200 w-full sm:w-fit rounded-md animate-pulse text-sm sm:text-base" 
+              size="default"
+              className="bg-amber-400 hover:bg-amber-500 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-200 w-full sm:w-fit rounded-md animate-pulse text-sm" 
               asChild
             >
-              <Link href="/contact" className="flex items-center justify-center">
+              <Link href="/contact" className="flex items-center justify-center py-3">
                 Get Free Case Assessment
-                <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
+                <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
             
             <Button
-              size="lg"
+              size="default"
               variant="outline"
-              className="border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-slate-900 bg-white/10 backdrop-blur-sm font-semibold transition-all duration-200 w-full sm:w-fit rounded-md text-sm sm:text-base"
+              className="border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-slate-900 bg-white/10 backdrop-blur-sm font-semibold transition-all duration-200 w-full sm:w-fit rounded-md text-sm"
               asChild
             >
-              <Link href="tel:+254792932136" className="flex items-center justify-center">
-                <Phone className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
+              <Link href="tel:+254792932136" className="flex items-center justify-center py-3">
+                <Phone className="mr-2 h-4 w-4" />
                 Call +254 792 932 136
               </Link>
             </Button>
