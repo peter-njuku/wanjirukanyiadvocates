@@ -117,7 +117,7 @@ export default function Header() {
           {/* Desktop CTA Button */}
           <Button
             asChild
-            className="bg-cyan-600 hover:bg-cyan-700 text-white hidden md:flex"
+            className="bg-yellow-500 hover:bg-yellow-600 text-white hidden md:flex"
           >
             <Link href="/contact">Schedule Consultation</Link>
           </Button>
@@ -162,7 +162,7 @@ export default function Header() {
                     </Link>
                   );
                 })}
-                <Button asChild className="bg-cyan-600 hover:bg-cyan-700 text-white mt-4">
+                <Button asChild className="bg-yellow-500 hover:bg-yellow-600 text-white mt-4">
                   <Link href="/contact" onClick={() => setIsOpen(false)}>
                     Schedule Your Consultation
                   </Link>

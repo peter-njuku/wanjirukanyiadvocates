@@ -28,13 +28,9 @@ export default function HeroSection({ hasCurvedBottom = false }: HeroSectionProp
               <stop offset="0%" stop-color="#6B8EAE" />
               <stop offset="100%" stop-color="#8DAAC9" />
             </linearGradient>
-            <linearGradient id="gold-gradient-right" x1="0%" y1="100%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#0A2342" />
-              <stop offset="80%" stop-color="#F9A602" />
-            </linearGradient>
-            <linearGradient id="gold-gradient-left" x1="100%" y1="100%" x2="0%" y2="0%">
-              <stop offset="10%" stop-color="#0A2342" />
-              <stop offset="100%" stop-color="#F9A602" />
+            <linearGradient id="gold-gradient-bottom" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#FFD700" stop-opacity="0" />
+              <stop offset="100%" stop-color="#FFD700" stop-opacity="0.5" />
             </linearGradient>
           </defs>
           <rect x="0" y="0" width="100%" height="100%" fill="url(#gradient1)" />
@@ -43,14 +39,14 @@ export default function HeroSection({ hasCurvedBottom = false }: HeroSectionProp
             <rect x="1200" y="-300" width="800" height="1200" transform="rotate(-30 1200 -300)" fill="url(#gradient3)" />
             <rect x="500" y="700" width="1000" height="600" transform="rotate(10 500 700)" fill="url(#gradient2)" />
           </g>
+          <g opacity="0.4">
+            <polygon points="1920,1080 1920,0 1200,1080" fill="url(#gold-gradient-bottom)" />
+            <polygon points="0,1080 0,800 800,1080" fill="url(#gold-gradient-bottom)" />
+          </g>
           <g opacity="0.1">
             <polygon points="0,0 400,0 200,400 0,200" fill="#FFFFFF" transform="translate(100, 50) rotate(15)" />
             <polygon points="1920,0 1520,0 1720,400 1920,200" fill="#FFFFFF" transform="translate(-100, 50) rotate(-15)" />
             <rect x="800" y="800" width="300" height="300" fill="#FFFFFF" transform="rotate(45 800 800)" />
-          </g>
-          <g opacity="0.6">
-            <polygon points="1920,1080 1920,0 1200,1080" fill="url(#gold-gradient-right)" />
-            <polygon points="0,1080 0,800 800,1080" fill="url(#gold-gradient-left)" />
           </g>
           <g opacity="0.05">
             <rect x="10%" y="0" width="2px" height="100%" fill="#FFFFFF" />
@@ -92,7 +88,7 @@ export default function HeroSection({ hasCurvedBottom = false }: HeroSectionProp
           </p>
 
           {/* Trust Signals - Kenyan Focused */}
-          <div className="flex flex-wrap items-center gap-6 text-sm text-slate-300 pt-2">
+          <div className="flex flex-wrap items-center gap-6 text-sm text-slate-300 pt-4">
             <div className="flex items-center bg-white/10 backdrop-blur-sm px-3 py-2 rounded-lg">
               <Shield className="h-4 w-4 mr-2 text-amber-400" />
               <span>Kenyan Court Experience</span>
@@ -108,7 +104,7 @@ export default function HeroSection({ hasCurvedBottom = false }: HeroSectionProp
           </div>
           
           {/* CTAs - More Action-Oriented */}
-          <div className="flex flex-col sm:flex-row gap-4 pt-8">
+          <div className="flex flex-col sm:flex-row gap-4 pt-12">
             <Button 
               size="lg" 
               className="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-200 w-fit rounded-md animate-pulse" 
