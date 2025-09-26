@@ -28,20 +28,21 @@ export default function HeroSection({ hasCurvedBottom = false }: HeroSectionProp
               <stop offset="0%" stop-color="#6B8EAE" />
               <stop offset="100%" stop-color="#8DAAC9" />
             </linearGradient>
-            <linearGradient id="gold-gradient-bottom" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="20%" stop-color="#996515" stop-opacity="1" />
-              <stop offset="100%" stop-color="#996515" stop-opacity="1" />
+            <pattern id="checkered" width="20" height="20" patternUnits="userSpaceOnUse">
+              <rect width="10" height="10" fill="#FF8C00" />
+              <rect x="10" y="10" width="10" height="10" fill="#FF8C00" />
+            </pattern>
+            <mask id="fade-mask">
+              <rect x="0" y="0" width="100%" height="100%" fill="url(#fade-gradient)" />
+            </mask>
+            <linearGradient id="fade-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="white" stop-opacity="0" />
+              <stop offset="100%" stop-color="white" stop-opacity="1" />
             </linearGradient>
           </defs>
           <rect x="0" y="0" width="100%" height="100%" fill="url(#gradient1)" />
-          <g opacity="0.15">
-            <rect x="-200" y="100" width="800" height="1200" transform="rotate(20 -200 100)" fill="url(#gradient2)" />
-            <rect x="1200" y="-300" width="800" height="1200" transform="rotate(-30 1200 -300)" fill="url(#gradient3)" />
-            <rect x="500" y="700" width="1000" height="600" transform="rotate(10 500 700)" fill="url(#gradient2)" />
-          </g>
-          <g opacity="1">
-            <polygon points="1920,1080 1920,0 1200,1080" fill="url(#gold-gradient-bottom)" />
-            <polygon points="0,1080 0,800 800,1080" fill="url(#gold-gradient-bottom)" />
+          <g opacity="0.2">
+            <rect x="0" y="0" width="100%" height="100%" fill="url(#checkered)" mask="url(#fade-mask)" />
           </g>
           <g opacity="0.1">
             <polygon points="0,0 400,0 200,400 0,200" fill="#FFFFFF" transform="translate(100, 50) rotate(15)" />
@@ -61,12 +62,12 @@ export default function HeroSection({ hasCurvedBottom = false }: HeroSectionProp
       {/* Award Badge - More Professional Placement */}
       <div className="absolute top-8 left-8 z-20">
   {/* The outer div acts as the container for the border */}
-  <div className="border border-amber-500/50 bg-amber-500/10 rounded-lg"> {/* Yellowish boundary */}
+  <div className="border border-brownish-orange/50 bg-brownish-orange/10 rounded-lg"> {/* Yellowish boundary */}
     {/* The inner div is now responsible for the content and has a clear background */}
     <div className="bg-transparent text-white px-6 py-3 rounded-lg flex items-center space-x-2">
       <div className="flex items-center bg-white/10 backdrop-blur-sm px-3 py-2 rounded-lg">
-        <Award className="h-5 w-5 text-amber-500" /> {/* Changed icon color to match border */}
-        <span className="text-amber-500">Advocates You Can Trust</span> {/* Changed text color to match border */}
+        <Award className="h-5 w-5 text-brownish-orange" /> {/* Changed icon color to match border */}
+        <span className="text-brownish-orange">Advocates You Can Trust</span> {/* Changed text color to match border */}
       </div>
     </div>
   </div>
@@ -107,7 +108,7 @@ export default function HeroSection({ hasCurvedBottom = false }: HeroSectionProp
           <div className="flex flex-col sm:flex-row gap-4 pt-12">
             <Button 
               size="lg" 
-              className="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-200 w-fit rounded-md animate-pulse" 
+              className="bg-brownish-orange hover:bg-opacity-90 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-200 w-fit rounded-md animate-pulse" 
               asChild
             >
               <Link href="/contact" className="flex items-center">
