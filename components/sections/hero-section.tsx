@@ -172,11 +172,11 @@ export default function HeroSection({
       </div>
 
       {/* Content */}
-      <div className="relative z-10 px-6 py-24 text-center flex flex-col items-center space-y-4 max-w-4xl mx-auto">
+      <div className="relative z-10 px-6 py-24 text-right flex flex-col items-end space-y-4 max-w-4xl mx-auto">
         {/* Award Badge */}
         <Badge
           variant="outline"
-          className="bg-red-900/80 border-red-800 text-white hover:bg-red-900 backdrop-blur-sm"
+          className="bg-blue-900/80 border-blue-800 text-white hover:bg-blue-900 backdrop-blur-sm"
         >
           <Star className="h-4 w-4 mr-2 text-white" />
           <span className="text-white text-sm sm:text-base font-medium">
@@ -200,7 +200,7 @@ export default function HeroSection({
         </p>
 
         {/* Trust Signals */}
-        <div className="flex flex-wrap gap-1 sm:gap-2 text-xs text-slate-300 pt-1 justify-center">
+        <div className="flex flex-wrap gap-1 sm:gap-2 text-xs text-slate-300 pt-1 justify-end">
           <div className="flex items-center bg-white/10 backdrop-blur-sm px-2 py-1 rounded text-xs">
             <Shield className="h-3 w-3 mr-1 text-amber-400" />
             <span className="hidden sm:inline">Kenyan Court Experience</span>
@@ -226,7 +226,7 @@ export default function HeroSection({
             asChild
           >
             <Link href="/contact" className="flex items-center justify-center">
-              Free Case Assessment.
+              Free Case Assessment
               <ArrowRight className="ml-1 h-4 w-4" />
             </Link>
           </Button>
@@ -248,7 +248,7 @@ export default function HeroSection({
         </div>
 
         {/* Quick Stats */}
-        <div className="flex flex-wrap gap-1 pt-2 text-xs text-slate-300 justify-center">
+        <div className="flex flex-wrap gap-1 pt-2 text-xs text-slate-300 justify-end">
           <div className="flex items-center">
             <Star className="h-3 w-3 mr-1 text-amber-400" />
             <span className="hidden sm:inline">
