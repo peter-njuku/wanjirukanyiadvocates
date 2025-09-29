@@ -8,13 +8,16 @@ interface HeroSectionProps {
 
 export default function HeroSection({ hasCurvedBottom = false }: HeroSectionProps) {
   return (
-    <section className="relative py-12 sm:py-16 md:py-24 lg:py-32 xl:py-40 flex items-center">
-      {hasCurvedBottom && (
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-background rounded-t-[50%] transform translate-y-1/2 z-10"></div>
-      )}
-      {/* Background with Professional SVG */}
+    <section className="relative bg-gray-900 text-white">
       <div className="absolute inset-0 z-0 overflow-hidden">
-        <svg width="100%" height="100%" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+        <svg
+          className="absolute inset-0 h-full w-full object-cover"
+          width="100%" 
+          height="100%" 
+          viewBox="0 0 1920 1080" 
+          preserveAspectRatio="xMidYMid slice" 
+          xmlns="http://www.w3.org/2000/svg"
+        >
           <defs>
             <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stop-color="#0A2342" />
@@ -72,20 +75,7 @@ export default function HeroSection({ hasCurvedBottom = false }: HeroSectionProp
         </svg>
       </div>
 
-      {/* Award Badge - Closer to content */}
-      <div className="absolute top-4 left-4 z-20 hidden sm:block">
-        <div className="bg-amber-500/10 rounded-lg">
-          <div className="bg-transparent text-white px-4 py-2 rounded-lg flex items-center space-x-2">
-            <div className="flex items-center bg-white/10 backdrop-blur-sm px-3 py-2 rounded-lg">
-              <Award className="h-5 w-5 text-amber-400" />
-              <span className="text-amber-400 text-sm">Advocates You Can Trust</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      {/* Content */}
-      <div className="container relative mx-auto px-4 z-10">
+      <div className="relative z-10 container mx-auto px-4 py-16 sm:py-24 md:py-32 lg:py-40 xl:py-48">
         <div className="text-left space-y-3 max-w-4xl">
           
           {/* Main Heading - Better mobile sizing */}
