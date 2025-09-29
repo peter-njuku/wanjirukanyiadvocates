@@ -112,24 +112,24 @@ export default function HeroSection({ hasCurvedBottom = false }: HeroSectionProp
           {/* CTAs - Compact on mobile */}
           <div className="flex flex-col gap-2 pt-2 sm:pt-4">
             <Button 
-              size="sm"
-              className="bg-amber-400 hover:bg-amber-500 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-200 w-full sm:w-fit rounded-md animate-pulse text-xs sm:text-sm h-10 sm:h-auto" 
+              size="lg"
+              className="bg-amber-400 hover:bg-amber-500 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-200 w-full sm:w-fit rounded-md animate-pulse text-sm sm:text-base h-12 sm:h-14" 
               asChild
             >
               <Link href="/contact" className="flex items-center justify-center">
                 Free Case Assessment
-                <ArrowRight className="ml-1 h-3 w-3 sm:h-4 sm:w-4" />
+                <ArrowRight className="ml-1 h-4 w-4" />
               </Link>
             </Button>
             
             <Button
-              size="sm"
+              size="lg"
               variant="outline"
-              className="border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-slate-900 bg-white/10 backdrop-blur-sm font-semibold transition-all duration-200 w-full sm:w-fit rounded-md text-xs sm:text-sm h-10 sm:h-auto"
+              className="border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-slate-900 bg-white/10 backdrop-blur-sm font-semibold transition-all duration-200 w-full sm:w-fit rounded-md text-sm sm:text-base h-12 sm:h-14"
               asChild
             >
               <Link href="tel:+254792932136" className="flex items-center justify-center">
-                <Phone className="mr-1 h-3 w-3 sm:h-4 sm:w-4" />
+                <Phone className="mr-1 h-4 w-4" />
                 Call +254 792 932 136
               </Link>
             </Button>
