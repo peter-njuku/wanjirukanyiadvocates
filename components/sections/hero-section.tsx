@@ -46,15 +46,7 @@ export default function HeroSection({
               <stop offset="100%" stopColor="#8DAAC9" />
             </linearGradient>
 
-            <pattern
-              id="checkered"
-              width="20"
-              height="20"
-              patternUnits="userSpaceOnUse"
-            >
-              <rect width="10" height="10" fill="#FF8C00" />
-              <rect x="10" y="10" width="10" height="10" fill="#FF8C00" />
-            </pattern>
+
 
             <mask id="fade-mask">
               <rect
@@ -72,14 +64,14 @@ export default function HeroSection({
             </linearGradient>
 
             <linearGradient
-              id="dark-orange-gradient-bottom"
+              id="dark-blue-gradient-bottom"
               x1="0%"
               y1="0%"
               x2="0%"
               y2="100%"
             >
-              <stop offset="20%" stopColor="#FF8C00" stopOpacity="0" />
-              <stop offset="100%" stopColor="#FF8C00" stopOpacity="1" />
+              <stop offset="20%" stopColor="#0A2342" stopOpacity="0" />
+              <stop offset="100%" stopColor="#0A2342" stopOpacity="1" />
             </linearGradient>
           </defs>
 
@@ -118,21 +110,11 @@ export default function HeroSection({
             />
           </g>
 
-          <g opacity="0.2">
-            <rect
-              x="0"
-              y="0"
-              width="100%"
-              height="100%"
-              fill="url(#checkered)"
-              mask="url(#fade-mask)"
-            />
-          </g>
+
 
           <g opacity="1">
             <polygon
-              points="1920,1080 1920,0 1200,1080"
-              fill="url(#dark-orange-gradient-bottom)"
+              fill="url(#dark-blue-gradient-bottom)"
             />
             <polygon
               points="0,1080 0,800 800,1080"
@@ -187,7 +169,7 @@ export default function HeroSection({
         {/* Heading */}
         <h1 className="font-serif font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl leading-tight text-white">
           Protecting Your Rights <br className="hidden sm:block" />
-          <span className="text-amber-400 font-light">
+          <span className="text-indigo-400 font-light">
             Across Kenya & Beyond
           </span>
         </h1>
@@ -202,17 +184,17 @@ export default function HeroSection({
         {/* Trust Signals */}
         <div className="flex flex-wrap gap-1 sm:gap-2 text-xs text-slate-300 pt-1 justify-start">
           <div className="flex items-center bg-white/10 backdrop-blur-sm px-2 py-1 rounded text-xs">
-            <Shield className="h-3 w-3 mr-1 text-amber-400" />
+            <Shield className="h-3 w-3 mr-1 text-indigo-400" />
             <span className="hidden sm:inline">Kenyan Court Experience</span>
             <span className="sm:hidden">Court Experience</span>
           </div>
           <div className="flex items-center bg-white/10 backdrop-blur-sm px-2 py-1 rounded text-xs">
-            <ScaleIcon className="h-3 w-3 mr-1 text-amber-400" />
+            <ScaleIcon className="h-3 w-3 mr-1 text-indigo-400" />
             <span className="hidden sm:inline">Proven Results</span>
             <span className="sm:hidden">Results</span>
           </div>
           <div className="flex items-center bg-white/10 backdrop-blur-sm px-2 py-1 rounded text-xs">
-            <Globe className="h-3 w-3 mr-1 text-amber-400" />
+            <Globe className="h-3 w-3 mr-1 text-indigo-400" />
             <span className="hidden sm:inline">International Clients</span>
             <span className="sm:hidden">Global</span>
           </div>
@@ -222,7 +204,7 @@ export default function HeroSection({
         <div className="flex flex-col sm:flex-row gap-2 pt-2 sm:pt-4">
           <Button
             size="lg"
-            className="bg-amber-400 hover:bg-amber-500 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-200 w-full sm:w-fit rounded-md animate-pulse text-sm sm:text-base h-12 sm:h-14"
+            className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-200 w-full sm:w-fit rounded-md animate-pulse text-sm sm:text-base h-12 sm:h-14"
             asChild
           >
             <Link href="/contact" className="flex items-center justify-center">
@@ -234,7 +216,7 @@ export default function HeroSection({
           <Button
             size="lg"
             variant="outline"
-            className="border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-slate-900 bg-white/10 backdrop-blur-sm font-semibold transition-all duration-200 w-full sm:w-fit rounded-md text-sm sm:text-base h-12 sm:h-14"
+            className="border-indigo-400 text-indigo-400 hover:bg-indigo-400 hover:text-white bg-white/10 backdrop-blur-sm font-semibold transition-all duration-200 w-full sm:w-fit rounded-md text-sm sm:text-base h-12 sm:h-14"
             asChild
           >
             <Link
@@ -250,15 +232,12 @@ export default function HeroSection({
         {/* Quick Stats */}
         <div className="flex flex-wrap gap-1 pt-2 text-xs text-slate-300 justify-start">
           <div className="flex items-center">
-            <Star className="h-3 w-3 mr-1 text-amber-400" />
-            <span className="hidden sm:inline">
-              Extensive Kenyan legal experience
-            </span>
+            <Star className="h-3 w-3 mr-1 text-indigo-400" />
             <span className="sm:hidden">Expert Legal Services</span>
           </div>
           <span className="text-slate-500 hidden sm:inline">•</span>
           <div className="flex items-center">
-            <Star className="h-3 w-3 mr-1 text-amber-400" />
+            <Star className="h-3 w-3 mr-1 text-indigo-400" />
             <span className="hidden sm:inline">500+ Clients Served</span>
             <span className="sm:hidden">500+ Clients</span>
           </div>
