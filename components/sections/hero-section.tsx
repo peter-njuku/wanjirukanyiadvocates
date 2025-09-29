@@ -1,3 +1,4 @@
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowRight, Phone, Award, Shield, Scale as ScaleIcon, Globe, Star } from "lucide-react"
@@ -76,10 +77,10 @@ export default function HeroSection({ hasCurvedBottom = false }: HeroSectionProp
       </div>
 
       {/* Award Badge - Closer to content */}
-      <div className="flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg">
-              <Award className="h-6 w-6 text-amber-400" />
-              <span className="text-amber-400 text-base sm:text-lg">Advocates You Can Trust</span>
-            </div>
+      <Badge variant="outline">
+              <Star className="h-6 w-6 text-amber-400" />
+              <span className="text-amber-400 text-base sm:text-lg">Advocates & Notaries You Can Trust</span>
+            </Badge>
       <div className="relative z-10 container mx-auto px-4 py-8 sm:py-12 md:py-16 lg:py-20 xl:py-24">
         <div className="text-left space-y-3 max-w-4xl">
           
