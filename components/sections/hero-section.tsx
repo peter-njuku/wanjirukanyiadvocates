@@ -77,13 +77,11 @@ export default function HeroSection({ hasCurvedBottom = false }: HeroSectionProp
       </div>
 
       {/* Award Badge - Closer to content */}
-      <Badge variant="outline">
-              <Star className="h-6 w-6 text-amber-400" />
-              <span className="text-amber-400 text-base sm:text-lg">Advocates & Notaries You Can Trust</span>
+      {/* Award Badge - Closer to content */}
+      <Badge variant="outline" className="bg-red-900/80 border-red-800 text-white hover:bg-red-900 backdrop-blur-sm">
+              <Star className="h-4 w-4 mr-2 text-white" />
+              <span className="text-white text-sm sm:text-base font-medium">Advocates & Notaries You Can Trust</span>
             </Badge>
-      <div className="relative z-10 container mx-auto px-4 py-8 sm:py-12 md:py-16 lg:py-20 xl:py-24">
-        <div className="text-left space-y-3 max-w-4xl">
-          
           {/* Main Heading - Better mobile sizing */}
           <h1 className="font-serif font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl leading-tight text-white">
             Protecting Your Rights <br className="hidden sm:block" />
