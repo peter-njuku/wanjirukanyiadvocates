@@ -79,13 +79,13 @@ export default function HeroSection({ hasCurvedBottom = false }: HeroSectionProp
         <div className="text-left space-y-3 max-w-4xl">
           
           {/* Main Heading - Better mobile sizing */}
-          <h1 className="font-serif font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl leading-tight text-white">
+          <h1 className="font-serif font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl leading-tight text-white">
             Protecting Your Rights <br className="hidden sm:block" />
             <span className="text-amber-400 font-light">Across Kenya & Beyond</span>
           </h1>
           
           {/* Supporting Line - Better mobile sizing */}
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-slate-200 leading-snug font-light">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-200 leading-snug font-light">
             Expert legal representation in land law, succession matters, commercial disputes, and cybercrime — serving Kenyan clients with integrity and excellence.
           </p>
 
