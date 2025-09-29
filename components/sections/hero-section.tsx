@@ -75,7 +75,7 @@ export default function HeroSection({ hasCurvedBottom = false }: HeroSectionProp
         </svg>
       </div>
 
-      <div className="relative z-10 container mx-auto px-4 py-16 sm:py-24 md:py-32 lg:py-40 xl:py-48">
+      <div className="relative z-10 container mx-auto px-4 py-8 sm:py-12 md:py-16 lg:py-20 xl:py-24">
         <div className="text-left space-y-3 max-w-4xl">
           
           {/* Main Heading - Better mobile sizing */}
