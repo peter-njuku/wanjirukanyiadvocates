@@ -110,7 +110,7 @@ export default function HeroSection({ hasCurvedBottom = false }: HeroSectionProp
           
           {/* CTAs - Stack on mobile, better spacing */}
           {/* CTAs - Compact on mobile */}
-          <div className="flex flex-col gap-2 pt-2 sm:pt-4">
+          <div className="flex flex-col sm:flex-row gap-2 pt-2 sm:pt-4">
             <Button 
               size="lg"
               className="bg-amber-400 hover:bg-amber-500 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-200 w-full sm:w-fit rounded-md animate-pulse text-sm sm:text-base h-12 sm:h-14" 
