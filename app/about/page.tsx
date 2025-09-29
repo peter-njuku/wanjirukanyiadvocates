@@ -142,7 +142,7 @@ export default function AboutPage() {
       {/* Access Commitment */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-2xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto text-center">
             <div className="bg-cyan-50 p-6 rounded-xl border border-cyan-200">
               <ScaleIcon className="h-10 w-10 text-cyan-600 mx-auto mb-3" />
               <h3 className="font-serif font-semibold text-xl text-slate-900 mb-3">Our Access Commitment</h3>
