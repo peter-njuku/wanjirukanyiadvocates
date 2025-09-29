@@ -77,7 +77,6 @@ export default function HeroSection({ hasCurvedBottom = false }: HeroSectionProp
       </div>
 
       {/* Award Badge - Closer to content */}
-      {/* Award Badge - Closer to content */}
       <Badge variant="outline" className="bg-red-900/80 border-red-800 text-white hover:bg-red-900 backdrop-blur-sm">
               <Star className="h-4 w-4 mr-2 text-white" />
               <span className="text-white text-sm sm:text-base font-medium">Advocates & Notaries You Can Trust</span>
