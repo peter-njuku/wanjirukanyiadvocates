@@ -8,7 +8,7 @@ interface HeroSectionProps {
 
 export default function HeroSection({ hasCurvedBottom = false }: HeroSectionProps) {
   return (
-    <section className="relative py-16 sm:py-24 md:py-32 lg:py-40 xl:py-48 flex items-center">
+    <section className="relative py-12 sm:py-16 md:py-24 lg:py-32 xl:py-40 flex items-center">
       {hasCurvedBottom && (
         <div className="absolute bottom-0 left-0 right-0 h-24 bg-background rounded-t-[50%] transform translate-y-1/2 z-10"></div>
       )}
@@ -75,10 +75,10 @@ export default function HeroSection({ hasCurvedBottom = false }: HeroSectionProp
       {/* Award Badge - Closer to content */}
       <div className="absolute top-4 left-4 z-20 hidden sm:block">
         <div className="bg-amber-500/10 rounded-lg">
-          <div className="bg-transparent text-white px-6 py-3 rounded-lg flex items-center space-x-2">
+          <div className="bg-transparent text-white px-4 py-2 rounded-lg flex items-center space-x-2">
             <div className="flex items-center bg-white/10 backdrop-blur-sm px-3 py-2 rounded-lg">
               <Award className="h-5 w-5 text-amber-400" />
-              <span className="text-amber-400 text-base">Advocates You Can Trust</span>
+              <span className="text-amber-400 text-sm">Advocates You Can Trust</span>
             </div>
           </div>
         </div>
@@ -86,16 +86,16 @@ export default function HeroSection({ hasCurvedBottom = false }: HeroSectionProp
       
       {/* Content */}
       <div className="container relative mx-auto px-4 z-10">
-        <div className="text-left space-y-4 max-w-4xl">
+        <div className="text-left space-y-3 max-w-4xl">
           
           {/* Main Heading - Better mobile sizing */}
-          <h1 className="font-serif font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl leading-tight text-white">
+          <h1 className="font-serif font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl leading-tight text-white">
             Protecting Your Rights <br className="hidden sm:block" />
             <span className="text-amber-400 font-light">Across Kenya & Beyond</span>
           </h1>
           
           {/* Supporting Line - Better mobile sizing */}
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-200 leading-snug font-light">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-slate-200 leading-snug font-light">
             Expert legal representation in land law, succession matters, commercial disputes, and cybercrime — serving Kenyan clients with integrity and excellence.
           </p>
 
