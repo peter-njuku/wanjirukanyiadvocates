@@ -226,7 +226,7 @@ export default function HeroSection({
             asChild
           >
             <Link href="/contact" className="flex items-center justify-center">
-              Free Case Assessment
+              Free Case Assessment.
               <ArrowRight className="ml-1 h-4 w-4" />
             </Link>
           </Button>
