@@ -11,7 +11,7 @@ export default function AboutPage() {
       <Header />
 
       {/* Hero Section - Combined Why Choose Us & About */}
-      <section className="relative py-16 bg-[#1a237e] text-white">
+      <section className="relative py-16 bg-[#081a33] text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-300 px-4 py-1 mb-4">
@@ -44,7 +44,7 @@ export default function AboutPage() {
                 <p className="text-blue-700 font-medium">Advocate of the High Court of Kenya & Founder</p>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-6 text-sm">
+              <div className="grid md:grid-cols-2 gap-6 text-base">
                 <div className="space-y-4">
                   <p className="text-slate-700 leading-relaxed">
                     Wanjiru Kanyi is a Litigation Advocate passionate about making justice accessible through 
@@ -52,15 +52,15 @@ export default function AboutPage() {
                   </p>
                   <div className="bg-blue-50 p-4 rounded-lg">
                     <h4 className="font-semibold text-blue-900 mb-2">Areas of Expertise</h4>
-                    <p className="text-blue-800 text-sm">
-                      Land law, succession, employment law, digital rights, and child protection.
+                    <p className="text-blue-800 text-base">
+                      Land Law, Succession, Employment Law, Digital Rights, Child Protection, and Family Law.
                     </p>
                   </div>
                 </div>
 
                 <div className="bg-slate-50 p-4 rounded-lg">
                   <h4 className="font-semibold text-slate-900 mb-2">Community Commitment</h4>
-                  <p className="text-slate-700 text-sm">
+<p className="text-slate-700 text-base">
                     Mentors young girls, promotes reproductive health rights, and supports ethical AI innovation 
                     in legal tech, believing justice should be accessible to all Kenyans.
                   </p>
@@ -86,7 +86,7 @@ export default function AboutPage() {
               <div className="bg-white/10 p-5 rounded-lg">
                 <Target className="h-8 w-8 text-cyan-300 mb-3" />
                 <h3 className="font-semibold text-cyan-100 mb-2">Mission</h3>
-                <p className="text-blue-100 text-sm">
+                <p className="text-blue-100 text-base">
                   Provide exceptional legal representation while democratizing access to justice through 
                   education and technology.
                 </p>
@@ -95,7 +95,7 @@ export default function AboutPage() {
               <div className="bg-white/10 p-5 rounded-lg">
                 <BookOpen className="h-8 w-8 text-cyan-300 mb-3" />
                 <h3 className="font-semibold text-cyan-100 mb-2">Vision</h3>
-                <p className="text-blue-100 text-sm">
+                <p className="text-blue-100 text-base">
                   A Kenya where every citizen understands their rights and has access to quality legal representation.
                 </p>
               </div>
@@ -107,7 +107,7 @@ export default function AboutPage() {
                 <ScaleIcon className="h-5 w-5 text-cyan-300 mt-0.5 flex-shrink-0" />
                 <div>
                   <h4 className="font-semibold text-cyan-100 mb-1">Excellence</h4>
-                  <p className="text-blue-100 text-sm">Highest standards in legal expertise and preparation</p>
+                  <p className="text-blue-100 text-base">Highest standards in legal expertise and preparation</p>
                 </div>
               </div>
 
@@ -115,7 +115,7 @@ export default function AboutPage() {
                 <Users className="h-5 w-5 text-cyan-300 mt-0.5 flex-shrink-0" />
                 <div>
                   <h4 className="font-semibold text-cyan-100 mb-1">Client-First</h4>
-                  <p className="text-blue-100 text-sm">Personalized attention and clear communication</p>
+                  <p className="text-blue-100 text-base">Personalized attention and clear communication</p>
                 </div>
               </div>
 
@@ -123,7 +123,7 @@ export default function AboutPage() {
                 <Shield className="h-5 w-5 text-cyan-300 mt-0.5 flex-shrink-0" />
                 <div>
                   <h4 className="font-semibold text-cyan-100 mb-1">Integrity</h4>
-                  <p className="text-blue-100 text-sm">Strict ethical standards and confidentiality</p>
+                  <p className="text-blue-100 text-base">Strict ethical standards and confidentiality</p>
                 </div>
               </div>
 
@@ -131,7 +131,7 @@ export default function AboutPage() {
                 <Star className="h-5 w-5 text-cyan-300 mt-0.5 flex-shrink-0" />
                 <div>
                   <h4 className="font-semibold text-cyan-100 mb-1">Innovation</h4>
-                  <p className="text-blue-100 text-sm">Embracing technology for better legal service</p>
+                  <p className="text-blue-100 text-base">Embracing technology for better legal service</p>
                 </div>
               </div>
             </div>
@@ -146,7 +146,7 @@ export default function AboutPage() {
             <div className="bg-cyan-50 p-6 rounded-xl border border-cyan-200">
               <ScaleIcon className="h-10 w-10 text-cyan-600 mx-auto mb-3" />
               <h3 className="font-serif font-semibold text-xl text-slate-900 mb-3">Our Access Commitment</h3>
-              <p className="text-slate-700 text-sm">
+              <p className="text-slate-700 text-base">
                 We believe quality legal services should be accessible to all Kenyans. This drives our 
                 community programs, walk-in consultations, and pro bono initiatives that serve ordinary 
                 citizens across Kenya.

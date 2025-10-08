@@ -32,8 +32,8 @@ export default function HeroSection({
         >
           <defs>
             <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#0A2342" />
-              <stop offset="100%" stopColor="#1E3A5F" />
+              <stop offset="0%" stopColor="#030a13" />
+              <stop offset="100%" stopColor="#081a33" />
             </linearGradient>
 
             <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -172,11 +172,11 @@ export default function HeroSection({
       </div>
 
       {/* Content */}
-      <div className="relative z-10 px-6 py-24 text-right flex flex-col items-end space-y-4 max-w-4xl mx-auto">
+      <div className="relative z-10 px-20 py-22 text-left flex flex-col items-start space-y-4 max-w-4xl">
         {/* Award Badge */}
         <Badge
           variant="outline"
-          className="bg-blue-900/80 border-blue-800 text-white hover:bg-blue-900 backdrop-blur-sm"
+          className="bg-blue-900/80 border-blue-800 text-white hover:bg-blue-900 backdrop-blur-sm ml-30"
         >
           <Star className="h-4 w-4 mr-2 text-white" />
           <span className="text-white text-sm sm:text-base font-medium">
@@ -200,7 +200,7 @@ export default function HeroSection({
         </p>
 
         {/* Trust Signals */}
-        <div className="flex flex-wrap gap-1 sm:gap-2 text-xs text-slate-300 pt-1 justify-end">
+        <div className="flex flex-wrap gap-1 sm:gap-2 text-xs text-slate-300 pt-1 justify-start">
           <div className="flex items-center bg-white/10 backdrop-blur-sm px-2 py-1 rounded text-xs">
             <Shield className="h-3 w-3 mr-1 text-amber-400" />
             <span className="hidden sm:inline">Kenyan Court Experience</span>
@@ -248,7 +248,7 @@ export default function HeroSection({
         </div>
 
         {/* Quick Stats */}
-        <div className="flex flex-wrap gap-1 pt-2 text-xs text-slate-300 justify-end">
+        <div className="flex flex-wrap gap-1 pt-2 text-xs text-slate-300 justify-start">
           <div className="flex items-center">
             <Star className="h-3 w-3 mr-1 text-amber-400" />
             <span className="hidden sm:inline">

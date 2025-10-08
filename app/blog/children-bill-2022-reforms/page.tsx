@@ -31,7 +31,7 @@ export default function ChildrenBillPost() {
             </Badge>
             
             <h1 className="font-serif font-bold text-3xl md:text-4xl text-slate-900 mb-6">
-              Kenya's New Children Bill 2021: What's Changing?
+              Kenya's New Children Bill 2022: What's Changing?
             </h1>
             
             <div className="flex flex-wrap items-center gap-6 text-slate-600 mb-8">
@@ -60,7 +60,7 @@ export default function ChildrenBillPost() {
           <div className="prose prose-lg max-w-none prose-headings:text-slate-900 prose-p:text-slate-700 prose-strong:text-slate-900">
             <h2>Landmark Reforms in Children's Rights</h2>
             
-            <p>Kenya has taken a significant step forward in protecting children's rights with the signing of the Children Bill 2021 into law. This comprehensive legislation introduces several groundbreaking changes that will transform how we handle children's matters in the justice system.</p>
+            <p>Kenya has taken a significant step forward in protecting children's rights with the signing of the Children Bill 2022 into law. This comprehensive legislation introduces several groundbreaking changes that will transform how we handle children's matters in the justice system.</p>
 
             <h3>Diversion from Court System</h3>
             <p>Children in conflict with the law, especially those accused of committing minor offenses, will no longer be automatically taken through the traditional court system. Instead, they will be diverted to community-based systems that focus on rehabilitation rather than punishment.</p>

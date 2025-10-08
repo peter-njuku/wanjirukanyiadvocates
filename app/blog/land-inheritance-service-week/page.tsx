@@ -294,10 +294,10 @@ export default function LandInheritanceServiceWeekPost() {
                   <p className="text-sm text-slate-600">Complete guide to navigating Kenya's Law of Succession Act</p>
                 </div>
               </Link>
-              <Link href="/blog/children-bill-2021-reforms" className="group">
+              <Link href="/blog/children-bill-2022-reforms" className="group">
                 <div className="p-4 border border-slate-200 rounded-lg hover:border-cyan-300 transition-colors">
                   <h4 className="font-semibold text-slate-900 group-hover:text-cyan-700 mb-2">
-                    Kenya's New Children Bill 2021: What's Changing?
+                    Kenya's New Children Bill 2022: What's Changing?
                   </h4>
                   <p className="text-sm text-slate-600">Understanding children's inheritance rights reforms</p>
                 </div>

@@ -6,8 +6,8 @@ const faqs = [
     answer: "We specialize in land law, succession matters, commercial disputes, cybercrime, and family law. Visit our Services page for a comprehensive list.",
   },
   {
-    question: "What are the key changes introduced by Kenya's New Children Bill 2021?",
-    answer: "The New Children Bill 2021 introduces major reforms, including a raised age of criminal responsibility, provisions for free legal aid for children, and new kinship adoption procedures. For a detailed breakdown, please refer to our blog post on the topic.",
+    question: "What are the key changes introduced by Kenya's New Children Bill 2022?",
+    answer: "The New Children Bill 2022 introduces major reforms, including a raised age of criminal responsibility, provisions for free legal aid for children, and new kinship adoption procedures. For a detailed breakdown, please refer to our blog post on the topic.",
   },
   {
     question: "How does the Computer Misuse and Cyber Crimes Act 2018 protect individuals in Kenya?",

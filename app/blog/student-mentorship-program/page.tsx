@@ -183,10 +183,10 @@ export default function MentorshipProgramPost() {
           <div className="mt-16 pt-8 border-t border-slate-200">
             <h3 className="font-serif font-bold text-2xl text-slate-900 mb-6">Related Articles</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <Link href="/blog/children-bill-2021-reforms" className="group">
+              <Link href="/blog/children-bill-2022-reforms" className="group">
                 <div className="p-4 border border-slate-200 rounded-lg hover:border-cyan-300 transition-colors">
                   <h4 className="font-semibold text-slate-900 group-hover:text-cyan-700 mb-2">
-                    Kenya's New Children Bill 2021: What's Changing?
+                    Kenya's New Children Bill 2022: What's Changing?
                   </h4>
                   <p className="text-sm text-slate-600">Major reforms in children's rights and juvenile justice</p>
                 </div>

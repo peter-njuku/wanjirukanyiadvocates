@@ -9,13 +9,13 @@ import Header from "@/components/header"
 const blogPosts = [
   {
     id: 1,
-    title: "Kenya's New Children Bill 2021: What's Changing?",
+    title: "Kenya's New Children Bill 2022: What's Changing?",
     excerpt: "Major reforms including raised age of criminal responsibility, free legal aid for children, and new kinship adoption procedures.",
     date: "2024-03-15",
     author: "Wanjiru Kanyi",
     readTime: "6 min read",
     category: "Children's Law",
-    slug: "children-bill-2021-reforms"
+    slug: "children-bill-2022-reforms"
   },
   {
     id: 2,
@@ -94,7 +94,7 @@ export default function BlogPage() {
     <div className="min-h-screen bg-white">
         <Header />
       {/* Hero Section */}
-      <section className="relative bg-[#1a237e] text-white py-16">
+      <section className="relative bg-[#081a33] text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="font-serif font-bold text-4xl md:text-5xl mb-4">Legal Insights & Updates</h1>
           <p className="text-xl text-cyan-100 max-w-2xl mx-auto">
